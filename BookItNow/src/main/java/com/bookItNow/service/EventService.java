@@ -12,4 +12,6 @@ public interface EventService {
     void deleteEvent(Integer eventId);
     List<Event> findByVenue(String venue);
     List<Event> findUpcomingEvents(LocalDateTime dateTime);
+    List<Event> findAllEvents();
+    List<Event> findAllAvailableEvents();
 }

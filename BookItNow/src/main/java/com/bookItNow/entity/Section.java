@@ -1,21 +1,19 @@
 package com.bookItNow.entity;
 
 import jakarta.persistence.*;
-import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
-@Entity
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-@Table(name = "events")
-public class Event {
+@Entity
+@Table(name = "sections")
+public class Section {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -25,15 +23,15 @@ public class Event {
     private String name;
 
     @Column(nullable = false)
-    private String venue;
+    private double price; // Price per seat for this section
 
     @Column(nullable = false)
-    private LocalDateTime dateTime;
+    private int capacity; // Total seats in this section
 
-    @OneToMany(mappedBy = "event", cascade = CascadeType.ALL, orphanRemoval = true)
-    private List<Section> sections = new ArrayList<>();
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "event_id", nullable = false)
+    private Event event;
 
-    @NotNull
-    private Availability isAvailable = Availability.AVAILABLE;
-
+    @OneToMany(mappedBy = "section", cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<Seat> seats = new ArrayList<>();
 }

@@ -28,7 +28,16 @@ public class Event {
     private String venue;
 
     @Column(nullable = false)
-    private LocalDateTime dateTime;
+    private LocalDateTime dateTime = LocalDateTime.now();
+
+    @Column(nullable = false)
+    private LocalDateTime startTime;
+
+    @Column(nullable = false)
+    private LocalDateTime endTime;
+
+    @Column(nullable = false)
+    private int numberSection;
 
     @OneToMany(mappedBy = "event", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Section> sections = new ArrayList<>();

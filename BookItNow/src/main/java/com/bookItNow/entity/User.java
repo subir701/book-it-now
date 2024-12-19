@@ -33,4 +33,10 @@ public class User {
 
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Booking> bookings = new ArrayList<>();
+
+    @ElementCollection
+    @CollectionTable(name = "user_selected_seats", joinColumns = @JoinColumn(name = "user_id"))
+    @Column(name = "seat_id")
+    private List<Integer> selectedSeatIds = new ArrayList<>();
+
 }

@@ -26,6 +26,4 @@ public class Ticket implements Serializable {
     @JoinColumn(name = "booking_id", nullable = false)
     private Booking booking;
 
-    @Column(nullable = false)
-    private double price; // Price derived from Section.
 }

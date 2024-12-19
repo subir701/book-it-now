@@ -22,6 +22,9 @@ public class Seat {
     @Column(nullable = false)
     private boolean isBooked = false;
 
+    @Column(nullable = false)
+    private double price;
+
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "section_id", nullable = false)
     private Section section;

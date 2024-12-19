@@ -1,6 +1,7 @@
 package com.bookItNow.service;
 
 import com.bookItNow.entity.User;
+import com.bookItNow.exception.UserNotFoundException;
 import com.bookItNow.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -28,8 +29,8 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public Optional<User> findById(Integer id) {
-        return userRepository.findById(id);
+    public User findById(Integer id) throws UserNotFoundException {
+        return userRepository.findById(id).orElseThrow(()-> new UserNotFoundException("User Not Found"));
     }
 
     @Override

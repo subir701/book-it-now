@@ -27,4 +27,19 @@ public class GlobalExceptionHandler {
     public ResponseEntity<ErrorDetails> bookingNotFoundException(BookingNotFoundException ex, WebRequest request) {
         return new ResponseEntity<ErrorDetails>(new ErrorDetails(ex.getMessage(), LocalDateTime.now(), request.getDescription(false)), HttpStatus.NOT_FOUND);
     }
+
+    @ExceptionHandler(TicketNotFoundException.class)
+    public ResponseEntity<ErrorDetails> ticketNotFoundException(TicketNotFoundException ex, WebRequest request) {
+        return new ResponseEntity<ErrorDetails>(new ErrorDetails(ex.getMessage(), LocalDateTime.now(), request.getDescription(false)), HttpStatus.NOT_FOUND);
+    }
+
+    @ExceptionHandler(SeatNotFoundException.class)
+    public ResponseEntity<ErrorDetails> seatNotFoundException(SeatNotFoundException ex, WebRequest request) {
+        return new ResponseEntity<ErrorDetails>(new ErrorDetails(ex.getMessage(), LocalDateTime.now(), request.getDescription(false)), HttpStatus.NOT_FOUND);
+    }
+
+    @ExceptionHandler(SectionNotFoundException.class)
+    public ResponseEntity<ErrorDetails> sectionNotFoundException(SectionNotFoundException ex, WebRequest request) {
+        return new ResponseEntity<ErrorDetails>(new ErrorDetails(ex.getMessage(), LocalDateTime.now(), request.getDescription(false)), HttpStatus.NOT_FOUND);
+    }
 }

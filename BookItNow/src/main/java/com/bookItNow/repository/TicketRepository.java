@@ -16,9 +16,6 @@ import java.util.Optional;
 @Repository
 public interface TicketRepository extends JpaRepository<Ticket, Integer> {
 
-    // Custom query to find tickets by event ID
-    List<Ticket> findByEventId(Integer eventId);
-
     // Custom query to find tickets by booking ID
     List<Ticket> findByBookingId(Integer bookingId);
 

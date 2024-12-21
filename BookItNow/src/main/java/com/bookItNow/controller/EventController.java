@@ -41,4 +41,9 @@ public class EventController {
     public ResponseEntity<List<Event>> getUpcomingEvents() {
         return ResponseEntity.ok(eventService.findUpcomingEvents(java.time.LocalDateTime.now()));
     }
+
+    @GetMapping("/available")
+    public ResponseEntity<List<Event>> getAllAvailableEvents() {
+        return ResponseEntity.ok(eventService.findAllAvailableEvents());
+    }
 }

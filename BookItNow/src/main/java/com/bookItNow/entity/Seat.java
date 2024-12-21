@@ -1,5 +1,6 @@
 package com.bookItNow.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -27,6 +28,7 @@ public class Seat {
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "section_id", nullable = false)
+    @JsonIgnore
     private Section section;
 
     @OneToOne(mappedBy = "seat", cascade = CascadeType.ALL, orphanRemoval = true)

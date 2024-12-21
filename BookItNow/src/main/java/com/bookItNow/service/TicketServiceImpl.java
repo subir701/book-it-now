@@ -17,10 +17,7 @@ public class TicketServiceImpl implements TicketService {
     @Autowired
     TicketRepository ticketRepository;
 
-    @Override
-    public List<Ticket> findByEventId(Integer eventId) {
-        return ticketRepository.findByEventId(eventId);
-    }
+
 
     @Override
     public List<Ticket> findByBookingId(Integer bookingId) {

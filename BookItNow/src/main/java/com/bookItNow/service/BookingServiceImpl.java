@@ -33,7 +33,9 @@ public class BookingServiceImpl implements BookingService {
     @Override
     public Booking createBooking(Integer userId) {
 
-        User user = userRepository.findById(userId).get();
+        // Fetch the user
+        User user = userRepository.findById(userId)
+                .orElseThrow(() -> new RuntimeException("User not found with ID: " + userId));
 
         // Fetch selected seats
         List<Integer> seatIds = user.getSelectedSeatIds();
@@ -41,7 +43,7 @@ public class BookingServiceImpl implements BookingService {
             throw new RuntimeException("No seats selected for booking.");
         }
 
-        // Fetch seats from repository and validate availability
+        // Fetch seats from the repository and validate their availability
         List<Seat> seats = seatRepository.findAllById(seatIds);
         if (seats.size() != seatIds.size()) {
             throw new RuntimeException("Some seats are invalid or already booked.");
@@ -57,34 +59,48 @@ public class BookingServiceImpl implements BookingService {
         Booking booking = new Booking();
         booking.setUser(user);
 
-        if(booking.getTickets() == null) {
+        // Initialize tickets collection if null
+        if (booking.getTickets() == null) {
             booking.setTickets(new ArrayList<>());
         }
 
-        double totalAmount = 0.0;
+        // Save the booking first
+        booking.setBookingTime(LocalDateTime.now());
+        booking.setTotalPrice(0.0); // Placeholder for total price
+        Booking savedBooking = bookingRepository.save(booking);
 
-        // Mark seats as booked
+        // Calculate total price and add tickets
+        double totalAmount = 0.0;
         for (Seat seat : seats) {
+            // Create and associate tickets
             Ticket ticket = new Ticket();
             ticket.setSeat(seat);
-            ticket.setBooking(booking);
+            ticket.setBooking(savedBooking); // Associate with the saved booking
             booking.getTickets().add(ticket);
+
+            // Mark the seat as booked
             seat.setBooked(true);
-            totalAmount+=seat.getPrice();
-            ticketRepository.save(ticket);
             seatRepository.save(seat); // Update seat status
+            totalAmount += seat.getPrice();
+            
         }
 
-        booking.setTotalPrice(totalAmount);
-        booking.setBookingTime(LocalDateTime.now());
-        // Save booking
-        user.getBookings().add(booking);
+        // Save tickets in bulk
+        ticketRepository.saveAll(booking.getTickets());
+
+        // Update the booking with total price
+        savedBooking.setTotalPrice(totalAmount);
+
+        // Update user's bookings
+        user.getBookings().add(savedBooking);
         user.setSelectedSeatIds(new ArrayList<>()); // Clear selected seats after booking
         userRepository.save(user);
 
-        return bookingRepository.save(booking);
-
+        // Save and return the final booking
+        return bookingRepository.save(savedBooking);
     }
+
+
 
     @Override
     public List<Booking> findByUserId(Integer userId) {

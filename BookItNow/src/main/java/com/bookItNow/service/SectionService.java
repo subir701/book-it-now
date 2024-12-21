@@ -9,4 +9,5 @@ public interface SectionService {
     public Section createSection(int eventId, Section section)throws RuntimeException;
     public Section updateSectionName(int id,String name)throws SectionNotFoundException;
     public Section updateSectionCapacity(int id,int updateCapacity)throws SectionNotFoundException;
+    public String deleteSection(Integer Id) throws SectionNotFoundException;
 }

@@ -11,6 +11,7 @@ import com.bookItNow.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
@@ -62,6 +63,11 @@ public class SeatServiceImpl implements SeatService {
         if (seat.isBooked()) {
             throw new RuntimeException("Seat is already booked: " + seat.getSeatNumber());
         }
+
+        if(user.getSelectedSeatIds()==null){
+            user.setSelectedSeatIds(new ArrayList<Integer>());
+        }
+
 
         if (!user.getSelectedSeatIds().contains(seat.getId())) {
             user.getSelectedSeatIds().add(seat.getId());

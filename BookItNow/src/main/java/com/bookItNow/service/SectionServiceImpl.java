@@ -33,35 +33,50 @@ public class SectionServiceImpl implements SectionService {
 
     @Override
     public Section createSection(int eventId, Section section) throws RuntimeException {
-        Event event = eventRepository.findById(eventId).orElseThrow(()-> new RuntimeException("No event found!!"));
+        // Fetch the event
+        Event event = eventRepository.findById(eventId)
+                .orElseThrow(() -> new RuntimeException("No event found!!"));
 
-        if(section.getCapacity()>0 && section.getPrice()>0){
-            int size = section.getEvent().getSections().size();
-            List<Seat> list = section.getSeats();
-            if (list == null) {
-                list = new ArrayList<>(); // Initialize if null
-            }
-            String sectionLabel = getSectionLabel(size); // Generate dynamic section label
-
-            for(int i=1; i<=section.getCapacity(); i++){
-                Seat seat = new Seat();
-                seat.setSeatNumber(sectionLabel+i);
-                seat.setSection(section);
-                seat.setPrice(section.getPrice());
-                list.add(seat);
-            }
-            section.setSeats(list);
-            seatRepository.saveAll(list);
-        }else{
-            throw new RuntimeException("Capacity should be greater than 0");
+        // Validate section capacity and price
+        if (section.getCapacity() <= 0 || section.getPrice() <= 0) {
+            throw new RuntimeException("Capacity and price must be greater than 0");
         }
 
         // Associate section with the event
         section.setEvent(event);
-        event.getSections().add(section);
 
+        // Initialize seats list if null
+        if (section.getSeats() == null) {
+            section.setSeats(new ArrayList<>());
+        }
+
+        // Save the section first
+        Section savedSection = sectionRepository.save(section);
+
+        // Generate dynamic section label
+        int size = event.getSections().size();
+        String sectionLabel = getSectionLabel(size);
+
+        // Create seats and associate with the saved section
+        List<Seat> seats = new ArrayList<>();
+        for (int i = 1; i <= section.getCapacity(); i++) {
+            Seat seat = new Seat();
+            seat.setSeatNumber(sectionLabel + i);
+            seat.setSection(savedSection);
+            seat.setPrice(section.getPrice());
+            seats.add(seat);
+        }
+
+        // Save seats
+        seatRepository.saveAll(seats);
+        savedSection.getSeats().addAll(seats);
+
+
+        // Add the saved section to the event
+        event.getSections().add(savedSection);
         eventRepository.save(event);
-        return sectionRepository.save(section);
+
+        return sectionRepository.save(savedSection);
     }
 
     // Utility method for dynamic section label
@@ -106,5 +121,11 @@ public class SectionServiceImpl implements SectionService {
 
         section.setCapacity(updateCapacity);
         return sectionRepository.save(section);
+    }
+
+    public String deleteSection(Integer Id) throws SectionNotFoundException{
+        Section section = sectionRepository.findById(Id).orElseThrow(()-> new SectionNotFoundException("No section found !!"));
+        sectionRepository.delete(section);
+        return "Section Deleted";
     }
 }

@@ -7,33 +7,59 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.List;
-
 @RestController
-@RequestMapping("/api/section")
+@RequestMapping("/api/v1/sections")
 public class SectionController {
 
     @Autowired
     private SectionService sectionService;
 
-    @PostMapping("/{eventId}/add")
-    public ResponseEntity<Section> addSection(@PathVariable Integer eventId, @RequestBody Section section) {
-
+    /**
+     * Add a new section to an event.
+     *
+     * @param eventId The ID of the event to which the section is being added.
+     * @param section The section details.
+     * @return The created section.
+     */
+    @PostMapping("/{eventId}")
+    public ResponseEntity<Section> addSectionToEvent(@PathVariable Integer eventId, @RequestBody Section section) {
         return new ResponseEntity<>(sectionService.createSection(eventId, section), HttpStatus.CREATED);
     }
 
-    @PutMapping("/{sectionId}/{capacity}")
-    public ResponseEntity<Section> updateSectionCapacity(@PathVariable Integer sectionId, @PathVariable Integer capacity) {
+    /**
+     * Update the capacity of a section.
+     *
+     * @param sectionId The ID of the section to update.
+     * @param capacity  The new capacity of the section.
+     * @return The updated section.
+     */
+    @PutMapping("/{sectionId}/capacity/{capacity}")
+    public ResponseEntity<Section> updateSectionCapacity(
+            @PathVariable Integer sectionId,
+            @PathVariable Integer capacity
+    ) {
         return new ResponseEntity<>(sectionService.updateSectionCapacity(sectionId, capacity), HttpStatus.ACCEPTED);
     }
 
+    /**
+     * Retrieve a section by ID.
+     *
+     * @param sectionId The ID of the section to retrieve.
+     * @return The section details.
+     */
     @GetMapping("/{sectionId}")
-    public ResponseEntity<Section> getSection(@PathVariable Integer sectionId) {
+    public ResponseEntity<Section> getSectionById(@PathVariable Integer sectionId) {
         return new ResponseEntity<>(sectionService.findSectionById(sectionId), HttpStatus.OK);
     }
 
-    @DeleteMapping("/delete/{sectionId}")
-    public ResponseEntity<String> deleteSection(@PathVariable Integer sectionId) {
-        return new ResponseEntity<>(sectionService.deleteSection(sectionId),HttpStatus.OK);
+    /**
+     * Delete a section by ID.
+     *
+     * @param sectionId The ID of the section to delete.
+     * @return A success message.
+     */
+    @DeleteMapping("/{sectionId}")
+    public ResponseEntity<String> deleteSectionById(@PathVariable Integer sectionId) {
+        return new ResponseEntity<>(sectionService.deleteSection(sectionId), HttpStatus.OK);
     }
 }

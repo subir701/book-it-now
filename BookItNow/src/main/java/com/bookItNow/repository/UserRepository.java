@@ -10,5 +10,13 @@ import java.util.Optional;
 public interface UserRepository extends JpaRepository<User, Integer> {
 
     Optional<User> findByUsername(String username);
+    // Handy method to find a user by their username.
+    // Spring Data JPA auto-generates the implementation based on this method's name!
+
     Optional<User> findByEmail(String email);
+
+    boolean existsById(long id);
+    // Similar to the one above, but this helps when you need to look up a user by their email.
+    // Great for things like login or password recovery.
+
 }

@@ -8,5 +8,6 @@ import java.util.List;
 
 @Repository
 public interface SeatRepository extends JpaRepository<Seat, Integer> {
+
     List<Seat> findAllBySeatNumberInAndSectionId(List<String> seatNumbers, int sectionId);
 }

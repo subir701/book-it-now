@@ -11,26 +11,46 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/bookings")
+@RequestMapping("/api/v1/bookings")
 public class BookingController {
 
     @Autowired
     private BookingService bookingService;
 
+    /**
+     * Create a new booking for a user.
+     *
+     * @param userId The ID of the user for whom the booking is being created.
+     * @return The created booking.
+     * @throws UserNotFoundException If the user is not found.
+     */
     @PostMapping("/{userId}")
-    public ResponseEntity<?> createBooking(@PathVariable Integer userId) throws UserNotFoundException {
-        return new ResponseEntity<>(bookingService.createBooking(userId), HttpStatus.CREATED);
+    public ResponseEntity<Booking> addBooking(@PathVariable Integer userId) throws UserNotFoundException {
+        Booking booking = bookingService.createBooking(userId);
+        return new ResponseEntity<>(booking, HttpStatus.CREATED);
     }
 
+    /**
+     * Retrieve all bookings for a specific user.
+     *
+     * @param userId The ID of the user.
+     * @return A list of bookings associated with the user.
+     */
     @GetMapping("/user/{userId}")
-    public ResponseEntity<List<Booking>> getBookingsByUserId(@PathVariable Integer userId) {
-        return ResponseEntity.ok(bookingService.findByUserId(userId));
+    public ResponseEntity<List<Booking>> fetchBookingsByUser(@PathVariable Integer userId) {
+        List<Booking> bookings = bookingService.findByUserId(userId);
+        return ResponseEntity.ok(bookings);
     }
 
+    /**
+     * Delete a booking by ID.
+     *
+     * @param id The ID of the booking to be deleted.
+     * @return No content status upon successful deletion.
+     */
     @DeleteMapping("/{id}")
-    public ResponseEntity<?> deleteBooking(@PathVariable Integer id) {
+    public ResponseEntity<Void> removeBooking(@PathVariable Integer id) {
         bookingService.deleteBooking(id);
         return ResponseEntity.noContent().build();
     }
 }
-

@@ -16,10 +16,15 @@ import java.util.Optional;
 @Repository
 public interface TicketRepository extends JpaRepository<Ticket, Integer> {
 
-    // Custom query to find tickets by booking ID
+    // Find all tickets associated with a specific booking ID
     List<Ticket> findByBookingId(Integer bookingId);
+    // This is super useful when you want to fetch all tickets for a particular booking.
+    // It leverages Spring Data JPA’s ability to derive queries from method names. No manual SQL needed!
 
     @Lock(LockModeType.PESSIMISTIC_WRITE)
     @Query("SELECT t FROM Ticket t WHERE t.id = :id")
     Optional<Ticket> findByIdWithLock(@Param("id") Integer id);
+    // Adding a pessimistic lock ensures that no one else can modify the ticket while you're working with it.
+    // This can come in handy in concurrent scenarios like ticket booking systems.
+    // The `@Query` annotation lets you write JPQL (Java Persistence Query Language) for custom queries.
 }

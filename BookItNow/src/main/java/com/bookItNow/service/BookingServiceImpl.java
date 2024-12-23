@@ -33,82 +33,79 @@ public class BookingServiceImpl implements BookingService {
     @Override
     public Booking createBooking(Integer userId) {
 
-        // Fetch the user
+        // Step 1: Fetch the user making the booking
         User user = userRepository.findById(userId)
                 .orElseThrow(() -> new RuntimeException("User not found with ID: " + userId));
 
-        // Fetch selected seats
+        // Step 2: Fetch the user's selected seats
         List<Integer> seatIds = user.getSelectedSeatIds();
         if (seatIds.isEmpty()) {
-            throw new RuntimeException("No seats selected for booking.");
+            throw new RuntimeException("No seats selected for booking."); // Simple validation
         }
 
-        // Fetch seats from the repository and validate their availability
+        // Step 3: Validate the selected seats
         List<Seat> seats = seatRepository.findAllById(seatIds);
         if (seats.size() != seatIds.size()) {
-            throw new RuntimeException("Some seats are invalid or already booked.");
+            throw new RuntimeException("Some seats are invalid or already booked."); // Prevent mismatches
         }
 
         for (Seat seat : seats) {
             if (seat.isBooked()) {
-                throw new RuntimeException("Seat already booked: " + seat.getSeatNumber());
+                throw new RuntimeException("Seat already booked: " + seat.getSeatNumber()); // Avoid double booking
             }
         }
 
-        // Create a new booking
+        // Step 4: Create a new booking object and associate it with the user
         Booking booking = new Booking();
         booking.setUser(user);
 
-        // Initialize tickets collection if null
+        // Initialize the tickets collection if it's null
         if (booking.getTickets() == null) {
             booking.setTickets(new ArrayList<>());
         }
 
-        // Save the booking first
+        // Save the booking to ensure we have a valid booking ID before linking tickets
         booking.setBookingTime(LocalDateTime.now());
-        booking.setTotalPrice(0.0); // Placeholder for total price
+        booking.setTotalPrice(0.0); // Temporary placeholder for total price
         Booking savedBooking = bookingRepository.save(booking);
 
-        // Calculate total price and add tickets
+        // Step 5: Add tickets for each selected seat and calculate the total amount
         double totalAmount = 0.0;
         for (Seat seat : seats) {
-            // Create and associate tickets
             Ticket ticket = new Ticket();
             ticket.setSeat(seat);
-            ticket.setBooking(savedBooking); // Associate with the saved booking
-            booking.getTickets().add(ticket);
+            ticket.setBooking(savedBooking); // Associate the ticket with the saved booking
+            booking.getTickets().add(ticket); // Add ticket to the booking
 
-            // Mark the seat as booked
-            seat.setBooked(true);
-            seatRepository.save(seat); // Update seat status
-            totalAmount += seat.getPrice();
-            
+            seat.setBooked(true); // Mark the seat as booked
+            seatRepository.save(seat); // Save the updated seat status
+            totalAmount += seat.getPrice(); // Update the total price
         }
 
-        // Save tickets in bulk
+        // Save all tickets in one go for efficiency
         ticketRepository.saveAll(booking.getTickets());
 
-        // Update the booking with total price
+        // Step 6: Update the booking with the calculated total price
         savedBooking.setTotalPrice(totalAmount);
 
-        // Update user's bookings
+        // Update the user's bookings and clear selected seats
         user.getBookings().add(savedBooking);
-        user.setSelectedSeatIds(new ArrayList<>()); // Clear selected seats after booking
-        userRepository.save(user);
+        user.setSelectedSeatIds(new ArrayList<>()); // Clear selected seat IDs
+        userRepository.save(user); // Save the updated user
 
-        // Save and return the final booking
+        // Step 7: Save the final booking and return it
         return bookingRepository.save(savedBooking);
     }
 
-
-
     @Override
     public List<Booking> findByUserId(Integer userId) {
+        // Simple method to fetch all bookings for a specific user
         return bookingRepository.findByUserId(userId);
     }
 
     @Override
     public void deleteBooking(Integer bookingId) {
+        // Straightforward deletion of a booking by ID
         bookingRepository.deleteById(bookingId);
     }
 }

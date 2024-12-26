@@ -41,7 +41,7 @@ BookItNow is an online ticket booking application built with **Spring Boot**. It
 - **JWT**: For secure, stateless authentication.
 
 ### Database:
-- **H2 Database** (for development/testing, can be replaced with MySQL/PostgreSQL in production).
+- **MySQL Database**
 
 ### Validation:
 - **Jakarta Bean Validation**: Ensures data integrity for entity fields.
@@ -100,21 +100,25 @@ BookItNow is an online ticket booking application built with **Spring Boot**. It
 ```bash
 git clone https://github.com/your-username/bookitnow.git
 cd bookitnow
+```
 ## Configure Environment Variables:
 Update the application.properties file for your local database and JWT secret:
 
 ###properties
 
-# Example
+### Example
+```bash
 spring.datasource.url=jdbc:h2:mem:testdb
-spring.datasource.username=sa
+spring.datasource.username=
 spring.datasource.password=
-
+```
 ##Build and Run:
 ###Build the application:
+```bash
 ./gradlew build
+```
 Run the application:
-bash
-Copy code
+```bash
 ./gradlew bootRun
-The application will start at http://localhost:8080.
+```
+The application will start at ***http://localhost:8080***.

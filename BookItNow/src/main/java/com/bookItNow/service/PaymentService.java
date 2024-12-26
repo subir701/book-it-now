@@ -1,6 +1,6 @@
 package com.bookItNow.service;
 
-import com.bookItNow.entity.Payment;
+import com.bookItNow.model.Payment;
 
 import java.util.Optional;
 

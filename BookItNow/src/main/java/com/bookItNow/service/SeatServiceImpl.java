@@ -1,9 +1,9 @@
 package com.bookItNow.service;
 
-import com.bookItNow.entity.Event;
-import com.bookItNow.entity.Seat;
-import com.bookItNow.entity.Section;
-import com.bookItNow.entity.User;
+import com.bookItNow.model.Event;
+import com.bookItNow.model.Seat;
+import com.bookItNow.model.Section;
+import com.bookItNow.model.User;
 import com.bookItNow.exception.EventNotFoundException;
 import com.bookItNow.exception.SeatNotFoundException;
 import com.bookItNow.exception.SectionNotFoundException;
@@ -16,7 +16,6 @@ import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Optional;
 import java.util.stream.Collectors;
 
 @Service

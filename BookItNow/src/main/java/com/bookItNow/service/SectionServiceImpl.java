@@ -1,8 +1,8 @@
 package com.bookItNow.service;
 
-import com.bookItNow.entity.Event;
-import com.bookItNow.entity.Seat;
-import com.bookItNow.entity.Section;
+import com.bookItNow.model.Event;
+import com.bookItNow.model.Seat;
+import com.bookItNow.model.Section;
 import com.bookItNow.exception.SectionNotFoundException;
 import com.bookItNow.repository.EventRepository;
 import com.bookItNow.repository.SeatRepository;

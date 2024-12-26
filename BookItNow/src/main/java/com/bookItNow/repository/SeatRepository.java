@@ -1,6 +1,6 @@
 package com.bookItNow.repository;
 
-import com.bookItNow.entity.Seat;
+import com.bookItNow.model.Seat;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

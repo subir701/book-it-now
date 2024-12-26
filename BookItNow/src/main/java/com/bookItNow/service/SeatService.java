@@ -1,11 +1,10 @@
 package com.bookItNow.service;
 
-import com.bookItNow.entity.Seat;
+import com.bookItNow.model.Seat;
 import com.bookItNow.exception.EventNotFoundException;
 import com.bookItNow.exception.SeatNotFoundException;
 
 import java.util.List;
-import java.util.Optional;
 
 public interface SeatService {
 

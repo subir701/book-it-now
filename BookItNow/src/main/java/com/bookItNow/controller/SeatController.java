@@ -1,6 +1,6 @@
 package com.bookItNow.controller;
 
-import com.bookItNow.entity.Seat;
+import com.bookItNow.model.Seat;
 import com.bookItNow.service.SeatService;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;

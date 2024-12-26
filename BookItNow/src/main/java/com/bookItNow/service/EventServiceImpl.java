@@ -1,14 +1,12 @@
 package com.bookItNow.service;
 
-import com.bookItNow.entity.Availability;
-import com.bookItNow.entity.Event;
-import com.bookItNow.entity.Section;
+import com.bookItNow.model.Availability;
+import com.bookItNow.model.Event;
 import com.bookItNow.repository.EventRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
-import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
 

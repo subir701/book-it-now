@@ -1,7 +1,6 @@
 package com.bookItNow.service;
 
-import com.bookItNow.entity.Ticket;
-import com.bookItNow.repository.TicketRepository;
+import com.bookItNow.model.Ticket;
 
 import java.util.List;
 

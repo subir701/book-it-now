@@ -1,6 +1,6 @@
 package com.bookItNow.controller;
 
-import com.bookItNow.entity.Payment;
+import com.bookItNow.model.Payment;
 import com.bookItNow.service.PaymentService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;

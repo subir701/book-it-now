@@ -1,6 +1,6 @@
 package com.bookItNow.controller;
 
-import com.bookItNow.entity.Section;
+import com.bookItNow.model.Section;
 import com.bookItNow.service.SectionService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;

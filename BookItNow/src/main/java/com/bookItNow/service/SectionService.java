@@ -1,6 +1,6 @@
 package com.bookItNow.service;
 
-import com.bookItNow.entity.Section;
+import com.bookItNow.model.Section;
 import com.bookItNow.exception.SectionNotFoundException;
 
 public interface SectionService {

@@ -1,6 +1,6 @@
 package com.bookItNow.service;
 
-import com.bookItNow.entity.Event;
+import com.bookItNow.model.Event;
 
 import java.time.LocalDateTime;
 import java.util.List;

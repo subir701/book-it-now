@@ -1,12 +1,13 @@
 package com.bookItNow.controller;
 
-import com.bookItNow.entity.User;
+import com.bookItNow.model.User;
 import com.bookItNow.service.SeatService;
 import com.bookItNow.service.UserService;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.Optional;
@@ -22,18 +23,6 @@ public class UserController {
     private SeatService seatService;
 
     /**
-     * Register a new user.
-     *
-     * @param user The user object to register.
-     * @return The created user entity.
-     */
-    @PostMapping("/register")
-    public ResponseEntity<User> registerUser(@Valid @RequestBody User user) {
-        User createdUser = userService.createUser(user);
-        return new ResponseEntity<>(createdUser, HttpStatus.CREATED);
-    }
-
-    /**
      * Login a user.
      *
      * @param username The username of the user.
@@ -41,18 +30,24 @@ public class UserController {
      * @return Success or error message based on credentials.
      */
     @PostMapping("/login")
-    public ResponseEntity<?> loginUser(@RequestParam String username, @RequestParam String password) throws Exception {
-        Optional<User> existingUser = userService.findByUsername(username);
+    public ResponseEntity<?> loginUser(@RequestBody User user ) throws Exception {
+        return ResponseEntity.ok(userService.verify(user));
+    }
 
-        if (existingUser.isEmpty()) {
-            return ResponseEntity.status(HttpStatus.NOT_FOUND).body("User not found");
-        }
 
-        if (!password.equals(existingUser.get().getPassword())) {
-            return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body("Invalid credentials");
-        }
+    private BCryptPasswordEncoder bCryptPasswordEncoder = new BCryptPasswordEncoder(12);
 
-        return ResponseEntity.ok("Login successful");
+    /**
+     * Register a new user.
+     *
+     * @param user The user object to register.
+     * @return The created user entity.
+     */
+    @PostMapping("/register")
+    public ResponseEntity<User> registerUser(@Valid @RequestBody User user) {
+        user.setPassword(bCryptPasswordEncoder.encode(user.getPassword()));
+        User createdUser = userService.createUser(user);
+        return new ResponseEntity<>(createdUser, HttpStatus.CREATED);
     }
 
     /**

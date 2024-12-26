@@ -1,6 +1,6 @@
 package com.bookItNow.service;
 
-import com.bookItNow.entity.Booking;
+import com.bookItNow.model.Booking;
 
 import java.util.List;
 

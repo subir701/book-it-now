@@ -1,6 +1,6 @@
 package com.bookItNow.controller;
 
-import com.bookItNow.entity.Event;
+import com.bookItNow.model.Event;
 import com.bookItNow.service.EventService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;

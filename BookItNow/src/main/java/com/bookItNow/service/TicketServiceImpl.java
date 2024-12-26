@@ -1,7 +1,7 @@
 package com.bookItNow.service;
 
-import com.bookItNow.entity.Booking;
-import com.bookItNow.entity.Ticket;
+import com.bookItNow.model.Booking;
+import com.bookItNow.model.Ticket;
 import com.bookItNow.repository.TicketRepository;
 import jakarta.persistence.OptimisticLockException;
 import jakarta.transaction.Transactional;

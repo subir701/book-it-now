@@ -1,9 +1,9 @@
 package com.bookItNow.service;
 
-import com.bookItNow.entity.Booking;
-import com.bookItNow.entity.Seat;
-import com.bookItNow.entity.Ticket;
-import com.bookItNow.entity.User;
+import com.bookItNow.model.Booking;
+import com.bookItNow.model.Seat;
+import com.bookItNow.model.Ticket;
+import com.bookItNow.model.User;
 import com.bookItNow.repository.BookingRepository;
 import com.bookItNow.repository.SeatRepository;
 import com.bookItNow.repository.TicketRepository;

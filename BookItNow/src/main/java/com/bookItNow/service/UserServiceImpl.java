@@ -1,9 +1,12 @@
 package com.bookItNow.service;
 
-import com.bookItNow.entity.User;
+import com.bookItNow.model.User;
 import com.bookItNow.exception.UserNotFoundException;
 import com.bookItNow.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.authentication.AuthenticationManager;
+import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
+import org.springframework.security.core.Authentication;
 import org.springframework.stereotype.Service;
 
 import java.util.Optional;
@@ -13,6 +16,12 @@ public class UserServiceImpl implements UserService {
 
     @Autowired
     private UserRepository userRepository;
+
+    @Autowired
+    private JWTService jwtService;
+
+    @Autowired
+    private AuthenticationManager authenticationManager;
 
     /**
      * Creates a new user and saves it in the database.
@@ -88,5 +97,15 @@ public class UserServiceImpl implements UserService {
             throw new UserNotFoundException("Cannot delete: User not found with ID: " + userId);
         }
         userRepository.deleteById(userId);
+    }
+
+    @Override
+    public String verify(User user) {
+        Authentication authentication = authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(user.getUsername(), user.getPassword()));
+        if(authentication.isAuthenticated()){
+            return jwtService.generateToken(user.getUsername());
+        }
+
+        return "fail";
     }
 }

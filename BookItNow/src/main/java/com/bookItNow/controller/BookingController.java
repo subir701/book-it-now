@@ -1,6 +1,6 @@
 package com.bookItNow.controller;
 
-import com.bookItNow.entity.Booking;
+import com.bookItNow.model.Booking;
 import com.bookItNow.exception.UserNotFoundException;
 import com.bookItNow.service.BookingService;
 import org.springframework.beans.factory.annotation.Autowired;

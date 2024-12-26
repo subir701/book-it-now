@@ -1,8 +1,7 @@
 package com.bookItNow.repository;
 
 
-import com.bookItNow.entity.Event;
-import com.bookItNow.entity.Ticket;
+import com.bookItNow.model.Ticket;
 import jakarta.persistence.LockModeType;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Lock;

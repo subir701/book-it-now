@@ -1,9 +1,8 @@
 package com.bookItNow.repository;
 
-import com.bookItNow.entity.Availability;
-import com.bookItNow.entity.Event;
+import com.bookItNow.model.Availability;
+import com.bookItNow.model.Event;
 import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;

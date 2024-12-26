@@ -124,11 +124,11 @@ Run the application:
 The application will start at **http://localhost:8080**.
 ---
 ## Future Improvements
-- Role-Based Access Control (RBAC):
+- **Role-Based Access Control (RBAC):**
 Add roles like Admin and User to control access to APIs.
-- JWT Authorization:
+- **JWT Authorization:**
 Protect specific endpoints based on roles and permissions.
-- Seat Availability Check:
+- **Seat Availability Check:**
 Prevent overbooking by locking unavailable seats.
-- Email Notifications:
+- **Email Notifications:**
 Notify users upon successful bookings.

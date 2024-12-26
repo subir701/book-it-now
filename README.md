@@ -104,7 +104,7 @@ cd bookitnow
 ## Configure Environment Variables:
 Update the application.properties file for your local database and JWT secret:
 
-###properties
+### properties
 
 ### Example
 ```bash
@@ -112,8 +112,8 @@ spring.datasource.url=jdbc:h2:mem:testdb
 spring.datasource.username=
 spring.datasource.password=
 ```
-##Build and Run:
-###Build the application:
+## Build and Run:
+### Build the application:
 ```bash
 ./gradlew build
 ```
@@ -122,3 +122,13 @@ Run the application:
 ./gradlew bootRun
 ```
 The application will start at ***http://localhost:8080***.
+---
+## Future Improvements
+- Role-Based Access Control (RBAC):
+Add roles like Admin and User to control access to APIs.
+- JWT Authorization:
+Protect specific endpoints based on roles and permissions.
+- Seat Availability Check:
+Prevent overbooking by locking unavailable seats.
+- Email Notifications:
+Notify users upon successful bookings.

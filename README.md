@@ -101,7 +101,7 @@ BookItNow is an online ticket booking application built with **Spring Boot**. It
 git clone https://github.com/your-username/bookitnow.git
 cd bookitnow
 ```
-## Configure Environment Variables:
+### Configure Environment Variables:
 Update the application.properties file for your local database and JWT secret:
 
 ### properties
@@ -112,7 +112,7 @@ spring.datasource.url=jdbc:h2:mem:testdb
 spring.datasource.username=
 spring.datasource.password=
 ```
-## Build and Run:
+### Build and Run:
 ### Build the application:
 ```bash
 ./gradlew build
@@ -121,7 +121,7 @@ Run the application:
 ```bash
 ./gradlew bootRun
 ```
-The application will start at ***http://localhost:8080***.
+The application will start at **http://localhost:8080**.
 ---
 ## Future Improvements
 - Role-Based Access Control (RBAC):

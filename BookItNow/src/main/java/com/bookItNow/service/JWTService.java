@@ -4,6 +4,7 @@ import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.io.Decoders;
 import io.jsonwebtoken.security.Keys;
+import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Service;
 
@@ -32,9 +33,10 @@ public class JWTService {
         }
     }
 
-    public String generateToken(String username) {
+    public String generateToken(String username, String role) {
 
         Map<String, Object> claims = new HashMap<String, Object>();
+        claims.put("role",role);
 
         return Jwts.builder()
                 .claims()
@@ -71,9 +73,23 @@ public class JWTService {
                 .getPayload();
     }
 
+    public String extractRole(String token) {
+        return Jwts.parser()
+                .verifyWith(getKey())
+                .build()
+                .parseSignedClaims(token)
+                .getPayload()
+                .get("role", String.class); // Extract role from token
+    }
+
+
     public boolean validateToken(String token, UserDetails userDetails) {
         final String username = extractUserName(token);
-        return (username.equals(userDetails.getUsername()) && !isTokenExpired(token));
+        final String role = extractRole(token);
+
+        return (username.equals(userDetails.getUsername())
+                && !isTokenExpired(token)
+                && userDetails.getAuthorities().contains(new SimpleGrantedAuthority(role)));
     }
 
     private boolean isTokenExpired(String token) {

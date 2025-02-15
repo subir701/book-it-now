@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/v1/bookings")
+@RequestMapping("/bookitnow/v1/bookings")
 public class BookingController {
 
     @Autowired
@@ -24,7 +24,7 @@ public class BookingController {
      * @return The created booking.
      * @throws UserNotFoundException If the user is not found.
      */
-    @PostMapping("/{userId}")
+    @PostMapping("/add/{userId}")
     public ResponseEntity<Booking> addBooking(@PathVariable Integer userId) throws UserNotFoundException {
         Booking booking = bookingService.createBooking(userId);
         return new ResponseEntity<>(booking, HttpStatus.CREATED);
@@ -48,7 +48,7 @@ public class BookingController {
      * @param id The ID of the booking to be deleted.
      * @return No content status upon successful deletion.
      */
-    @DeleteMapping("/{id}")
+    @DeleteMapping("/delete/{id}")
     public ResponseEntity<Void> removeBooking(@PathVariable Integer id) {
         bookingService.deleteBooking(id);
         return ResponseEntity.noContent().build();

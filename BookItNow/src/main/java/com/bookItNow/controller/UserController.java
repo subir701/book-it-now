@@ -1,8 +1,11 @@
 package com.bookItNow.controller;
 
+import com.bookItNow.dto.UserDTO;
 import com.bookItNow.model.User;
 import com.bookItNow.service.SeatService;
 import com.bookItNow.service.UserService;
+import com.bookItNow.util.CookieUtil;
+import jakarta.servlet.http.HttpServletResponse;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -10,10 +13,12 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+import java.util.Map;
 import java.util.Optional;
 
 @RestController
-@RequestMapping("/api/v1/users")
+@RequestMapping("/bookitnow/v1/users")
 public class UserController {
 
     @Autowired
@@ -21,6 +26,8 @@ public class UserController {
 
     @Autowired
     private SeatService seatService;
+
+    private BCryptPasswordEncoder bCryptPasswordEncoder = new BCryptPasswordEncoder(12);
 
     /**
      * Login a user.
@@ -30,12 +37,19 @@ public class UserController {
      * @return Success or error message based on credentials.
      */
     @PostMapping("/login")
-    public ResponseEntity<?> loginUser(@RequestBody User user ) throws Exception {
-        return ResponseEntity.ok(userService.verify(user));
+    public ResponseEntity<?> loginUser(@RequestBody UserDTO user, HttpServletResponse response) throws Exception {
+        Map<String, String> token = userService.verify(user);
+
+        System.out.println(token.get("access_token"));
+
+        CookieUtil.addCookie(response,"accessToken",token.get("access_token"),60000);
+        CookieUtil.addCookie(response,"refreshToken",token.get("refresh_token"),60000);
+
+        return ResponseEntity.ok("Logged In");
     }
 
 
-    private BCryptPasswordEncoder bCryptPasswordEncoder = new BCryptPasswordEncoder(12);
+
 
     /**
      * Register a new user.
@@ -68,7 +82,7 @@ public class UserController {
      * @param user The updated user object.
      * @return The updated user entity.
      */
-    @PutMapping("/{id}")
+    @PutMapping("/update/{id}")
     public ResponseEntity<?> updateUserDetails(@PathVariable Integer id, @RequestBody User user) {
         user.setId(id);
         return ResponseEntity.ok(userService.updateUser(user));
@@ -80,7 +94,7 @@ public class UserController {
      * @param id The ID of the user to delete.
      * @return ResponseEntity with no content.
      */
-    @DeleteMapping("/{id}")
+    @DeleteMapping("/delete/{id}")
     public ResponseEntity<?> deleteUserById(@PathVariable Integer id) {
         userService.deleteUser(id);
         return ResponseEntity.noContent().build();
@@ -97,5 +111,10 @@ public class UserController {
     public ResponseEntity<?> selectSeat(@PathVariable Integer userId, @PathVariable Integer seatId) {
         seatService.selectSeats(userId, seatId);
         return ResponseEntity.ok("Seat " + seatId + " has been successfully selected by user " + userId);
+    }
+
+    @GetMapping("/all")
+    public ResponseEntity<List<User>> getAllUsers() {
+        return new ResponseEntity<>(userService.findAllUser(), HttpStatus.OK);
     }
 }

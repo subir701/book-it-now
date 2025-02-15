@@ -11,7 +11,7 @@ import java.time.LocalDateTime;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/v1/events")
+@RequestMapping("/bookitnow/v1/events")
 public class EventController {
 
     @Autowired
@@ -23,7 +23,7 @@ public class EventController {
      * @param event The event details to be created.
      * @return The created event.
      */
-    @PostMapping
+    @PostMapping("/add")
     public ResponseEntity<Event> addEvent(@RequestBody Event event) {
         Event createdEvent = eventService.createEvent(event);
         return new ResponseEntity<>(createdEvent, HttpStatus.CREATED);
@@ -36,7 +36,7 @@ public class EventController {
      * @param event The updated event details.
      * @return The updated event.
      */
-    @PutMapping("/{id}")
+    @PutMapping("/update/{id}")
     public ResponseEntity<Event> modifyEvent(@PathVariable Integer id, @RequestBody Event event) {
         event.setId(id);
         Event updatedEvent = eventService.updateEvent(event);
@@ -49,7 +49,7 @@ public class EventController {
      * @param id The ID of the event to be deleted.
      * @return No content status after successful deletion.
      */
-    @DeleteMapping("/{id}")
+    @DeleteMapping("/delete/{id}")
     public ResponseEntity<Void> removeEvent(@PathVariable Integer id) {
         eventService.deleteEvent(id);
         return ResponseEntity.noContent().build();

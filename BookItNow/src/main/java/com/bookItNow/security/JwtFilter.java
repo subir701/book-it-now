@@ -1,6 +1,5 @@
 package com.bookItNow.security;
 
-import com.bookItNow.model.MyUserDetails;
 import com.bookItNow.service.JWTService;
 import com.bookItNow.service.MyUserDetailsService;
 import jakarta.servlet.FilterChain;
@@ -34,8 +33,9 @@ public class JwtFilter extends OncePerRequestFilter {
         String username = null;
 
         if(authHeader != null && authHeader.startsWith("Bearer ")) {
-            token = authHeader.substring(7);
+          token = authHeader.substring(7);
             username = jwtService.extractUserName(token);
+
         }
 
         if(username != null && SecurityContextHolder.getContext().getAuthentication() == null) {
@@ -43,7 +43,6 @@ public class JwtFilter extends OncePerRequestFilter {
             UserDetails userDetails = context.getBean(MyUserDetailsService.class).loadUserByUsername(username);
 
             if(jwtService.validateToken(token, userDetails)){
-
 
                 UsernamePasswordAuthenticationToken authToken = new UsernamePasswordAuthenticationToken(userDetails, null, userDetails.getAuthorities());
                 authToken.setDetails(new WebAuthenticationDetailsSource().buildDetails(request));

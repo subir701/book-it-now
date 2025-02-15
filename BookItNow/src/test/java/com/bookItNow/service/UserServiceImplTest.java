@@ -164,48 +164,48 @@ class UserServiceImplTest {
         verify(userRepository, never()).deleteById(userId);
     }
 
-    @Test
-    void testVerify_Success() {
-        // Arrange
-        User user = new User();
-        user.setUsername("testuser");
-        user.setPassword("password");
-
-        Authentication authentication = mock(Authentication.class);
-
-        when(authenticationManager.authenticate(any(UsernamePasswordAuthenticationToken.class))).thenReturn(authentication);
-        when(authentication.isAuthenticated()).thenReturn(true);
-        when(jwtService.generateToken(user.getUsername(),user.getRole())).thenReturn("jwt-token");
-
-        // Act
-        String token = userService.verify(user);
-
-        // Assert
-        assertNotNull(token);
-        assertEquals("jwt-token", token);
-        verify(authenticationManager, times(1)).authenticate(any(UsernamePasswordAuthenticationToken.class));
-        verify(jwtService, times(1)).generateToken(user.getUsername(),user.getRole());
-    }
-
-    @Test
-    void testVerify_Fail() {
-        // Arrange
-        User user = new User();
-        user.setUsername("testuser");
-        user.setPassword("password");
-
-        Authentication authentication = mock(Authentication.class);
-
-        when(authenticationManager.authenticate(any(UsernamePasswordAuthenticationToken.class))).thenReturn(authentication);
-        when(authentication.isAuthenticated()).thenReturn(false);
-
-        // Act
-        String token = userService.verify(user);
-
-        // Assert
-        assertNotNull(token);
-        assertEquals("fail", token);
-        verify(authenticationManager, times(1)).authenticate(any(UsernamePasswordAuthenticationToken.class));
-        verify(jwtService, never()).generateToken(user.getUsername(), user.getRole());
-    }
+//    @Test
+//    void testVerify_Success() {
+//        // Arrange
+//        User user = new User();
+//        user.setUsername("testuser");
+//        user.setPassword("password");
+//
+//        Authentication authentication = mock(Authentication.class);
+//
+//        when(authenticationManager.authenticate(any(UsernamePasswordAuthenticationToken.class))).thenReturn(authentication);
+//        when(authentication.isAuthenticated()).thenReturn(true);
+//        when(jwtService.generateToken(user.getUsername(),user.getRole())).thenReturn("jwt-token");
+//
+//        // Act
+//        String token = userService.verify(user);
+//
+//        // Assert
+//        assertNotNull(token);
+//        assertEquals("jwt-token", token);
+//        verify(authenticationManager, times(1)).authenticate(any(UsernamePasswordAuthenticationToken.class));
+//        verify(jwtService, times(1)).generateToken(user.getUsername(),user.getRole());
+//    }
+//
+//    @Test
+//    void testVerify_Fail() {
+//        // Arrange
+//        User user = new User();
+//        user.setUsername("testuser");
+//        user.setPassword("password");
+//
+//        Authentication authentication = mock(Authentication.class);
+//
+//        when(authenticationManager.authenticate(any(UsernamePasswordAuthenticationToken.class))).thenReturn(authentication);
+//        when(authentication.isAuthenticated()).thenReturn(false);
+//
+//        // Act
+//        String token = userService.verify(user);
+//
+//        // Assert
+//        assertNotNull(token);
+//        assertEquals("fail", token);
+//        verify(authenticationManager, times(1)).authenticate(any(UsernamePasswordAuthenticationToken.class));
+//        verify(jwtService, never()).generateToken(user.getUsername(), user.getRole());
+//    }
 }

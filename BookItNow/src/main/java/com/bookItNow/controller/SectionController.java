@@ -8,7 +8,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping("/api/v1/sections")
+@RequestMapping("/bookitnow/v1/sections")
 public class SectionController {
 
     @Autowired
@@ -21,7 +21,7 @@ public class SectionController {
      * @param section The section details.
      * @return The created section.
      */
-    @PostMapping("/{eventId}")
+    @PostMapping("/add/{eventId}")
     public ResponseEntity<Section> addSectionToEvent(@PathVariable Integer eventId, @RequestBody Section section) {
         return new ResponseEntity<>(sectionService.createSection(eventId, section), HttpStatus.CREATED);
     }
@@ -58,7 +58,7 @@ public class SectionController {
      * @param sectionId The ID of the section to delete.
      * @return A success message.
      */
-    @DeleteMapping("/{sectionId}")
+    @DeleteMapping("/delete/{sectionId}")
     public ResponseEntity<String> deleteSectionById(@PathVariable Integer sectionId) {
         return new ResponseEntity<>(sectionService.deleteSection(sectionId), HttpStatus.OK);
     }

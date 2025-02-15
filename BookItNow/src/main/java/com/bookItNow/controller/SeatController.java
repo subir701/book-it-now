@@ -9,7 +9,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping("/api/v1/seats")
+@RequestMapping("/bookitnow/v1/seats")
 public class SeatController {
 
     @Autowired

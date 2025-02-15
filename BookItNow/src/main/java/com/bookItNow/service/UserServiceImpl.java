@@ -1,5 +1,6 @@
 package com.bookItNow.service;
 
+import com.bookItNow.dto.UserDTO;
 import com.bookItNow.model.User;
 import com.bookItNow.exception.UserNotFoundException;
 import com.bookItNow.repository.UserRepository;
@@ -9,6 +10,9 @@ import org.springframework.security.authentication.UsernamePasswordAuthenticatio
 import org.springframework.security.core.Authentication;
 import org.springframework.stereotype.Service;
 
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 import java.util.Optional;
 
 @Service
@@ -19,6 +23,9 @@ public class UserServiceImpl implements UserService {
 
     @Autowired
     private JWTService jwtService;
+
+    @Autowired
+    private RefreshTokenService refreshTokenService;
 
     @Autowired
     private AuthenticationManager authenticationManager;
@@ -44,6 +51,11 @@ public class UserServiceImpl implements UserService {
     @Override
     public Optional<User> findByUsername(String username) {
         return userRepository.findByUsername(username);
+    }
+
+    @Override
+    public List<User> findAllUser()throws UserNotFoundException{
+        return userRepository.findAll();
     }
 
     /**
@@ -100,12 +112,21 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public String verify(User user) {
+    public Map<String,String> verify(UserDTO user) {
+        User existingUser = userRepository.findByUsername(user.getUsername()).orElseThrow(()->new UserNotFoundException("User not found with username: " + user.getUsername()));
         Authentication authentication = authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(user.getUsername(), user.getPassword()));
         if(authentication.isAuthenticated()){
-            return jwtService.generateToken(user.getUsername(),user.getRole());
+            String accessToken = jwtService.generateToken(existingUser.getUsername(),existingUser.getRole());
+            String refreshToken = refreshTokenService.createRefreshToken(existingUser.getUsername()).getToken();
+            Map<String, String> map = new HashMap<>();
+
+            map.put("access_token", accessToken);
+            map.put("refresh_token", refreshToken);
+            return map;
+        }else{
+            throw new UserNotFoundException("Invalid username or password");
         }
 
-        return "fail";
+
     }
 }

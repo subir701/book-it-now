@@ -6,23 +6,23 @@
 
 ## Features
 
--**Multithreading:** Efficient ticket booking for concurrent users.
+- **Multithreading:** Efficient ticket booking for concurrent users.
 
---**Implementation:** The system uses Java's multithreading to manage simultaneous ticket bookings. Conflicts are prevented by synchronized blocks and thread-safe collections.
+-- **Implementation:** The system uses Java's multithreading to manage simultaneous ticket bookings. Conflicts are prevented by synchronized blocks and thread-safe collections.
 
--**Security:** Implements JWT-based authentication and authorization.
+- **Security:** Implements JWT-based authentication and authorization.
 
---**Implementation:** JWT tokens are issued upon login and must be provided with each request in the Authorization header.
+-- **Implementation:** JWT tokens are issued upon login and must be provided with each request in the Authorization header.
 
--**Swagger Integration:** The Swagger UI allows token authentication for testing endpoints.
+- **Swagger Integration:** The Swagger UI allows token authentication for testing endpoints.
 
--**User Management:** Includes roles for USER and ADMIN.
+- **User Management:** Includes roles for USER and ADMIN.
 
---**Implementation:** Role-based access control (RBAC) ensures certain endpoints are restricted to admin roles.
+-- **Implementation:** Role-based access control (RBAC) ensures certain endpoints are restricted to admin roles.
 
--**Data Persistence:** Stores booking data securely.
+- **Data Persistence:** Stores booking data securely.
 
---**Implementation:** Booking details are stored using JPA in a relational database.
+-- **Implementation:** Booking details are stored using JPA in a relational database.
 
 ---
 
@@ -98,22 +98,22 @@ BookItNow/
 └── loggingfolder      # Application logs
 ```
 ---
-##Using Postman and Swagger for Testing
-###Postman:
+## Using Postman and Swagger for Testing
+### Postman:
 
--Import the API collection and set environment variables (e.g., base_url, auth_token).
+- Import the API collection and set environment variables (e.g., base_url, auth_token).
 
--Test login, booking, and user management by sending requests to corresponding endpoints.
+- Test login, booking, and user management by sending requests to corresponding endpoints.
 
--For multithreading, use Postman’s Collection Runner to send multiple parallel requests.
+- For multithreading, use Postman’s Collection Runner to send multiple parallel requests.
 
-###Swagger:
+### Swagger:
 
--Access the Swagger UI (usually available at http://localhost:8080/swagger-ui.html after starting the application).
+- Access the Swagger UI (usually available at http://localhost:8080/swagger-ui.html after starting the application).
 
--Use the Authorize button to add JWT tokens.
+- Use the Authorize button to add JWT tokens.
 
--Test all available endpoints directly from the Swagger interface.
+- Test all available endpoints directly from the Swagger interface.
 ---
 ## API Endpoints
 

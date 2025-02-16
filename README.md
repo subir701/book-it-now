@@ -147,33 +147,33 @@ BookItNow/
 - `DELETE /bookitnow/v1/bookings/delete/{id}`: Delete a booking.
 ---
 ## Future Improvements
-- **Transition to Microservices:**\n
-Plan: Gradually decompose the monolithic architecture into smaller, independently deployable microservices.
+- **Transition to Microservices:**\
+  - Plan: Gradually decompose the monolithic architecture into smaller, independently deployable microservices.
 
-Benefits: Improved scalability, better fault isolation, and easier updates for individual components.
+  - Benefits: Improved scalability, better fault isolation, and easier updates for individual components.
 
-Implementation Strategy: Break down booking, user management, notifications, and payment services into separate modules.
+  - Implementation Strategy: Break down booking, user management, notifications, and payment services into separate modules.
 
-- **Enhanced Notification System:**\n
-Plan: Expand the notification system to include email and SMS services.
+- **Enhanced Notification System:**\
+  - Plan: Expand the notification system to include email and SMS services.
 
-Benefits: Users will have multiple channels to receive booking confirmations and updates.
+  - Benefits: Users will have multiple channels to receive booking confirmations and updates.
 
-Implementation Strategy: Integrate external notification services like Twilio or SendGrid.
+  - Implementation Strategy: Integrate external notification services like Twilio or SendGrid.
 
-- **Caching Mechanism:**\n
-Plan: Implement caching to reduce database load and improve response times.
+- **Caching Mechanism:**\
+  - Plan: Implement caching to reduce database load and improve response times.
 
-Benefits: Faster read performance for frequently accessed data.
+  - Benefits: Faster read performance for frequently accessed data.
 
-Implementation Strategy: Use Redis or Ehcache for caching.
+  - Implementation Strategy: Use Redis or Ehcache for caching.
 
-- **Email Notifications:**\n
-Notify users upon successful bookings.
+- **Email Notifications:**\
+  - Notify users upon successful bookings.
 
-- **API Gateway Integration:**\n
-Plan: Implement an API Gateway for better routing, load balancing, and security.
+- **API Gateway Integration:**\
+  - Plan: Implement an API Gateway for better routing, load balancing, and security.
 
-Benefits: Centralized control over all service interactions.
+  - Benefits: Centralized control over all service interactions.
 
-Implementation Strategy: Use tools like Spring Cloud Gateway or Zuul.
+  - Implementation Strategy: Use tools like Spring Cloud Gateway or Zuul.

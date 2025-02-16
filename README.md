@@ -147,31 +147,31 @@ BookItNow/
 - `DELETE /bookitnow/v1/bookings/delete/{id}`: Delete a booking.
 ---
 ## Future Improvements
-- **Transition to Microservices:**\
+- **Transition to Microservices:**
   - Plan: Gradually decompose the monolithic architecture into smaller, independently deployable microservices.
 
   - Benefits: Improved scalability, better fault isolation, and easier updates for individual components.
 
   - Implementation Strategy: Break down booking, user management, notifications, and payment services into separate modules.
 
-- **Enhanced Notification System:**\
+- **Enhanced Notification System:**
   - Plan: Expand the notification system to include email and SMS services.
 
   - Benefits: Users will have multiple channels to receive booking confirmations and updates.
 
   - Implementation Strategy: Integrate external notification services like Twilio or SendGrid.
 
-- **Caching Mechanism:**\
+- **Caching Mechanism:**
   - Plan: Implement caching to reduce database load and improve response times.
 
   - Benefits: Faster read performance for frequently accessed data.
 
   - Implementation Strategy: Use Redis or Ehcache for caching.
 
-- **Email Notifications:**\
+- **Email Notifications:**
   - Notify users upon successful bookings.
 
-- **API Gateway Integration:**\
+- **API Gateway Integration:**
   - Plan: Implement an API Gateway for better routing, load balancing, and security.
 
   - Benefits: Centralized control over all service interactions.

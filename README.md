@@ -8,21 +8,21 @@
 
 - **Multithreading:** Efficient ticket booking for concurrent users.
 
--- **Implementation:** The system uses Java's multithreading to manage simultaneous ticket bookings. Conflicts are prevented by synchronized blocks and thread-safe collections.
+  - **Implementation:** The system uses Java's multithreading to manage simultaneous ticket bookings. Conflicts are prevented by synchronized blocks and thread-safe collections.
 
 - **Security:** Implements JWT-based authentication and authorization.
 
--- **Implementation:** JWT tokens are issued upon login and must be provided with each request in the Authorization header.
+  - **Implementation:** JWT tokens are issued upon login and must be provided with each request in the Authorization header.
 
 - **Swagger Integration:** The Swagger UI allows token authentication for testing endpoints.
 
 - **User Management:** Includes roles for USER and ADMIN.
 
--- **Implementation:** Role-based access control (RBAC) ensures certain endpoints are restricted to admin roles.
+  - **Implementation:** Role-based access control (RBAC) ensures certain endpoints are restricted to admin roles.
 
 - **Data Persistence:** Stores booking data securely.
 
--- **Implementation:** Booking details are stored using JPA in a relational database.
+  - **Implementation:** Booking details are stored using JPA in a relational database.
 
 ---
 
@@ -83,7 +83,7 @@ Run the application:
 ```
 The application will start at **http://localhost:8080**.
 ---
-##Project Structure
+## Project Structure
 ```bash
 BookItNow/
 ├── src
@@ -147,27 +147,31 @@ BookItNow/
 - `DELETE /bookitnow/v1/bookings/delete/{id}`: Delete a booking.
 ---
 ## Future Improvements
-- **Transition to Microservices:**
+- **Transition to Microservices:**\n
 Plan: Gradually decompose the monolithic architecture into smaller, independently deployable microservices.
 
 Benefits: Improved scalability, better fault isolation, and easier updates for individual components.
 
 Implementation Strategy: Break down booking, user management, notifications, and payment services into separate modules.
-- **Enhanced Notification System:**
+
+- **Enhanced Notification System:**\n
 Plan: Expand the notification system to include email and SMS services.
 
 Benefits: Users will have multiple channels to receive booking confirmations and updates.
 
 Implementation Strategy: Integrate external notification services like Twilio or SendGrid.
-- **Caching Mechanism:**
+
+- **Caching Mechanism:**\n
 Plan: Implement caching to reduce database load and improve response times.
 
 Benefits: Faster read performance for frequently accessed data.
 
 Implementation Strategy: Use Redis or Ehcache for caching.
-- **Email Notifications:**
+
+- **Email Notifications:**\n
 Notify users upon successful bookings.
-- **API Gateway Integration:**
+
+- **API Gateway Integration:**\n
 Plan: Implement an API Gateway for better routing, load balancing, and security.
 
 Benefits: Centralized control over all service interactions.

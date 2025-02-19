@@ -1,6 +1,6 @@
 # BookItNow: Online Ticket Booking System
 
-**BookItNow** is a modern online ticket booking system designed to simplify the process of reserving tickets for events. Built with Spring Boot, it features robust APIs for managing users, events, sections, seats, and bookings. The application includes JWT-based authentication for secure access and aims to provide a seamless experience for both event organizers and attendees. Its modular architecture makes it scalable, easy to maintain, and ready for future enhancements like role-based access control.
+**BookItNow** is a modern online ticket booking system designed to simplify the process of reserving tickets for events. Built with Spring Boot, it features robust APIs for managing users, events, sections, seats, and bookings. The application includes JWT-based authentication for secure access and aims to provide a seamless experience for both event organizers and attendees. Its modular architecture makes it scalable, easy to maintain.
 
 ---
 

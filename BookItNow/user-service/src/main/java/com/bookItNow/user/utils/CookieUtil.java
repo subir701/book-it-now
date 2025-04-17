@@ -1,4 +1,4 @@
-package com.bookItNow.util;
+package com.bookItNow.user.utils;
 
 import jakarta.servlet.http.Cookie;
 import jakarta.servlet.http.HttpServletResponse;

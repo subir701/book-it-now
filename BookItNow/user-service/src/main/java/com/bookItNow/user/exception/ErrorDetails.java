@@ -1,4 +1,4 @@
-package com.bookItNow.exception;
+package com.bookItNow.user.exception;
 
 import java.time.LocalDateTime;
 

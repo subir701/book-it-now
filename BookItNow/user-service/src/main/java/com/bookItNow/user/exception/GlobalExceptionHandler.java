@@ -1,7 +1,6 @@
-package com.bookItNow.exception;
+package com.bookItNow.user.exception;
 
 
-import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ExceptionHandler;

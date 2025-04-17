@@ -1,4 +1,4 @@
-package com.bookItNow.exception;
+package com.bookItNow.user.exception;
 
 public class TicketNotFoundException extends RuntimeException {
 

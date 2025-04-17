@@ -1,7 +1,7 @@
 package com.bookItNow.user.security;
 
-import com.bookItNow.service.JWTService;
-import com.bookItNow.service.MyUserDetailsService;
+import com.bookItNow.user.service.JWTService;
+import com.bookItNow.user.service.MyUserDetailsService;
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;

@@ -20,8 +20,13 @@
 ### 🧵 **Multithreading for Concurrency**
 - Optimized for high traffic booking scenarios using synchronized blocks and thread-safe structures in Booking Service.
 
-### 📬 **Event-Driven Communication**
-- **RabbitMQ:** Used for inter-service communication (e.g., PaymentConfirmed → BookingUpdate).
+### 📨 **Messaging Architecture**
+- **Kafka:** Used for high-volume messaging (e.g., seat status updates)
+- Topic: reservation.create, reservation.cancel, etc.
+- **RabbitMQ Queues:**
+- seat.status.update.queue: Updates seat status after booking
+- payment.confirmation.queue: Confirms payment and triggers booking
+- notification.queue: Sends booking confirmation notifications
 - Ensures transactional consistency across distributed services.
 
 ### 🔍 **Swagger Integration**
@@ -38,7 +43,7 @@
 |----------------|----------------------------------|
 | **Backend**    | Spring Boot, Spring Cloud        |
 | **Auth**       | JWT, Spring Security             |
-| **Messaging**  | RabbitMQ                         |
+| **Messaging**  | RabbitMQ, Kafka                  |
 | **Database**   | PostgreSQL                       |
 | **Discovery**  | Eureka                           |
 | **Gateway**    | Spring Cloud Gateway             |
@@ -54,6 +59,7 @@
 - Java 17+
 - Gradle
 - RabbitMQ Server (locally or via Docker)
+- Kafka and Zookeeper
 - PostgreSQL
 - IntelliJ / Eclipse / VS Code
 
@@ -99,6 +105,8 @@ bookitnow/
 ├── booking-service/
 ├── payment-service/
 ├── common-lib/            # Shared models and utilities
+├── loggingfolder/
+│   └── *.log
 └── build.gradle
 ```
 
@@ -139,6 +147,17 @@ bookitnow/
 ### Postman
 - Use collection runner for stress testing booking concurrency.
 - Pass JWT tokens in headers for protected routes.
+
+### 📨 Messaging Architecture
+**Kafka**
+- Used for high-volume messaging (e.g., seat status updates)
+- **Topic:** reservation.create, reservation.cancel, etc.
+
+**RabbitMQ**
+- **Queues:**
+- **seat.status.update.queue:** Updates seat status after booking
+- **payment.confirmation.queue:** Confirms payment and triggers booking
+- **notification.queue:** Sends booking confirmation notifications
 
 ---
 

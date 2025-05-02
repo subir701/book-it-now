@@ -98,7 +98,6 @@ bookitnow/
 ├── seat-service/
 ├── booking-service/
 ├── payment-service/
-├── notification-service/
 ├── common-lib/            # Shared models and utilities
 └── build.gradle
 ```
@@ -155,6 +154,3 @@ bookitnow/
 | **Monitoring**           | Add Prometheus + Grafana for metrics |
 
 ---
-
-## 🧑‍💻 Contributing
-Contributions are welcome! Feel free to open issues or submit PRs.

@@ -4,41 +4,36 @@ import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.io.Decoders;
 import io.jsonwebtoken.security.Keys;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Service;
 
-import javax.crypto.KeyGenerator;
 import javax.crypto.SecretKey;
-import java.security.NoSuchAlgorithmException;
-import java.util.Base64;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.UUID;
 import java.util.function.Function;
 
 @Service
 public class JWTService {
 
-    private String secert = "";
+    @Value("${jwt.secret}")
+    private String secert;
+    private SecretKey key;
 
-    public JWTService(){
-        try{
-            KeyGenerator keyGen = KeyGenerator.getInstance("HmacSHA256");
-            SecretKey sk = keyGen.generateKey();
-            secert = Base64.getEncoder().encodeToString(sk.getEncoded());
-        }catch (NoSuchAlgorithmException ex){
-            throw new RuntimeException(ex);
-        }
-    }
-
-    public String generateToken(String username, String role) {
+    public String generateToken(String username, String role, int userId) {
 
         Map<String, Object> claims = new HashMap<String, Object>();
         claims.put("role",role);
+        claims.put("userId",userId);
+
+        String jti = UUID.randomUUID().toString();
 
         return Jwts.builder()
                 .claims()
+                .id(jti)
                 .add(claims)
                 .subject(username)
                 .issuedAt(new Date(System.currentTimeMillis()))
@@ -89,6 +84,20 @@ public class JWTService {
         return role;
     }
 
+    public int extractUserId(String token){
+        int userId = Jwts.parser()
+                .verifyWith(getKey())
+                .build()
+                .parseSignedClaims(token)
+                .getPayload()
+                .get("userId", Integer.class);
+
+        return userId;
+    }
+
+    public String extractJti(String token){
+        return extractClaims(token, Claims::getId);
+    }
 
     public boolean validateToken(String token, UserDetails userDetails) {
         final String username = extractUserName(token);

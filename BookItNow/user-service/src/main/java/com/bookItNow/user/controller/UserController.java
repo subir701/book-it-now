@@ -3,14 +3,16 @@ package com.bookItNow.user.controller;
 import com.bookItNow.common.dto.UserDTO;
 import com.bookItNow.common.dto.UserResponseDTO;
 import com.bookItNow.common.dto.UserLoginDTO;
+import com.bookItNow.user.model.MyUserDetails;
 import com.bookItNow.user.model.User;
 import com.bookItNow.user.service.UserService;
 import com.bookItNow.user.utils.CookieUtil;
 import jakarta.servlet.http.HttpServletResponse;
 import jakarta.validation.Valid;
-import org.springframework.beans.factory.annotation.Autowired;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.core.Authentication;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.web.bind.annotation.*;
 
@@ -19,15 +21,17 @@ import java.util.Map;
 
 @RestController
 @RequestMapping("/bookitnow/v1/users")
+@Slf4j
 public class UserController {
 
-    @Autowired
-    private UserService userService;
+    private final UserService userService;
 
-//    @Autowired
-//    private SeatService seatService;
+    private final BCryptPasswordEncoder bCryptPasswordEncoder ;
 
-    private BCryptPasswordEncoder bCryptPasswordEncoder = new BCryptPasswordEncoder(12);
+    public UserController(UserService userService) {
+        this.userService = userService;
+        this.bCryptPasswordEncoder = new BCryptPasswordEncoder(12);
+    }
 
     /**
      * Login a user.
@@ -37,8 +41,10 @@ public class UserController {
      * @return Success or error message based on credentials.
      */
     @PostMapping("/login")
-    public ResponseEntity<?> loginUser(@RequestBody UserLoginDTO user, HttpServletResponse response) throws Exception {
+    public ResponseEntity<?> loginUser(@RequestBody @Valid UserLoginDTO user, HttpServletResponse response) throws Exception {
         Map<String, String> token = userService.verify(user);
+
+        log.info("User '{}' logged in successfully", user.getUsername());
 
         System.out.println(token.get("access_token"));
 
@@ -46,6 +52,18 @@ public class UserController {
         CookieUtil.addCookie(response,"refreshToken",token.get("refresh_token"),60000);
 
         return ResponseEntity.ok("Logged In");
+    }
+
+    @PostMapping("/logout")
+    public ResponseEntity<?> logoutUser(Authentication authentication){
+
+//        Get your custom UserDetails from the context
+        MyUserDetails userDetails = (MyUserDetails) authentication.getPrincipal();
+
+//        Pass the ID directly to the service
+        userService.logout(userDetails.getId());
+
+        return ResponseEntity.ok("Successfully logged out");
     }
 
 
@@ -61,6 +79,8 @@ public class UserController {
     public ResponseEntity<UserResponseDTO> registerUser(@Valid @RequestBody UserDTO user) {
         user.setPassword(bCryptPasswordEncoder.encode(user.getPassword()));
         UserResponseDTO createdUser = userService.createUser(user);
+
+        log.info("New user '{}' registered successfully", createdUser.getUsername());
         return new ResponseEntity<>(createdUser, HttpStatus.CREATED);
     }
 
@@ -72,6 +92,7 @@ public class UserController {
      */
     @GetMapping("/details/{id}")
     public ResponseEntity<?> getUserById(@PathVariable int id) {
+
         return ResponseEntity.ok(userService.findById(id));
     }
 
@@ -85,6 +106,7 @@ public class UserController {
     @PutMapping("/update/{id}")
     public ResponseEntity<?> updateUserDetails(@PathVariable Integer id, @RequestBody User user) {
         user.setId(id);
+        log.info("Updating user with ID: {}", id);
         return ResponseEntity.ok(userService.updateUser(user));
     }
 
@@ -100,21 +122,29 @@ public class UserController {
         return ResponseEntity.noContent().build();
     }
 
-    /**
-     * Select a seat for an event.
-     *
-     * @param userId The ID of the user selecting the seat.
-     * @param seatId The ID of the seat being selected.
-     * @return A success message.
-     */
-//    @PutMapping("/{userId}/seats/{seatId}/select")
-//    public ResponseEntity<?> selectSeat(@PathVariable Integer userId, @PathVariable Integer seatId) {
-//        seatService.selectSeats(userId, seatId);
-//        return ResponseEntity.ok("Seat " + seatId + " has been successfully selected by user " + userId);
-//    }
 
     @GetMapping("/all")
     public ResponseEntity<List<User>> getAllUsers() {
+        log.info("Fetching all users");
         return new ResponseEntity<>(userService.findAllUser(), HttpStatus.OK);
     }
+
+    @GetMapping("/username/{username}")
+    public ResponseEntity<UserResponseDTO> getUserByUsername(@PathVariable String username) {
+        log.info("Fetching user by username: {}", username);
+        return ResponseEntity.ok(userService.findByUsername(username));
+    }
+
+    @GetMapping("/email/{email}")
+    public ResponseEntity<UserResponseDTO> getUserByEmail(@PathVariable String email) {
+        log.info("Fetching user by email: {}", email);
+        return ResponseEntity.ok(userService.findByEmail(email));
+    }
+
+    @GetMapping("/{userId}/bookings")
+    public ResponseEntity<List<String>> getUserBookings(@PathVariable int userId) {
+        log.info("Fetching bookings for user ID: {}", userId);
+        return ResponseEntity.ok(userService.getUserBookings(userId));
+    }
+
 }

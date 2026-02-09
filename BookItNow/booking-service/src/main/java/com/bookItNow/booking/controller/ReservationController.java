@@ -4,12 +4,10 @@ import com.bookItNow.booking.exception.ReservationNotFoundException;
 import com.bookItNow.booking.model.Reservation;
 import com.bookItNow.booking.service.ReservationService;
 import com.bookItNow.common.dto.ReservationDTO;
+import com.bookItNow.common.event.ReservationEvent;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("bookitnow/v1/reservations")
@@ -30,4 +28,5 @@ public class ReservationController {
 
         return ResponseEntity.ok(reservationDTO);
     }
+
 }

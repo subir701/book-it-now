@@ -7,7 +7,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
-@ConditionalOnProperty(name=" messaging.rabbit.enabled", havingValue = "true")
+@ConditionalOnProperty(name="messaging.rabbit.enabled", havingValue = "true")
 public class RabbitConfig {
     // --- Queue ---
     @Value("${rabbitmq.payment.confirmed.queue}")

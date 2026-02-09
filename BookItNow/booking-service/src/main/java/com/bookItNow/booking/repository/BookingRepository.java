@@ -11,4 +11,6 @@ public interface BookingRepository extends JpaRepository<Booking, Integer> {
 
     // Custom query to find bookings by user ID
     List<Booking> findByUserId(int userId);
+
+    boolean existsByPaymentId(String paymentId);
 }

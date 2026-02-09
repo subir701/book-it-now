@@ -32,18 +32,6 @@ public class JWTService {
     }
 
 
-//    Dynamic key generation
-//    issue was whenever application get restart all the previous generated token will be invalid
-//    public JWTService(){
-//        try{
-//            KeyGenerator keyGen = KeyGenerator.getInstance("HmacSHA256");
-//            SecretKey sk = keyGen.generateKey();
-//            secert = Base64.getEncoder().encodeToString(sk.getEncoded());
-//        }catch (NoSuchAlgorithmException ex){
-//            throw new RuntimeException(ex);
-//        }
-//    }
-
     public String generateToken(String username, String role) {
 
         Map<String, Object> claims = new HashMap<String, Object>();
@@ -101,6 +89,21 @@ public class JWTService {
         return role;
     }
 
+    public String extractJti(String token){
+        return extractClaims(token, Claims::getId);
+    }
+
+    public int extractUserId(String token){
+        int userId = Jwts.parser()
+                .verifyWith(getKey())
+                .build()
+                .parseSignedClaims(token)
+                .getPayload()
+                .get("userId", Integer.class);
+
+        return userId;
+    }
+
 
 //    public boolean validateToken(String token, UserDetails userDetails) {
 //        final String username = extractUserName(token);
@@ -115,7 +118,7 @@ public class JWTService {
         return extractExpriation(token).before(new Date());
     }
 
-    private Date extractExpriation(String token) {
+    public Date extractExpriation(String token) {
         return extractClaims(token, Claims::getExpiration);
     }
 }

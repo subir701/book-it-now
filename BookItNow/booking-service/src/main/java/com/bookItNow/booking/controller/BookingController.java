@@ -4,19 +4,22 @@ import com.bookItNow.booking.model.Booking;
 
 import com.bookItNow.booking.service.BookingService;
 import com.bookItNow.common.event.ConfirmedPaymentEvent;
+import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
+import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
 @RestController
 @RequestMapping("/bookitnow/v1/bookings")
+@RequiredArgsConstructor
 public class BookingController {
 
-    @Autowired
-    private BookingService bookingService;
+    private final BookingService bookingService;
 
     /**
      * Create a new booking for a user.
@@ -25,6 +28,7 @@ public class BookingController {
      * @return The created booking.
      */
     @PostMapping("/new/{userId}")
+    @PreAuthorize("hasAnyRole('ADMIN','USER')")
     public ResponseEntity<Booking> addBooking(@RequestBody ConfirmedPaymentEvent event)  {
         Booking booking = bookingService.createBooking(event);
         return new ResponseEntity<>(booking, HttpStatus.CREATED);
@@ -37,8 +41,10 @@ public class BookingController {
      * @return A list of bookings associated with the user.
      */
     @GetMapping("/user/{userId}")
-    public ResponseEntity<List<Booking>> fetchBookingsByUser(@PathVariable Integer userId) {
-        List<Booking> bookings = bookingService.findByUserId(userId);
+    @PreAuthorize("hasAnyRole('ADMIN','USER')")
+    public ResponseEntity<List<Booking>> fetchBookingsByUser(@AuthenticationPrincipal String userId) {
+        int id = Integer.parseInt(userId);
+        List<Booking> bookings = bookingService.findByUserId(id);
         return ResponseEntity.ok(bookings);
     }
 
@@ -49,6 +55,7 @@ public class BookingController {
      * @return No content status upon successful deletion.
      */
     @DeleteMapping("/delete/{id}")
+    @PreAuthorize("hasAnyRole('ADMIN', 'USER')")
     public ResponseEntity<Void> removeBooking(@PathVariable Integer id) {
         bookingService.deleteBooking(id);
         return ResponseEntity.noContent().build();

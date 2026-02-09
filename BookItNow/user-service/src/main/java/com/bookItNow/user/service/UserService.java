@@ -21,4 +21,6 @@ public interface UserService {
     void deleteUser(int userId)throws UserNotFoundException;
     Map<String, String> verify(UserLoginDTO user);
     List<String> getUserBookings(int userId);
+
+    void logout(int userId)throws UserNotFoundException;
 }

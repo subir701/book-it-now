@@ -15,16 +15,17 @@ import java.util.HashMap;
 import java.util.Map;
 
 @Configuration
-@ConditionalOnProperty(name=" messaging.kafka.enabled", havingValue = "true")
+@ConditionalOnProperty(name="messaging.kafka.enabled", havingValue = "true")
 public class KafkaConfig {
 
     @Bean
     public ProducerFactory<String, ReservationEvent> producerFactory() {
-        Map<String, Object> configProps = new HashMap<String, Object>();
+        Map<String, Object> configProps = new HashMap<>();
         configProps.put(ProducerConfig.BOOTSTRAP_SERVERS_CONFIG, "localhost:9092");
         configProps.put(ProducerConfig.KEY_SERIALIZER_CLASS_CONFIG, StringSerializer.class);
-        configProps.put(ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG, StringSerializer.class);
-        return new DefaultKafkaProducerFactory<String, ReservationEvent>(configProps);
+        // Use JsonSerializer here!
+        configProps.put(ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG, org.springframework.kafka.support.serializer.JsonSerializer.class);
+        return new DefaultKafkaProducerFactory<>(configProps);
     }
 
     @Bean

@@ -7,32 +7,40 @@ import com.bookItNow.event.exception.SectionNotFoundException;
 import com.bookItNow.event.repository.EventRepository;
 import com.bookItNow.event.repository.SeatRepository;
 import com.bookItNow.event.repository.SectionRepository;
+import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.ArrayList;
 import java.util.List;
 
 @Service
+@RequiredArgsConstructor
+@Slf4j
 public class SectionServiceImpl implements SectionService {
 
-    @Autowired
-    SectionRepository sectionRepository;
+    private final SectionRepository sectionRepository;
 
-    @Autowired
-    SeatRepository seatRepository;
+    private final SeatRepository seatRepository;
 
-    @Autowired
-    EventRepository eventRepository;
+    private final EventRepository eventRepository;
 
     @Override
     public Section findSectionById(int id) throws SectionNotFoundException {
         // Fetch section by its ID or throw an exception if not found.
+        log.info("Finding section with ID: {}", id);
+
         return sectionRepository.findById(id)
-                .orElseThrow(() -> new SectionNotFoundException("Section not found!!"));
+                .orElseThrow(() -> {
+                    log.error("Section with ID {} not found!", id);
+                    return new SectionNotFoundException("Section not found!!");
+                });
     }
 
     @Override
+    @Transactional
     public Section createSection(int eventId, Section section) throws RuntimeException {
         // Fetch the event associated with the section.
         Event event = eventRepository.findById(eventId)
@@ -51,9 +59,8 @@ public class SectionServiceImpl implements SectionService {
             section.setSeats(new ArrayList<>());
         }
 
-
         // Generate a dynamic section label (e.g., A, B, AA, etc.).
-        int size = sectionRepository.countByEventId(eventId);
+        int size = event.getSections().size();
         String sectionLabel = getSectionLabel(size);
 
         // Create and associate seats with the saved section.
@@ -66,11 +73,14 @@ public class SectionServiceImpl implements SectionService {
             seats.add(seat);
         }
 
-        // Associate seats with the section before saving.
         section.setSeats(seats);
+        event.getSections().add(section);
 
-        // Save the section and cascade to seats (if cascade is set properly in your entity).
-        return sectionRepository.save(section);
+        // 3. ONE SAVE to rule them all
+        // Because of CascadeType.ALL, saving the event saves the section AND the seats.
+        eventRepository.save(event);
+
+        return section;
     }
 
     // Utility method to generate dynamic section labels like A, B, AA, AB, etc.
@@ -94,11 +104,13 @@ public class SectionServiceImpl implements SectionService {
     @Override
     public Section updateSectionCapacity(int id, int updateCapacity) throws SectionNotFoundException {
         // Fetch the section by ID and its current seats.
+        log.info("Updating capacity of section with ID {} to {}.", id, updateCapacity);
         Section section = findSectionById(id);
         List<Seat> seats = section.getSeats();
 
         if (updateCapacity > seats.size()) {
             // Add new seats if the updated capacity exceeds current seat count.
+            log.info("Increasing section capacity by adding {} seats.", updateCapacity - seats.size());
             for (int i = seats.size() + 1; i <= updateCapacity; i++) {
                 Seat seat = new Seat();
                 seat.setSeatNumber(section.getName() + i); // Use section name + number for new seats.
@@ -107,8 +119,10 @@ public class SectionServiceImpl implements SectionService {
             }
         } else if (updateCapacity < seats.size()) {
             // Reduce seats, but ensure no booked seat is being removed.
+            log.info("Reducing section capacity by removing {} seats.", seats.size() - updateCapacity);
             for (int i = seats.size() - 1; i >= updateCapacity; i--) {
                 if (seats.get(i).isBooked()) {
+                    log.error("Cannot remove booked seat at position {}", i);
                     throw new RuntimeException("Cannot reduce capacity: Some seats are already booked.");
                 }
                 seats.remove(i); // Remove seats from the list.

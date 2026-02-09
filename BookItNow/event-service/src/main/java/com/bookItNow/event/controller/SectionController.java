@@ -2,17 +2,19 @@ package com.bookItNow.event.controller;
 
 import com.bookItNow.event.model.Section;
 import com.bookItNow.event.service.SectionService;
+import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/bookitnow/v1/sections")
+@RequiredArgsConstructor
 public class SectionController {
 
-    @Autowired
-    private SectionService sectionService;
+    private final SectionService sectionService;
 
     /**
      * Add a new section to an event.
@@ -22,7 +24,9 @@ public class SectionController {
      * @return The created section.
      */
     @PostMapping("/add/{eventId}")
+    @PreAuthorize("hasRole('ADMIN')")
     public ResponseEntity<Section> addSectionToEvent(@PathVariable Integer eventId, @RequestBody Section section) {
+        System.out.println("We reach the controller layer");
         return new ResponseEntity<>(sectionService.createSection(eventId, section), HttpStatus.CREATED);
     }
 
@@ -34,6 +38,7 @@ public class SectionController {
      * @return The updated section.
      */
     @PutMapping("/{sectionId}/capacity/{capacity}")
+    @PreAuthorize("hasRole('ADMIN')")
     public ResponseEntity<Section> updateSectionCapacity(
             @PathVariable Integer sectionId,
             @PathVariable Integer capacity
@@ -48,6 +53,7 @@ public class SectionController {
      * @return The section details.
      */
     @GetMapping("/view/{sectionId}")
+    @PreAuthorize("hasRole('ADMIN')")
     public ResponseEntity<Section> getSectionById(@PathVariable Integer sectionId) {
         return new ResponseEntity<>(sectionService.findSectionById(sectionId), HttpStatus.OK);
     }
@@ -59,6 +65,7 @@ public class SectionController {
      * @return A success message.
      */
     @DeleteMapping("/delete/{sectionId}")
+    @PreAuthorize("hasRole('ADMIN')")
     public ResponseEntity<String> deleteSectionById(@PathVariable Integer sectionId) {
         return new ResponseEntity<>(sectionService.deleteSection(sectionId), HttpStatus.OK);
     }

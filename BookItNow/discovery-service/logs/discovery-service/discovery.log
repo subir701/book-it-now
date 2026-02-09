@@ -1,0 +1,1260 @@
+2025-04-18 21:44:20 [main] INFO  c.b.discovery.DiscoveryApplication - Starting DiscoveryApplication using Java 17.0.14 with PID 73035 (/home/ironman/book-it-now/BookItNow/discovery-service/build/classes/java/main started by ironman in /home/ironman/book-it-now/BookItNow/discovery-service)
+2025-04-18 21:44:20 [main] INFO  c.b.discovery.DiscoveryApplication - No active profile set, falling back to 1 default profile: "default"
+2025-04-18 21:44:27 [main] INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=7c151485-92d3-3efd-9fed-aa6526449e7e
+2025-04-18 21:44:29 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8761 (http)
+2025-04-18 21:44:29 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8761"]
+2025-04-18 21:44:29 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-04-18 21:44:29 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.33]
+2025-04-18 21:44:29 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-04-18 21:44:29 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 8759 ms
+2025-04-18 21:44:32 [main] INFO  c.n.d.p.DiscoveryJerseyProvider - Using JSON encoding codec LegacyJacksonJson
+2025-04-18 21:44:32 [main] INFO  c.n.d.p.DiscoveryJerseyProvider - Using JSON decoding codec LegacyJacksonJson
+2025-04-18 21:44:33 [main] INFO  c.n.d.p.DiscoveryJerseyProvider - Using XML encoding codec XStreamXml
+2025-04-18 21:44:33 [main] INFO  c.n.d.p.DiscoveryJerseyProvider - Using XML decoding codec XStreamXml
+2025-04-18 21:44:36 [main] INFO  o.s.cloud.commons.util.InetUtils - Cannot determine local hostname
+2025-04-18 21:44:37 [main] INFO  o.s.cloud.commons.util.InetUtils - Cannot determine local hostname
+2025-04-18 21:44:38 [main] WARN  o.s.c.l.c.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger - Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2025-04-18 21:44:38 [main] INFO  o.s.c.n.eureka.InstanceInfoFactory - Setting initial instance status as: STARTING
+2025-04-18 21:44:38 [main] INFO  c.netflix.discovery.DiscoveryClient - Initializing Eureka in region us-east-1
+2025-04-18 21:44:38 [main] INFO  c.netflix.discovery.DiscoveryClient - Client configured to neither register nor query for data.
+2025-04-18 21:44:38 [main] INFO  c.netflix.discovery.DiscoveryClient - Discovery Client initialized at timestamp 1744992878394 with initial instances count: 0
+2025-04-18 21:44:37 [main] INFO  c.n.e.DefaultEurekaServerContext - Initializing ...
+2025-04-18 21:44:37 [main] DEBUG c.n.discovery.endpoint.EndpointUtils - The availability zone for the given region us-east-1 are [defaultZone]
+2025-04-18 21:44:37 [main] WARN  c.n.eureka.cluster.PeerEurekaNodes - The replica size seems to be empty. Check the route 53 DNS Registry
+2025-04-18 21:44:37 [main] INFO  c.n.e.r.AbstractInstanceRegistry - Finished initializing remote region registries. All known remote regions: []
+2025-04-18 21:44:37 [main] INFO  c.n.e.DefaultEurekaServerContext - Initialized
+2025-04-18 21:44:37 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 1 endpoint beneath base path '/actuator'
+2025-04-18 21:44:37 [main] INFO  o.s.c.n.e.s.EurekaServiceRegistry - Registering application UNKNOWN with eureka with status UP
+2025-04-18 21:44:37 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8761"]
+2025-04-18 21:44:38 [Thread-10] INFO  o.s.c.n.e.s.EurekaServerBootstrap - isAws returned false
+2025-04-18 21:44:38 [Thread-10] INFO  o.s.c.n.e.s.EurekaServerBootstrap - Initialized server context
+2025-04-18 21:44:38 [Thread-10] INFO  c.n.e.r.PeerAwareInstanceRegistryImpl - Got 1 instances from neighboring DS node
+2025-04-18 21:44:38 [Thread-10] INFO  c.n.e.r.PeerAwareInstanceRegistryImpl - Renew threshold is: 1
+2025-04-18 21:44:38 [Thread-10] INFO  c.n.e.r.PeerAwareInstanceRegistryImpl - Changing status to UP
+2025-04-18 21:44:38 [Thread-10] INFO  o.s.c.n.e.s.EurekaServerInitializerConfiguration - Started Eureka Server
+2025-04-18 21:44:38 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8761 (http) with context path '/'
+2025-04-18 21:44:38 [main] INFO  o.s.c.n.e.s.EurekaAutoServiceRegistration - Updating port to 8761
+2025-04-18 21:44:39 [http-nio-8761-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-04-18 21:44:39 [http-nio-8761-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-04-18 21:44:39 [http-nio-8761-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 4 ms
+2025-04-18 21:44:39 [main] INFO  o.s.cloud.commons.util.InetUtils - Cannot determine local hostname
+2025-04-18 21:44:39 [main] INFO  c.b.discovery.DiscoveryApplication - Started DiscoveryApplication in 24.951 seconds (process running for 29.489)
+2025-04-18 21:44:40 [http-nio-8761-exec-1] DEBUG c.n.d.util.DeserializerStringCache - clearing global-level cache with size 2
+2025-04-18 21:44:40 [http-nio-8761-exec-1] DEBUG c.n.d.util.DeserializerStringCache - clearing app-level serialization cache with size 8
+2025-04-18 21:44:40 [http-nio-8761-exec-1] INFO  c.n.e.r.AbstractInstanceRegistry - Registered instance GATEWAY-SERVICE/localhost:gateway-service:8080 with status UP (replication=false)
+2025-04-18 21:45:07 [http-nio-8761-exec-3] DEBUG c.n.d.util.DeserializerStringCache - clearing global-level cache with size 2
+2025-04-18 21:45:07 [http-nio-8761-exec-3] DEBUG c.n.d.util.DeserializerStringCache - clearing app-level serialization cache with size 8
+2025-04-18 21:45:07 [http-nio-8761-exec-3] INFO  c.n.e.r.AbstractInstanceRegistry - Registered instance USER-SERVICE/localhost:user-service:8081 with status UP (replication=false)
+2025-04-18 21:45:38 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 0ms
+2025-04-18 21:46:38 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 2107ms
+2025-04-18 21:47:38 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 2064ms
+2025-04-18 21:48:38 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 2132ms
+2025-04-18 21:49:38 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 2506ms
+2025-04-18 21:50:38 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 2209ms
+2025-04-18 21:51:38 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 2162ms
+2025-04-18 21:52:38 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 2234ms
+2025-04-18 21:53:38 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 2489ms
+2025-04-18 21:54:17 [Eureka-PeerNodesUpdater] DEBUG c.n.discovery.endpoint.EndpointUtils - The availability zone for the given region us-east-1 are [defaultZone]
+2025-04-18 21:54:17 [Eureka-PeerNodesUpdater] WARN  c.n.eureka.cluster.PeerEurekaNodes - The replica size seems to be empty. Check the route 53 DNS Registry
+2025-04-18 21:54:38 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 2539ms
+2025-04-18 21:55:38 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 2474ms
+2025-04-18 21:56:38 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 1197ms
+2025-04-18 21:57:38 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 2462ms
+2025-04-18 21:58:38 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 2593ms
+2025-04-18 21:59:37 [ReplicaAwareInstanceRegistry - RenewalThresholdUpdater] INFO  c.n.e.r.PeerAwareInstanceRegistryImpl - Current renewal threshold is : 5
+2025-04-18 21:59:38 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 2617ms
+2025-04-18 22:00:38 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 2491ms
+2025-04-18 22:01:38 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 2522ms
+2025-04-18 22:02:38 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 2524ms
+2025-04-18 22:03:38 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 2725ms
+2025-04-18 22:03:54 [Eureka-PeerNodesUpdater] DEBUG c.n.discovery.endpoint.EndpointUtils - The availability zone for the given region us-east-1 are [defaultZone]
+2025-04-18 22:03:54 [Eureka-PeerNodesUpdater] WARN  c.n.eureka.cluster.PeerEurekaNodes - The replica size seems to be empty. Check the route 53 DNS Registry
+2025-04-18 22:04:38 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 2589ms
+2025-04-18 22:05:38 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 2579ms
+2025-04-18 22:06:38 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 2554ms
+2025-04-18 22:07:38 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 2717ms
+2025-04-18 22:08:38 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 1402ms
+2025-04-18 22:09:38 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 0ms
+2025-04-18 22:10:38 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 0ms
+2025-04-18 22:11:38 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 0ms
+2025-04-18 22:12:38 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 910ms
+2025-04-18 22:13:38 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 1670ms
+2025-04-18 22:13:40 [Eureka-PeerNodesUpdater] DEBUG c.n.discovery.endpoint.EndpointUtils - The availability zone for the given region us-east-1 are [defaultZone]
+2025-04-18 22:13:40 [Eureka-PeerNodesUpdater] WARN  c.n.eureka.cluster.PeerEurekaNodes - The replica size seems to be empty. Check the route 53 DNS Registry
+2025-04-18 22:14:37 [ReplicaAwareInstanceRegistry - RenewalThresholdUpdater] INFO  c.n.e.r.PeerAwareInstanceRegistryImpl - Current renewal threshold is : 5
+2025-04-18 22:14:38 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 1929ms
+2025-04-18 22:15:38 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 2194ms
+2025-04-18 22:16:38 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 2085ms
+2025-04-18 22:17:38 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 2104ms
+2025-04-18 22:18:38 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 2072ms
+2025-04-18 22:19:38 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 2045ms
+2025-04-18 22:20:38 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 2061ms
+2025-04-18 22:21:38 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 1062ms
+2025-04-18 22:22:38 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 2217ms
+2025-04-18 22:23:20 [Eureka-PeerNodesUpdater] DEBUG c.n.discovery.endpoint.EndpointUtils - The availability zone for the given region us-east-1 are [defaultZone]
+2025-04-18 22:23:20 [Eureka-PeerNodesUpdater] WARN  c.n.eureka.cluster.PeerEurekaNodes - The replica size seems to be empty. Check the route 53 DNS Registry
+2025-04-18 22:23:38 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 2229ms
+2025-04-18 22:24:38 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 2014ms
+2025-04-18 22:25:38 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 2376ms
+2025-04-18 22:26:38 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 2347ms
+2025-04-18 22:27:38 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 2378ms
+2025-04-18 22:28:38 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 1777ms
+2025-04-18 22:29:37 [ReplicaAwareInstanceRegistry - RenewalThresholdUpdater] INFO  c.n.e.r.PeerAwareInstanceRegistryImpl - Current renewal threshold is : 5
+2025-04-18 22:29:38 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 1528ms
+2025-04-18 22:30:38 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 1841ms
+2025-04-18 22:31:38 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 1982ms
+2025-04-18 22:32:38 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 2001ms
+2025-04-18 22:33:00 [Eureka-PeerNodesUpdater] DEBUG c.n.discovery.endpoint.EndpointUtils - The availability zone for the given region us-east-1 are [defaultZone]
+2025-04-18 22:33:03 [Eureka-PeerNodesUpdater] WARN  c.n.eureka.cluster.PeerEurekaNodes - The replica size seems to be empty. Check the route 53 DNS Registry
+2025-04-18 22:33:10 [http-nio-8761-exec-8] DEBUG c.n.d.util.DeserializerStringCache - clearing global-level cache with size 2
+2025-04-18 22:33:10 [http-nio-8761-exec-8] DEBUG c.n.d.util.DeserializerStringCache - clearing app-level serialization cache with size 8
+2025-04-18 22:33:10 [http-nio-8761-exec-8] INFO  c.n.e.r.AbstractInstanceRegistry - Registered instance GATEWAY-SERVICE/localhost:gateway-service:8080 with status DOWN (replication=false)
+2025-04-18 22:33:16 [http-nio-8761-exec-9] INFO  c.n.e.r.AbstractInstanceRegistry - Cancelled instance GATEWAY-SERVICE/localhost:gateway-service:8080 (replication=false)
+2025-04-18 22:33:38 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 2062ms
+2025-04-18 22:33:40 [http-nio-8761-exec-5] DEBUG c.n.d.util.DeserializerStringCache - clearing global-level cache with size 2
+2025-04-18 22:33:40 [http-nio-8761-exec-5] DEBUG c.n.d.util.DeserializerStringCache - clearing app-level serialization cache with size 8
+2025-04-18 22:33:40 [http-nio-8761-exec-5] INFO  c.n.e.r.AbstractInstanceRegistry - Registered instance GATEWAY-SERVICE/localhost:gateway-service:8080 with status UP (replication=false)
+2025-04-18 22:34:38 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 1989ms
+2025-04-18 22:35:38 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 2025ms
+2025-04-18 22:36:38 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 2134ms
+2025-04-18 22:37:38 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 1125ms
+2025-04-18 22:38:38 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 2583ms
+2025-04-18 22:39:38 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 2896ms
+2025-04-18 22:40:38 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 2534ms
+2025-04-18 22:41:38 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 2718ms
+2025-04-18 22:42:38 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 2690ms
+2025-04-18 22:42:41 [Eureka-PeerNodesUpdater] DEBUG c.n.discovery.endpoint.EndpointUtils - The availability zone for the given region us-east-1 are [defaultZone]
+2025-04-18 22:42:41 [Eureka-PeerNodesUpdater] WARN  c.n.eureka.cluster.PeerEurekaNodes - The replica size seems to be empty. Check the route 53 DNS Registry
+2025-04-18 22:43:38 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 2679ms
+2025-04-18 22:44:37 [ReplicaAwareInstanceRegistry - RenewalThresholdUpdater] INFO  c.n.e.r.PeerAwareInstanceRegistryImpl - Current renewal threshold is : 5
+2025-04-18 22:44:38 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 2848ms
+2025-04-18 22:45:21 [http-nio-8761-exec-3] DEBUG c.n.d.util.DeserializerStringCache - clearing global-level cache with size 2
+2025-04-18 22:45:21 [http-nio-8761-exec-3] DEBUG c.n.d.util.DeserializerStringCache - clearing app-level serialization cache with size 8
+2025-04-18 22:45:21 [http-nio-8761-exec-3] INFO  c.n.e.r.AbstractInstanceRegistry - Registered instance GATEWAY-SERVICE/localhost:gateway-service:8080 with status DOWN (replication=false)
+2025-04-18 22:45:27 [http-nio-8761-exec-5] INFO  c.n.e.r.AbstractInstanceRegistry - Cancelled instance GATEWAY-SERVICE/localhost:gateway-service:8080 (replication=false)
+2025-04-18 22:45:33 [http-nio-8761-exec-8] DEBUG c.n.d.util.DeserializerStringCache - clearing global-level cache with size 2
+2025-04-18 22:45:33 [http-nio-8761-exec-8] DEBUG c.n.d.util.DeserializerStringCache - clearing app-level serialization cache with size 8
+2025-04-18 22:45:33 [http-nio-8761-exec-8] INFO  c.n.e.r.AbstractInstanceRegistry - Registered instance USER-SERVICE/localhost:user-service:8081 with status DOWN (replication=false)
+2025-04-18 22:45:37 [http-nio-8761-exec-1] INFO  c.n.e.r.AbstractInstanceRegistry - Cancelled instance USER-SERVICE/localhost:user-service:8081 (replication=false)
+2025-04-18 22:45:38 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 2563ms
+2025-04-18 22:45:58 [SpringApplicationShutdownHook] INFO  o.s.c.n.e.s.EurekaServiceRegistry - Unregistering application UNKNOWN with eureka with status DOWN
+2025-04-18 22:45:58 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-04-18 22:45:58 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-04-18 22:45:58 [SpringApplicationShutdownHook] INFO  o.s.c.n.e.s.EurekaServerBootstrap - Shutting down Eureka Server..
+2025-04-18 22:45:58 [SpringApplicationShutdownHook] INFO  c.n.e.DefaultEurekaServerContext - Shutting down ...
+2025-04-18 22:45:58 [SpringApplicationShutdownHook] INFO  c.n.e.DefaultEurekaServerContext - Shut down
+2025-04-18 22:45:58 [SpringApplicationShutdownHook] INFO  o.s.c.n.e.s.EurekaServerBootstrap - Eureka Service is now shutdown...
+2025-04-18 22:45:58 [SpringApplicationShutdownHook] INFO  c.n.e.DefaultEurekaServerContext - Shutting down ...
+2025-04-18 22:45:58 [SpringApplicationShutdownHook] INFO  c.n.e.DefaultEurekaServerContext - Shut down
+2025-04-18 22:45:58 [SpringApplicationShutdownHook] INFO  c.netflix.discovery.DiscoveryClient - Shutting down DiscoveryClient ...
+2025-04-18 22:45:58 [SpringApplicationShutdownHook] INFO  c.netflix.discovery.DiscoveryClient - Completed shut down of DiscoveryClient
+2025-07-26 01:39:06 [main] INFO  c.b.discovery.DiscoveryApplication - Starting DiscoveryApplication using Java 17.0.15 with PID 693555 (/home/ironman/book-it-now/BookItNow/discovery-service/build/classes/java/main started by ironman in /home/ironman/book-it-now/BookItNow/discovery-service)
+2025-07-26 01:39:06 [main] INFO  c.b.discovery.DiscoveryApplication - No active profile set, falling back to 1 default profile: "default"
+2025-07-26 01:39:08 [main] INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=7c151485-92d3-3efd-9fed-aa6526449e7e
+2025-07-26 01:39:09 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-07-26 01:39:09 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-07-26 01:39:09 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-07-26 01:39:09 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.33]
+2025-07-26 01:39:09 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-07-26 01:39:09 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2395 ms
+2025-07-26 01:39:10 [main] INFO  c.n.d.p.DiscoveryJerseyProvider - Using JSON encoding codec LegacyJacksonJson
+2025-07-26 01:39:10 [main] INFO  c.n.d.p.DiscoveryJerseyProvider - Using JSON decoding codec LegacyJacksonJson
+2025-07-26 01:39:10 [main] INFO  c.n.d.p.DiscoveryJerseyProvider - Using XML encoding codec XStreamXml
+2025-07-26 01:39:10 [main] INFO  c.n.d.p.DiscoveryJerseyProvider - Using XML decoding codec XStreamXml
+2025-07-26 01:39:11 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'healthContributorRegistry' defined in class path resource [org/springframework/boot/actuate/autoconfigure/health/HealthEndpointConfiguration.class]: Unsatisfied dependency expressed through method 'healthContributorRegistry' parameter 2: Error creating bean with name 'discoveryCompositeHealthContributor' defined in class path resource [org/springframework/cloud/client/CommonsClientAutoConfiguration$DiscoveryLoadBalancerConfiguration.class]: Unsatisfied dependency expressed through method 'discoveryCompositeHealthContributor' parameter 0: Error creating bean with name 'eurekaHealthIndicator' defined in class path resource [org/springframework/cloud/netflix/eureka/EurekaClientAutoConfiguration$EurekaHealthIndicatorConfiguration.class]: Unsatisfied dependency expressed through method 'eurekaHealthIndicator' parameter 1: Error creating bean with name 'eurekaInstanceConfigBean' defined in class path resource [org/springframework/cloud/netflix/eureka/EurekaClientAutoConfiguration.class]: Failed to instantiate [org.springframework.cloud.netflix.eureka.EurekaInstanceConfigBean]: Factory method 'eurekaInstanceConfigBean' threw exception with message: For input string: ""
+2025-07-26 01:39:11 [main] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+2025-07-26 01:39:11 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-07-26 01:39:11 [main] ERROR o.s.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'healthContributorRegistry' defined in class path resource [org/springframework/boot/actuate/autoconfigure/health/HealthEndpointConfiguration.class]: Unsatisfied dependency expressed through method 'healthContributorRegistry' parameter 2: Error creating bean with name 'discoveryCompositeHealthContributor' defined in class path resource [org/springframework/cloud/client/CommonsClientAutoConfiguration$DiscoveryLoadBalancerConfiguration.class]: Unsatisfied dependency expressed through method 'discoveryCompositeHealthContributor' parameter 0: Error creating bean with name 'eurekaHealthIndicator' defined in class path resource [org/springframework/cloud/netflix/eureka/EurekaClientAutoConfiguration$EurekaHealthIndicatorConfiguration.class]: Unsatisfied dependency expressed through method 'eurekaHealthIndicator' parameter 1: Error creating bean with name 'eurekaInstanceConfigBean' defined in class path resource [org/springframework/cloud/netflix/eureka/EurekaClientAutoConfiguration.class]: Failed to instantiate [org.springframework.cloud.netflix.eureka.EurekaInstanceConfigBean]: Factory method 'eurekaInstanceConfigBean' threw exception with message: For input string: ""
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:804)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:546)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1351)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1181)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:563)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:336)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:288)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:334)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.instantiateSingleton(DefaultListableBeanFactory.java:1122)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingleton(DefaultListableBeanFactory.java:1093)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:1030)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:987)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:627)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350)
+	at com.bookItNow.discovery.DiscoveryApplication.main(DiscoveryApplication.java:11)
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'discoveryCompositeHealthContributor' defined in class path resource [org/springframework/cloud/client/CommonsClientAutoConfiguration$DiscoveryLoadBalancerConfiguration.class]: Unsatisfied dependency expressed through method 'discoveryCompositeHealthContributor' parameter 0: Error creating bean with name 'eurekaHealthIndicator' defined in class path resource [org/springframework/cloud/netflix/eureka/EurekaClientAutoConfiguration$EurekaHealthIndicatorConfiguration.class]: Unsatisfied dependency expressed through method 'eurekaHealthIndicator' parameter 1: Error creating bean with name 'eurekaInstanceConfigBean' defined in class path resource [org/springframework/cloud/netflix/eureka/EurekaClientAutoConfiguration.class]: Failed to instantiate [org.springframework.cloud.netflix.eureka.EurekaInstanceConfigBean]: Factory method 'eurekaInstanceConfigBean' threw exception with message: For input string: ""
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:804)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:546)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1351)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1181)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:563)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:336)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:288)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:334)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.addCandidateEntry(DefaultListableBeanFactory.java:1878)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.findAutowireCandidates(DefaultListableBeanFactory.java:1842)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveMultipleBeanMap(DefaultListableBeanFactory.java:1764)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveMultipleBeans(DefaultListableBeanFactory.java:1703)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1575)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1514)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:913)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791)
+	... 21 common frames omitted
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'eurekaHealthIndicator' defined in class path resource [org/springframework/cloud/netflix/eureka/EurekaClientAutoConfiguration$EurekaHealthIndicatorConfiguration.class]: Unsatisfied dependency expressed through method 'eurekaHealthIndicator' parameter 1: Error creating bean with name 'eurekaInstanceConfigBean' defined in class path resource [org/springframework/cloud/netflix/eureka/EurekaClientAutoConfiguration.class]: Failed to instantiate [org.springframework.cloud.netflix.eureka.EurekaInstanceConfigBean]: Factory method 'eurekaInstanceConfigBean' threw exception with message: For input string: ""
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:804)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:546)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1351)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1181)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:563)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:336)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:288)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:334)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.addCandidateEntry(DefaultListableBeanFactory.java:1878)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.findAutowireCandidates(DefaultListableBeanFactory.java:1842)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveMultipleBeanCollection(DefaultListableBeanFactory.java:1732)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveMultipleBeans(DefaultListableBeanFactory.java:1700)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1575)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1514)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:913)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791)
+	... 39 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'eurekaInstanceConfigBean' defined in class path resource [org/springframework/cloud/netflix/eureka/EurekaClientAutoConfiguration.class]: Failed to instantiate [org.springframework.cloud.netflix.eureka.EurekaInstanceConfigBean]: Factory method 'eurekaInstanceConfigBean' threw exception with message: For input string: ""
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:657)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:645)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1351)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1181)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:563)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:336)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:288)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:334)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1626)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1514)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:913)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791)
+	... 57 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.cloud.netflix.eureka.EurekaInstanceConfigBean]: Factory method 'eurekaInstanceConfigBean' threw exception with message: For input string: ""
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.lambda$instantiate$0(SimpleInstantiationStrategy.java:199)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiateWithFactoryMethod(SimpleInstantiationStrategy.java:88)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:168)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:653)
+	... 71 common frames omitted
+Caused by: java.lang.NumberFormatException: For input string: ""
+	at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:67)
+	at java.base/java.lang.Integer.parseInt(Integer.java:678)
+	at java.base/java.lang.Integer.parseInt(Integer.java:786)
+	at org.springframework.cloud.netflix.eureka.EurekaClientAutoConfiguration.eurekaInstanceConfigBean(EurekaClientAutoConfiguration.java:157)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.lambda$instantiate$0(SimpleInstantiationStrategy.java:171)
+	... 74 common frames omitted
+2025-07-26 01:49:24 [main] INFO  c.b.discovery.DiscoveryApplication - Starting DiscoveryApplication using Java 17.0.15 with PID 706853 (/home/ironman/book-it-now/BookItNow/discovery-service/build/classes/java/main started by ironman in /home/ironman/book-it-now/BookItNow/discovery-service)
+2025-07-26 01:49:24 [main] INFO  c.b.discovery.DiscoveryApplication - No active profile set, falling back to 1 default profile: "default"
+2025-07-26 01:49:26 [main] INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=7c151485-92d3-3efd-9fed-aa6526449e7e
+2025-07-26 01:49:26 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8761 (http)
+2025-07-26 01:49:26 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8761"]
+2025-07-26 01:49:26 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-07-26 01:49:26 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.33]
+2025-07-26 01:49:26 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-07-26 01:49:26 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2375 ms
+2025-07-26 01:49:28 [main] INFO  c.n.d.p.DiscoveryJerseyProvider - Using JSON encoding codec LegacyJacksonJson
+2025-07-26 01:49:28 [main] INFO  c.n.d.p.DiscoveryJerseyProvider - Using JSON decoding codec LegacyJacksonJson
+2025-07-26 01:49:28 [main] INFO  c.n.d.p.DiscoveryJerseyProvider - Using XML encoding codec XStreamXml
+2025-07-26 01:49:28 [main] INFO  c.n.d.p.DiscoveryJerseyProvider - Using XML decoding codec XStreamXml
+2025-07-26 01:49:31 [main] WARN  o.s.c.l.c.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger - Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2025-07-26 01:49:31 [main] INFO  o.s.c.n.eureka.InstanceInfoFactory - Setting initial instance status as: STARTING
+2025-07-26 01:49:31 [main] INFO  c.netflix.discovery.DiscoveryClient - Initializing Eureka in region us-east-1
+2025-07-26 01:49:31 [main] INFO  c.netflix.discovery.DiscoveryClient - Client configured to neither register nor query for data.
+2025-07-26 01:49:31 [main] INFO  c.netflix.discovery.DiscoveryClient - Discovery Client initialized at timestamp 1753474771876 with initial instances count: 0
+2025-07-26 01:49:31 [main] INFO  c.n.e.DefaultEurekaServerContext - Initializing ...
+2025-07-26 01:49:31 [main] DEBUG c.n.discovery.endpoint.EndpointUtils - The availability zone for the given region us-east-1 are [defaultZone]
+2025-07-26 01:49:31 [main] WARN  c.n.eureka.cluster.PeerEurekaNodes - The replica size seems to be empty. Check the route 53 DNS Registry
+2025-07-26 01:49:31 [main] INFO  c.n.e.r.AbstractInstanceRegistry - Finished initializing remote region registries. All known remote regions: []
+2025-07-26 01:49:31 [main] INFO  c.n.e.DefaultEurekaServerContext - Initialized
+2025-07-26 01:49:31 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 1 endpoint beneath base path '/actuator'
+2025-07-26 01:49:32 [main] INFO  o.s.c.n.e.s.EurekaServiceRegistry - Registering application UNKNOWN with eureka with status UP
+2025-07-26 01:49:32 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8761"]
+2025-07-26 01:49:32 [Thread-9] INFO  o.s.c.n.e.s.EurekaServerBootstrap - isAws returned false
+2025-07-26 01:49:32 [Thread-9] INFO  o.s.c.n.e.s.EurekaServerBootstrap - Initialized server context
+2025-07-26 01:49:32 [Thread-9] INFO  c.n.e.r.PeerAwareInstanceRegistryImpl - Got 1 instances from neighboring DS node
+2025-07-26 01:49:32 [Thread-9] INFO  c.n.e.r.PeerAwareInstanceRegistryImpl - Renew threshold is: 1
+2025-07-26 01:49:32 [Thread-9] INFO  c.n.e.r.PeerAwareInstanceRegistryImpl - Changing status to UP
+2025-07-26 01:49:32 [Thread-9] INFO  o.s.c.n.e.s.EurekaServerInitializerConfiguration - Started Eureka Server
+2025-07-26 01:49:32 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8761 (http) with context path '/'
+2025-07-26 01:49:32 [main] INFO  o.s.c.n.e.s.EurekaAutoServiceRegistration - Updating port to 8761
+2025-07-26 01:49:33 [main] INFO  c.b.discovery.DiscoveryApplication - Started DiscoveryApplication in 12.375 seconds (process running for 14.795)
+2025-07-26 01:49:48 [http-nio-8761-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-07-26 01:49:48 [http-nio-8761-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-07-26 01:49:48 [http-nio-8761-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2025-07-26 01:49:48 [http-nio-8761-exec-3] WARN  c.n.e.r.AbstractInstanceRegistry - DS: Registry: lease doesn't exist, registering resource: GATEWAY-SERVICE - localhost:gateway-service:8080
+2025-07-26 01:49:48 [http-nio-8761-exec-3] WARN  c.n.e.resources.InstanceResource - Not Found (Renew): GATEWAY-SERVICE - localhost:gateway-service:8080
+2025-07-26 01:49:49 [http-nio-8761-exec-1] DEBUG c.n.d.util.DeserializerStringCache - clearing global-level cache with size 2
+2025-07-26 01:49:49 [http-nio-8761-exec-1] DEBUG c.n.d.util.DeserializerStringCache - clearing app-level serialization cache with size 8
+2025-07-26 01:49:49 [http-nio-8761-exec-1] INFO  c.n.e.r.AbstractInstanceRegistry - Registered instance GATEWAY-SERVICE/localhost:gateway-service:8080 with status UP (replication=false)
+2025-07-26 01:49:49 [http-nio-8761-exec-4] DEBUG c.n.d.util.DeserializerStringCache - clearing global-level cache with size 2
+2025-07-26 01:49:49 [http-nio-8761-exec-4] DEBUG c.n.d.util.DeserializerStringCache - clearing app-level serialization cache with size 8
+2025-07-26 01:49:49 [http-nio-8761-exec-4] INFO  c.n.e.r.AbstractInstanceRegistry - Registered instance GATEWAY-SERVICE/localhost:gateway-service:8080 with status UP (replication=false)
+2025-07-26 01:50:32 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 0ms
+2025-07-26 01:51:32 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 0ms
+2025-07-26 01:52:32 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 0ms
+2025-07-26 01:53:32 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 0ms
+2025-07-26 01:54:05 [http-nio-8761-exec-4] DEBUG c.n.d.util.DeserializerStringCache - clearing global-level cache with size 2
+2025-07-26 01:54:05 [http-nio-8761-exec-4] DEBUG c.n.d.util.DeserializerStringCache - clearing app-level serialization cache with size 8
+2025-07-26 01:54:05 [http-nio-8761-exec-4] INFO  c.n.e.r.AbstractInstanceRegistry - Registered instance USER-SERVICE/localhost:user-service:8081 with status UP (replication=false)
+2025-07-26 01:54:32 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 0ms
+2025-07-26 01:55:32 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 0ms
+2025-07-26 01:56:32 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 0ms
+2025-07-26 01:57:32 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 0ms
+2025-07-26 01:58:32 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 54ms
+2025-07-26 01:59:33 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 31ms
+2025-07-26 01:59:40 [Eureka-PeerNodesUpdater] DEBUG c.n.discovery.endpoint.EndpointUtils - The availability zone for the given region us-east-1 are [defaultZone]
+2025-07-26 01:59:43 [Eureka-PeerNodesUpdater] WARN  c.n.eureka.cluster.PeerEurekaNodes - The replica size seems to be empty. Check the route 53 DNS Registry
+2025-07-26 02:00:33 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 903ms
+2025-07-26 02:01:33 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 468ms
+2025-07-26 02:02:34 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 735ms
+2025-07-26 02:03:39 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 2203ms
+2025-07-26 02:04:38 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 625ms
+2025-07-26 02:05:11 [ReplicaAwareInstanceRegistry - RenewalThresholdUpdater] INFO  c.n.e.r.PeerAwareInstanceRegistryImpl - Current renewal threshold is : 5
+2025-07-26 02:05:41 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 412ms
+2025-07-26 02:06:41 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 1872ms
+2025-07-26 02:07:42 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 1234ms
+2025-07-26 02:08:44 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 2218ms
+2025-07-26 02:09:42 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 0ms
+2025-07-26 02:09:44 [Eureka-PeerNodesUpdater] DEBUG c.n.discovery.endpoint.EndpointUtils - The availability zone for the given region us-east-1 are [defaultZone]
+2025-07-26 02:09:44 [Eureka-PeerNodesUpdater] WARN  c.n.eureka.cluster.PeerEurekaNodes - The replica size seems to be empty. Check the route 53 DNS Registry
+2025-07-26 02:10:03 [http-nio-8761-exec-2] DEBUG c.n.d.util.DeserializerStringCache - clearing global-level cache with size 2
+2025-07-26 02:10:03 [http-nio-8761-exec-2] DEBUG c.n.d.util.DeserializerStringCache - clearing app-level serialization cache with size 8
+2025-07-26 02:10:03 [http-nio-8761-exec-2] INFO  c.n.e.r.AbstractInstanceRegistry - Registered instance BOOKING-SERVICE/localhost:booking-service:8082 with status UP (replication=false)
+2025-07-26 02:10:13 [SpringApplicationShutdownHook] INFO  o.s.c.n.e.s.EurekaServiceRegistry - Unregistering application UNKNOWN with eureka with status DOWN
+2025-07-26 02:10:14 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-07-26 02:10:14 [http-nio-8761-exec-7] DEBUG c.n.d.util.DeserializerStringCache - clearing global-level cache with size 2
+2025-07-26 02:10:14 [http-nio-8761-exec-7] DEBUG c.n.d.util.DeserializerStringCache - clearing app-level serialization cache with size 8
+2025-07-26 02:10:14 [http-nio-8761-exec-7] INFO  c.n.e.r.AbstractInstanceRegistry - Registered instance USER-SERVICE/localhost:user-service:8081 with status DOWN (replication=false)
+2025-07-26 02:10:14 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-07-26 02:10:14 [SpringApplicationShutdownHook] INFO  o.s.c.n.e.s.EurekaServerBootstrap - Shutting down Eureka Server..
+2025-07-26 02:10:14 [SpringApplicationShutdownHook] INFO  c.n.e.DefaultEurekaServerContext - Shutting down ...
+2025-07-26 02:10:14 [SpringApplicationShutdownHook] INFO  c.n.e.DefaultEurekaServerContext - Shut down
+2025-07-26 02:10:14 [SpringApplicationShutdownHook] INFO  o.s.c.n.e.s.EurekaServerBootstrap - Eureka Service is now shutdown...
+2025-07-26 02:10:14 [SpringApplicationShutdownHook] INFO  c.n.e.DefaultEurekaServerContext - Shutting down ...
+2025-07-26 02:10:14 [SpringApplicationShutdownHook] INFO  c.n.e.DefaultEurekaServerContext - Shut down
+2025-07-26 02:10:14 [SpringApplicationShutdownHook] INFO  c.netflix.discovery.DiscoveryClient - Shutting down DiscoveryClient ...
+2025-07-26 02:10:14 [SpringApplicationShutdownHook] INFO  c.netflix.discovery.DiscoveryClient - Completed shut down of DiscoveryClient
+2025-07-26 12:42:59 [main] INFO  c.b.discovery.DiscoveryApplication - Starting DiscoveryApplication using Java 17.0.15 with PID 19487 (/home/ironman/book-it-now/BookItNow/discovery-service/build/classes/java/main started by ironman in /home/ironman/book-it-now/BookItNow/discovery-service)
+2025-07-26 12:42:59 [main] INFO  c.b.discovery.DiscoveryApplication - No active profile set, falling back to 1 default profile: "default"
+2025-07-26 12:43:42 [main] INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=7c151485-92d3-3efd-9fed-aa6526449e7e
+2025-07-26 12:43:47 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8761 (http)
+2025-07-26 12:43:47 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8761"]
+2025-07-26 12:43:47 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-07-26 12:43:47 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.33]
+2025-07-26 12:43:49 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-07-26 12:43:49 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 37256 ms
+2025-07-26 12:44:02 [main] INFO  c.n.d.p.DiscoveryJerseyProvider - Using JSON encoding codec LegacyJacksonJson
+2025-07-26 12:44:02 [main] INFO  c.n.d.p.DiscoveryJerseyProvider - Using JSON decoding codec LegacyJacksonJson
+2025-07-26 12:44:05 [main] INFO  c.n.d.p.DiscoveryJerseyProvider - Using XML encoding codec XStreamXml
+2025-07-26 12:44:05 [main] INFO  c.n.d.p.DiscoveryJerseyProvider - Using XML decoding codec XStreamXml
+2025-07-26 12:44:10 [main] INFO  o.s.cloud.commons.util.InetUtils - Cannot determine local hostname
+2025-07-26 12:44:28 [main] INFO  o.s.cloud.commons.util.InetUtils - Cannot determine local hostname
+2025-07-26 12:44:30 [main] WARN  o.s.c.l.c.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger - Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2025-07-26 12:44:30 [main] INFO  o.s.c.n.eureka.InstanceInfoFactory - Setting initial instance status as: STARTING
+2025-07-26 12:44:30 [main] INFO  c.netflix.discovery.DiscoveryClient - Initializing Eureka in region us-east-1
+2025-07-26 12:44:30 [main] INFO  c.netflix.discovery.DiscoveryClient - Client configured to neither register nor query for data.
+2025-07-26 12:44:30 [main] INFO  c.netflix.discovery.DiscoveryClient - Discovery Client initialized at timestamp 1753514070582 with initial instances count: 0
+2025-07-26 12:44:31 [main] INFO  c.n.e.DefaultEurekaServerContext - Initializing ...
+2025-07-26 12:44:31 [main] DEBUG c.n.discovery.endpoint.EndpointUtils - The availability zone for the given region us-east-1 are [defaultZone]
+2025-07-26 12:44:31 [main] WARN  c.n.eureka.cluster.PeerEurekaNodes - The replica size seems to be empty. Check the route 53 DNS Registry
+2025-07-26 12:44:31 [main] INFO  c.n.e.r.AbstractInstanceRegistry - Finished initializing remote region registries. All known remote regions: []
+2025-07-26 12:44:31 [main] INFO  c.n.e.DefaultEurekaServerContext - Initialized
+2025-07-26 12:44:31 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 1 endpoint beneath base path '/actuator'
+2025-07-26 12:44:32 [main] INFO  o.s.c.n.e.s.EurekaServiceRegistry - Registering application UNKNOWN with eureka with status UP
+2025-07-26 12:44:32 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8761"]
+2025-07-26 12:44:32 [Thread-9] INFO  o.s.c.n.e.s.EurekaServerBootstrap - isAws returned false
+2025-07-26 12:44:32 [Thread-9] INFO  o.s.c.n.e.s.EurekaServerBootstrap - Initialized server context
+2025-07-26 12:44:32 [Thread-9] INFO  c.n.e.r.PeerAwareInstanceRegistryImpl - Got 1 instances from neighboring DS node
+2025-07-26 12:44:32 [Thread-9] INFO  c.n.e.r.PeerAwareInstanceRegistryImpl - Renew threshold is: 1
+2025-07-26 12:44:32 [Thread-9] INFO  c.n.e.r.PeerAwareInstanceRegistryImpl - Changing status to UP
+2025-07-26 12:44:32 [Thread-9] INFO  o.s.c.n.e.s.EurekaServerInitializerConfiguration - Started Eureka Server
+2025-07-26 12:44:32 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8761 (http) with context path '/'
+2025-07-26 12:44:32 [main] INFO  o.s.c.n.e.s.EurekaAutoServiceRegistration - Updating port to 8761
+2025-07-26 12:44:32 [http-nio-8761-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-07-26 12:44:32 [http-nio-8761-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-07-26 12:44:32 [http-nio-8761-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 12 ms
+2025-07-26 12:44:33 [main] INFO  o.s.cloud.commons.util.InetUtils - Cannot determine local hostname
+2025-07-26 12:44:33 [main] INFO  c.b.discovery.DiscoveryApplication - Started DiscoveryApplication in 108.831 seconds (process running for 132.418)
+2025-07-26 12:44:34 [http-nio-8761-exec-1] DEBUG c.n.d.util.DeserializerStringCache - clearing global-level cache with size 2
+2025-07-26 12:44:34 [http-nio-8761-exec-1] DEBUG c.n.d.util.DeserializerStringCache - clearing app-level serialization cache with size 8
+2025-07-26 12:44:34 [http-nio-8761-exec-1] INFO  c.n.e.r.AbstractInstanceRegistry - Registered instance GATEWAY-SERVICE/localhost:gateway-service:8080 with status UP (replication=false)
+2025-07-26 12:45:33 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 0ms
+2025-07-26 12:46:32 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 1086ms
+2025-07-26 12:47:33 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 238ms
+2025-07-26 12:48:34 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 331ms
+2025-07-26 12:49:33 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 74ms
+2025-07-26 12:50:41 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 13875ms
+2025-07-26 12:51:41 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 43ms
+2025-07-26 12:52:42 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 1845ms
+2025-07-26 12:53:43 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 698ms
+2025-07-26 12:54:32 [Eureka-PeerNodesUpdater] DEBUG c.n.discovery.endpoint.EndpointUtils - The availability zone for the given region us-east-1 are [defaultZone]
+2025-07-26 12:54:42 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 64ms
+2025-07-26 12:54:48 [Eureka-PeerNodesUpdater] WARN  c.n.eureka.cluster.PeerEurekaNodes - The replica size seems to be empty. Check the route 53 DNS Registry
+2025-07-26 12:55:42 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 50ms
+2025-07-26 12:56:43 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 546ms
+2025-07-26 12:57:43 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 135ms
+2025-07-26 12:58:47 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 406ms
+2025-07-26 12:59:48 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 558ms
+2025-07-26 12:59:59 [ReplicaAwareInstanceRegistry - RenewalThresholdUpdater] INFO  c.n.e.r.PeerAwareInstanceRegistryImpl - Current renewal threshold is : 3
+2025-07-26 13:00:52 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 3693ms
+2025-07-26 13:01:52 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 3186ms
+2025-07-26 13:02:10 [http-nio-8761-exec-3] DEBUG c.n.d.util.DeserializerStringCache - clearing global-level cache with size 2
+2025-07-26 13:02:10 [http-nio-8761-exec-3] DEBUG c.n.d.util.DeserializerStringCache - clearing app-level serialization cache with size 8
+2025-07-26 13:02:10 [http-nio-8761-exec-3] INFO  c.n.e.r.AbstractInstanceRegistry - Registered instance USER-SERVICE/localhost:user-service:8081 with status UP (replication=false)
+2025-07-26 13:02:14 [http-nio-8761-exec-4] DEBUG c.n.d.util.DeserializerStringCache - clearing global-level cache with size 2
+2025-07-26 13:02:14 [http-nio-8761-exec-4] DEBUG c.n.d.util.DeserializerStringCache - clearing app-level serialization cache with size 8
+2025-07-26 13:02:14 [http-nio-8761-exec-4] INFO  c.n.e.r.AbstractInstanceRegistry - Registered instance PAYMENT-SERVICE/localhost:payment-service:8083 with status UP (replication=false)
+2025-07-26 13:02:19 [http-nio-8761-exec-7] DEBUG c.n.d.util.DeserializerStringCache - clearing global-level cache with size 2
+2025-07-26 13:02:19 [http-nio-8761-exec-7] DEBUG c.n.d.util.DeserializerStringCache - clearing app-level serialization cache with size 8
+2025-07-26 13:02:19 [http-nio-8761-exec-7] INFO  c.n.e.r.AbstractInstanceRegistry - Registered instance EVENT-SERVICE/localhost:event-service:8084 with status UP (replication=false)
+2025-07-26 13:02:38 [http-nio-8761-exec-10] DEBUG c.n.d.util.DeserializerStringCache - clearing global-level cache with size 2
+2025-07-26 13:02:38 [http-nio-8761-exec-10] DEBUG c.n.d.util.DeserializerStringCache - clearing app-level serialization cache with size 8
+2025-07-26 13:02:38 [http-nio-8761-exec-10] INFO  c.n.e.r.AbstractInstanceRegistry - Registered instance EVENT-SERVICE/localhost:event-service:8084 with status DOWN (replication=false)
+2025-07-26 13:02:41 [http-nio-8761-exec-3] INFO  c.n.e.r.AbstractInstanceRegistry - Cancelled instance EVENT-SERVICE/localhost:event-service:8084 (replication=false)
+2025-07-26 13:02:50 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 1292ms
+2025-07-26 13:03:50 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 591ms
+2025-07-26 13:04:46 [Eureka-PeerNodesUpdater] DEBUG c.n.discovery.endpoint.EndpointUtils - The availability zone for the given region us-east-1 are [defaultZone]
+2025-07-26 13:04:46 [Eureka-PeerNodesUpdater] WARN  c.n.eureka.cluster.PeerEurekaNodes - The replica size seems to be empty. Check the route 53 DNS Registry
+2025-07-26 13:04:50 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 1648ms
+2025-07-26 13:05:50 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 1446ms
+2025-07-26 13:06:50 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 1497ms
+2025-07-26 13:07:50 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 713ms
+2025-07-26 13:08:50 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 1555ms
+2025-07-26 13:09:50 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 1548ms
+2025-07-26 13:10:50 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 1357ms
+2025-07-26 13:11:50 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 1646ms
+2025-07-26 13:12:50 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 1420ms
+2025-07-26 13:13:50 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 1530ms
+2025-07-26 13:14:32 [ReplicaAwareInstanceRegistry - RenewalThresholdUpdater] INFO  c.n.e.r.PeerAwareInstanceRegistryImpl - Current renewal threshold is : 6
+2025-07-26 13:14:33 [Eureka-PeerNodesUpdater] DEBUG c.n.discovery.endpoint.EndpointUtils - The availability zone for the given region us-east-1 are [defaultZone]
+2025-07-26 13:14:33 [Eureka-PeerNodesUpdater] WARN  c.n.eureka.cluster.PeerEurekaNodes - The replica size seems to be empty. Check the route 53 DNS Registry
+2025-07-26 13:14:50 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 1433ms
+2025-07-26 13:15:50 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 1523ms
+2025-07-26 13:16:50 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 723ms
+2025-07-26 13:17:50 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 1397ms
+2025-07-26 13:18:50 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 1606ms
+2025-07-26 13:19:50 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 1617ms
+2025-07-26 13:20:50 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 1492ms
+2025-07-26 13:21:50 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 1509ms
+2025-07-26 13:22:50 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 1544ms
+2025-07-26 13:23:50 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 1558ms
+2025-07-26 13:24:19 [Eureka-PeerNodesUpdater] DEBUG c.n.discovery.endpoint.EndpointUtils - The availability zone for the given region us-east-1 are [defaultZone]
+2025-07-26 13:24:19 [Eureka-PeerNodesUpdater] WARN  c.n.eureka.cluster.PeerEurekaNodes - The replica size seems to be empty. Check the route 53 DNS Registry
+2025-07-26 13:24:50 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 1567ms
+2025-07-26 13:25:50 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 781ms
+2025-07-26 13:26:50 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 1539ms
+2025-07-26 13:27:50 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 1553ms
+2025-07-26 13:28:50 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 1628ms
+2025-07-26 13:29:32 [ReplicaAwareInstanceRegistry - RenewalThresholdUpdater] INFO  c.n.e.r.PeerAwareInstanceRegistryImpl - Current renewal threshold is : 6
+2025-07-26 13:29:50 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 1618ms
+2025-07-26 13:30:50 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 1783ms
+2025-07-26 13:31:50 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 1751ms
+2025-07-26 13:32:50 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 1554ms
+2025-07-26 13:33:50 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 1663ms
+2025-07-26 13:34:04 [Eureka-PeerNodesUpdater] DEBUG c.n.discovery.endpoint.EndpointUtils - The availability zone for the given region us-east-1 are [defaultZone]
+2025-07-26 13:34:04 [Eureka-PeerNodesUpdater] WARN  c.n.eureka.cluster.PeerEurekaNodes - The replica size seems to be empty. Check the route 53 DNS Registry
+2025-07-26 13:34:50 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 1672ms
+2025-07-26 13:35:50 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 820ms
+2025-07-26 13:36:50 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 1698ms
+2025-07-26 13:37:50 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 1955ms
+2025-07-26 13:38:50 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 1512ms
+2025-07-26 13:39:50 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 1625ms
+2025-07-26 13:40:50 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 1810ms
+2025-07-26 13:41:50 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 1701ms
+2025-07-26 13:42:50 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 1840ms
+2025-07-26 13:43:49 [Eureka-PeerNodesUpdater] DEBUG c.n.discovery.endpoint.EndpointUtils - The availability zone for the given region us-east-1 are [defaultZone]
+2025-07-26 13:43:49 [Eureka-PeerNodesUpdater] WARN  c.n.eureka.cluster.PeerEurekaNodes - The replica size seems to be empty. Check the route 53 DNS Registry
+2025-07-26 13:43:50 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 0ms
+2025-07-26 13:44:32 [ReplicaAwareInstanceRegistry - RenewalThresholdUpdater] INFO  c.n.e.r.PeerAwareInstanceRegistryImpl - Current renewal threshold is : 6
+2025-07-26 13:44:50 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 0ms
+2025-07-26 13:45:50 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 0ms
+2025-07-26 13:46:50 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 0ms
+2025-07-26 13:47:50 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 0ms
+2025-07-26 13:48:50 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 0ms
+2025-07-26 13:49:50 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 0ms
+2025-07-26 13:50:50 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 0ms
+2025-07-26 13:51:50 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 0ms
+2025-07-26 13:52:50 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 0ms
+2025-07-26 13:53:49 [Eureka-PeerNodesUpdater] DEBUG c.n.discovery.endpoint.EndpointUtils - The availability zone for the given region us-east-1 are [defaultZone]
+2025-07-26 13:53:49 [Eureka-PeerNodesUpdater] WARN  c.n.eureka.cluster.PeerEurekaNodes - The replica size seems to be empty. Check the route 53 DNS Registry
+2025-07-26 13:53:50 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 0ms
+2025-07-26 13:54:50 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 0ms
+2025-07-26 13:55:50 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 0ms
+2025-07-26 13:56:50 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 0ms
+2025-07-26 13:57:50 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 0ms
+2025-07-26 13:58:50 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 0ms
+2025-07-26 13:59:32 [ReplicaAwareInstanceRegistry - RenewalThresholdUpdater] INFO  c.n.e.r.PeerAwareInstanceRegistryImpl - Current renewal threshold is : 6
+2025-07-26 13:59:50 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 0ms
+2025-07-26 14:00:50 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 0ms
+2025-07-26 14:01:50 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 0ms
+2025-07-26 14:02:50 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 0ms
+2025-07-26 14:03:49 [Eureka-PeerNodesUpdater] DEBUG c.n.discovery.endpoint.EndpointUtils - The availability zone for the given region us-east-1 are [defaultZone]
+2025-07-26 14:03:49 [Eureka-PeerNodesUpdater] WARN  c.n.eureka.cluster.PeerEurekaNodes - The replica size seems to be empty. Check the route 53 DNS Registry
+2025-07-26 14:03:50 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 0ms
+2025-07-26 14:04:50 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 0ms
+2025-07-26 14:05:50 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 0ms
+2025-07-26 14:06:50 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 0ms
+2025-07-26 14:07:50 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 0ms
+2025-07-26 14:08:50 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 0ms
+2025-07-26 14:09:50 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 0ms
+2025-07-26 14:10:50 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 0ms
+2025-07-26 14:11:50 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 0ms
+2025-07-26 14:12:51 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 0ms
+2025-07-26 14:13:49 [Eureka-PeerNodesUpdater] DEBUG c.n.discovery.endpoint.EndpointUtils - The availability zone for the given region us-east-1 are [defaultZone]
+2025-07-26 14:13:49 [Eureka-PeerNodesUpdater] WARN  c.n.eureka.cluster.PeerEurekaNodes - The replica size seems to be empty. Check the route 53 DNS Registry
+2025-07-26 14:13:50 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 0ms
+2025-07-26 14:14:32 [ReplicaAwareInstanceRegistry - RenewalThresholdUpdater] INFO  c.n.e.r.PeerAwareInstanceRegistryImpl - Current renewal threshold is : 6
+2025-07-26 14:14:51 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 0ms
+2025-07-26 14:15:51 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 0ms
+2025-07-26 14:16:51 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 0ms
+2025-07-26 14:17:51 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 0ms
+2025-07-26 14:18:51 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 0ms
+2025-07-26 14:19:51 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 0ms
+2025-07-26 14:20:51 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 0ms
+2025-07-26 14:21:51 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 0ms
+2025-07-26 14:22:51 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 0ms
+2025-07-26 14:23:49 [Eureka-PeerNodesUpdater] DEBUG c.n.discovery.endpoint.EndpointUtils - The availability zone for the given region us-east-1 are [defaultZone]
+2025-07-26 14:23:49 [Eureka-PeerNodesUpdater] WARN  c.n.eureka.cluster.PeerEurekaNodes - The replica size seems to be empty. Check the route 53 DNS Registry
+2025-07-26 14:23:51 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 0ms
+2025-07-26 14:24:51 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 0ms
+2025-07-26 14:25:51 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 0ms
+2025-07-26 14:26:51 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 0ms
+2025-07-26 14:27:51 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 0ms
+2025-07-26 14:28:51 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 0ms
+2025-07-26 14:29:32 [ReplicaAwareInstanceRegistry - RenewalThresholdUpdater] INFO  c.n.e.r.PeerAwareInstanceRegistryImpl - Current renewal threshold is : 6
+2025-07-26 14:29:51 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 0ms
+2025-07-26 14:30:51 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 0ms
+2025-07-26 14:31:51 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 0ms
+2025-07-26 14:32:51 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 0ms
+2025-07-26 14:33:49 [Eureka-PeerNodesUpdater] DEBUG c.n.discovery.endpoint.EndpointUtils - The availability zone for the given region us-east-1 are [defaultZone]
+2025-07-26 14:33:49 [Eureka-PeerNodesUpdater] WARN  c.n.eureka.cluster.PeerEurekaNodes - The replica size seems to be empty. Check the route 53 DNS Registry
+2025-07-26 14:33:51 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 0ms
+2025-07-26 14:34:51 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 0ms
+2025-07-26 14:35:51 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 0ms
+2025-07-26 14:36:51 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 0ms
+2025-07-26 14:37:51 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 0ms
+2025-07-26 14:38:51 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 0ms
+2025-07-26 14:39:51 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 0ms
+2025-07-26 14:40:51 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 0ms
+2025-07-26 14:41:51 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 0ms
+2025-07-26 14:42:51 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 0ms
+2025-07-26 14:43:49 [Eureka-PeerNodesUpdater] DEBUG c.n.discovery.endpoint.EndpointUtils - The availability zone for the given region us-east-1 are [defaultZone]
+2025-07-26 14:43:49 [Eureka-PeerNodesUpdater] WARN  c.n.eureka.cluster.PeerEurekaNodes - The replica size seems to be empty. Check the route 53 DNS Registry
+2025-07-26 14:43:51 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 0ms
+2025-07-26 14:44:32 [ReplicaAwareInstanceRegistry - RenewalThresholdUpdater] INFO  c.n.e.r.PeerAwareInstanceRegistryImpl - Current renewal threshold is : 6
+2025-07-26 14:44:51 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 0ms
+2025-07-26 14:45:51 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 0ms
+2025-07-26 14:46:51 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 0ms
+2025-07-26 14:47:51 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 0ms
+2025-07-26 14:48:51 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 0ms
+2025-07-26 14:49:51 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 0ms
+2025-07-26 14:50:51 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 0ms
+2025-07-26 14:51:51 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 0ms
+2025-07-26 14:52:51 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 0ms
+2025-07-26 14:53:49 [Eureka-PeerNodesUpdater] DEBUG c.n.discovery.endpoint.EndpointUtils - The availability zone for the given region us-east-1 are [defaultZone]
+2025-07-26 14:53:49 [Eureka-PeerNodesUpdater] WARN  c.n.eureka.cluster.PeerEurekaNodes - The replica size seems to be empty. Check the route 53 DNS Registry
+2025-07-26 14:53:51 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 0ms
+2025-07-26 14:54:51 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 0ms
+2025-07-26 14:55:51 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 0ms
+2025-07-26 14:56:51 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 0ms
+2025-07-26 14:57:51 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 0ms
+2025-07-26 14:58:51 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 0ms
+2025-07-26 14:59:32 [ReplicaAwareInstanceRegistry - RenewalThresholdUpdater] INFO  c.n.e.r.PeerAwareInstanceRegistryImpl - Current renewal threshold is : 6
+2025-07-26 14:59:51 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 0ms
+2025-07-26 15:00:51 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 0ms
+2025-07-26 15:01:51 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 0ms
+2025-07-26 15:02:51 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 0ms
+2025-07-26 15:03:49 [Eureka-PeerNodesUpdater] DEBUG c.n.discovery.endpoint.EndpointUtils - The availability zone for the given region us-east-1 are [defaultZone]
+2025-07-26 15:03:49 [Eureka-PeerNodesUpdater] WARN  c.n.eureka.cluster.PeerEurekaNodes - The replica size seems to be empty. Check the route 53 DNS Registry
+2025-07-26 15:03:51 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 0ms
+2025-07-26 15:04:51 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 0ms
+2025-07-26 15:05:51 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 0ms
+2025-07-26 15:06:51 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 0ms
+2025-07-26 15:07:51 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 0ms
+2025-07-26 15:08:51 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 0ms
+2025-07-26 15:09:51 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 0ms
+2025-07-26 15:10:51 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 0ms
+2025-07-26 15:11:51 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 0ms
+2025-07-26 15:12:51 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 0ms
+2025-07-26 15:13:49 [Eureka-PeerNodesUpdater] DEBUG c.n.discovery.endpoint.EndpointUtils - The availability zone for the given region us-east-1 are [defaultZone]
+2025-07-26 15:13:49 [Eureka-PeerNodesUpdater] WARN  c.n.eureka.cluster.PeerEurekaNodes - The replica size seems to be empty. Check the route 53 DNS Registry
+2025-07-26 15:13:51 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 0ms
+2025-07-26 15:14:32 [ReplicaAwareInstanceRegistry - RenewalThresholdUpdater] INFO  c.n.e.r.PeerAwareInstanceRegistryImpl - Current renewal threshold is : 6
+2025-07-26 15:14:51 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 0ms
+2025-07-26 15:15:51 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 0ms
+2025-07-26 15:16:51 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 0ms
+2025-07-26 15:17:51 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 0ms
+2025-07-26 15:18:51 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 0ms
+2025-07-26 15:19:51 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 0ms
+2025-07-26 15:20:51 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 0ms
+2025-07-26 15:21:51 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 0ms
+2025-07-26 15:22:51 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 0ms
+2025-07-26 15:23:49 [Eureka-PeerNodesUpdater] DEBUG c.n.discovery.endpoint.EndpointUtils - The availability zone for the given region us-east-1 are [defaultZone]
+2025-07-26 15:23:49 [Eureka-PeerNodesUpdater] WARN  c.n.eureka.cluster.PeerEurekaNodes - The replica size seems to be empty. Check the route 53 DNS Registry
+2025-07-26 15:23:51 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 0ms
+2025-07-26 15:24:51 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 0ms
+2025-07-26 15:25:51 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 0ms
+2025-07-26 15:26:51 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 0ms
+2025-07-26 15:27:51 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 0ms
+2025-07-26 15:28:51 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 0ms
+2025-07-26 15:29:32 [ReplicaAwareInstanceRegistry - RenewalThresholdUpdater] INFO  c.n.e.r.PeerAwareInstanceRegistryImpl - Current renewal threshold is : 6
+2025-07-26 15:29:51 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 0ms
+2025-07-26 15:30:51 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 0ms
+2025-07-26 15:31:51 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 0ms
+2025-07-26 15:32:51 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 0ms
+2025-07-26 15:33:49 [Eureka-PeerNodesUpdater] DEBUG c.n.discovery.endpoint.EndpointUtils - The availability zone for the given region us-east-1 are [defaultZone]
+2025-07-26 15:33:49 [Eureka-PeerNodesUpdater] WARN  c.n.eureka.cluster.PeerEurekaNodes - The replica size seems to be empty. Check the route 53 DNS Registry
+2025-07-26 15:33:51 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 0ms
+2025-07-26 15:34:51 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 0ms
+2025-07-26 15:35:51 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 0ms
+2025-07-26 15:36:51 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 0ms
+2025-07-26 15:37:51 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 0ms
+2025-07-26 15:38:51 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 0ms
+2025-07-26 15:39:51 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 0ms
+2025-07-26 15:40:51 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 0ms
+2025-07-26 15:41:51 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 0ms
+2025-07-26 15:42:51 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 0ms
+2025-07-26 15:43:49 [Eureka-PeerNodesUpdater] DEBUG c.n.discovery.endpoint.EndpointUtils - The availability zone for the given region us-east-1 are [defaultZone]
+2025-07-26 15:43:49 [Eureka-PeerNodesUpdater] WARN  c.n.eureka.cluster.PeerEurekaNodes - The replica size seems to be empty. Check the route 53 DNS Registry
+2025-07-26 15:43:51 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 0ms
+2025-07-26 15:44:32 [ReplicaAwareInstanceRegistry - RenewalThresholdUpdater] INFO  c.n.e.r.PeerAwareInstanceRegistryImpl - Current renewal threshold is : 6
+2025-07-26 15:44:51 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 0ms
+2025-07-26 15:45:51 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 0ms
+2025-07-26 15:46:51 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 0ms
+2025-07-26 15:47:51 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 0ms
+2025-07-26 15:48:51 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 0ms
+2025-07-26 15:49:51 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 0ms
+2025-07-26 15:50:51 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 0ms
+2025-07-26 15:51:51 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 0ms
+2025-07-26 15:52:51 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 0ms
+2025-07-26 15:53:49 [Eureka-PeerNodesUpdater] DEBUG c.n.discovery.endpoint.EndpointUtils - The availability zone for the given region us-east-1 are [defaultZone]
+2025-07-26 15:53:49 [Eureka-PeerNodesUpdater] WARN  c.n.eureka.cluster.PeerEurekaNodes - The replica size seems to be empty. Check the route 53 DNS Registry
+2025-07-26 15:53:51 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 0ms
+2025-07-26 15:54:51 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 0ms
+2025-07-26 15:55:51 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 0ms
+2025-07-26 15:56:51 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 0ms
+2025-07-26 15:57:51 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 0ms
+2025-07-26 15:58:51 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 0ms
+2025-07-26 15:59:32 [ReplicaAwareInstanceRegistry - RenewalThresholdUpdater] INFO  c.n.e.r.PeerAwareInstanceRegistryImpl - Current renewal threshold is : 6
+2025-07-26 15:59:51 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 0ms
+2025-07-26 16:00:51 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 0ms
+2025-07-26 16:01:51 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 0ms
+2025-07-26 16:02:51 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 0ms
+2025-07-26 16:03:49 [Eureka-PeerNodesUpdater] DEBUG c.n.discovery.endpoint.EndpointUtils - The availability zone for the given region us-east-1 are [defaultZone]
+2025-07-26 16:03:49 [Eureka-PeerNodesUpdater] WARN  c.n.eureka.cluster.PeerEurekaNodes - The replica size seems to be empty. Check the route 53 DNS Registry
+2025-07-26 16:03:51 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 0ms
+2025-07-26 16:04:51 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 0ms
+2025-07-26 16:05:51 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 407ms
+2025-07-26 16:06:51 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 478ms
+2025-07-26 16:07:51 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 655ms
+2025-07-26 16:08:51 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 0ms
+2025-07-26 16:09:51 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 0ms
+2025-07-26 16:10:51 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 441ms
+2025-07-26 16:11:51 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 407ms
+2025-07-26 16:12:51 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 0ms
+2025-07-26 16:13:46 [Eureka-PeerNodesUpdater] DEBUG c.n.discovery.endpoint.EndpointUtils - The availability zone for the given region us-east-1 are [defaultZone]
+2025-07-26 16:13:46 [Eureka-PeerNodesUpdater] WARN  c.n.eureka.cluster.PeerEurekaNodes - The replica size seems to be empty. Check the route 53 DNS Registry
+2025-07-26 16:13:51 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 635ms
+2025-07-26 16:14:40 [ReplicaAwareInstanceRegistry - RenewalThresholdUpdater] INFO  c.n.e.r.PeerAwareInstanceRegistryImpl - Current renewal threshold is : 6
+2025-07-26 16:14:51 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 49ms
+2025-07-26 16:15:52 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 623ms
+2025-07-26 16:16:53 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 690ms
+2025-07-26 16:17:52 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 564ms
+2025-07-26 16:18:55 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 1120ms
+2025-07-26 16:19:54 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 736ms
+2025-07-26 16:20:55 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 245ms
+2025-07-26 16:21:56 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 1124ms
+2025-07-26 16:22:58 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 128ms
+2025-07-26 16:23:46 [Eureka-PeerNodesUpdater] DEBUG c.n.discovery.endpoint.EndpointUtils - The availability zone for the given region us-east-1 are [defaultZone]
+2025-07-26 16:23:46 [Eureka-PeerNodesUpdater] WARN  c.n.eureka.cluster.PeerEurekaNodes - The replica size seems to be empty. Check the route 53 DNS Registry
+2025-07-26 16:23:56 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 414ms
+2025-07-26 16:24:56 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 131ms
+2025-07-26 16:25:56 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 85ms
+2025-07-26 16:26:56 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 159ms
+2025-07-26 16:27:56 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 209ms
+2025-07-26 16:28:57 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 233ms
+2025-07-26 16:29:45 [ReplicaAwareInstanceRegistry - RenewalThresholdUpdater] INFO  c.n.e.r.PeerAwareInstanceRegistryImpl - Current renewal threshold is : 6
+2025-07-26 16:29:57 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 171ms
+2025-07-26 16:30:57 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 186ms
+2025-07-26 16:31:57 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 103ms
+2025-07-26 16:32:59 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 961ms
+2025-07-26 16:33:48 [Eureka-PeerNodesUpdater] DEBUG c.n.discovery.endpoint.EndpointUtils - The availability zone for the given region us-east-1 are [defaultZone]
+2025-07-26 16:33:48 [Eureka-PeerNodesUpdater] WARN  c.n.eureka.cluster.PeerEurekaNodes - The replica size seems to be empty. Check the route 53 DNS Registry
+2025-07-26 16:34:00 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 930ms
+2025-07-26 16:35:02 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 1619ms
+2025-07-26 16:36:03 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 1322ms
+2025-07-26 16:37:05 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 2443ms
+2025-07-26 16:38:11 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 1985ms
+2025-07-26 16:39:10 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 2036ms
+2025-07-26 16:40:13 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 3642ms
+2025-07-26 16:41:15 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 2094ms
+2025-07-26 16:42:15 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 1223ms
+2025-07-26 16:43:17 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 1337ms
+2025-07-26 16:43:55 [Eureka-PeerNodesUpdater] DEBUG c.n.discovery.endpoint.EndpointUtils - The availability zone for the given region us-east-1 are [defaultZone]
+2025-07-26 16:44:01 [Eureka-PeerNodesUpdater] WARN  c.n.eureka.cluster.PeerEurekaNodes - The replica size seems to be empty. Check the route 53 DNS Registry
+2025-07-26 16:44:18 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 1047ms
+2025-07-26 16:44:34 [ReplicaAwareInstanceRegistry - RenewalThresholdUpdater] INFO  c.n.e.r.PeerAwareInstanceRegistryImpl - Current renewal threshold is : 6
+2025-07-26 16:45:21 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 2012ms
+2025-07-26 16:46:22 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 899ms
+2025-07-26 16:47:21 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 0ms
+2025-07-26 16:48:21 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 593ms
+2025-07-26 16:49:23 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 1324ms
+2025-07-26 16:50:23 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 716ms
+2025-07-26 16:51:26 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 1868ms
+2025-07-26 16:52:26 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 813ms
+2025-07-26 16:53:27 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 981ms
+2025-07-26 16:54:04 [Eureka-PeerNodesUpdater] DEBUG c.n.discovery.endpoint.EndpointUtils - The availability zone for the given region us-east-1 are [defaultZone]
+2025-07-26 16:54:09 [Eureka-PeerNodesUpdater] WARN  c.n.eureka.cluster.PeerEurekaNodes - The replica size seems to be empty. Check the route 53 DNS Registry
+2025-07-26 16:54:28 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 1363ms
+2025-07-26 16:55:33 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 3837ms
+2025-07-26 16:56:32 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 73ms
+2025-07-26 16:57:32 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 121ms
+2025-07-26 16:58:32 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 286ms
+2025-07-26 16:59:33 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 613ms
+2025-07-26 16:59:34 [ReplicaAwareInstanceRegistry - RenewalThresholdUpdater] INFO  c.n.e.r.PeerAwareInstanceRegistryImpl - Current renewal threshold is : 6
+2025-07-26 17:00:33 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 165ms
+2025-07-26 17:01:36 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 2361ms
+2025-07-26 17:02:36 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 0ms
+2025-07-26 17:03:35 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 500ms
+2025-07-26 17:04:10 [Eureka-PeerNodesUpdater] DEBUG c.n.discovery.endpoint.EndpointUtils - The availability zone for the given region us-east-1 are [defaultZone]
+2025-07-26 17:04:10 [Eureka-PeerNodesUpdater] WARN  c.n.eureka.cluster.PeerEurekaNodes - The replica size seems to be empty. Check the route 53 DNS Registry
+2025-07-26 17:04:11 [SpringApplicationShutdownHook] INFO  o.s.c.n.e.s.EurekaServiceRegistry - Unregistering application UNKNOWN with eureka with status DOWN
+2025-07-26 17:04:12 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-07-26 17:04:16 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-07-26 17:04:16 [SpringApplicationShutdownHook] INFO  o.s.c.n.e.s.EurekaServerBootstrap - Shutting down Eureka Server..
+2025-07-26 17:04:16 [SpringApplicationShutdownHook] INFO  c.n.e.DefaultEurekaServerContext - Shutting down ...
+2025-07-26 17:04:16 [SpringApplicationShutdownHook] INFO  c.n.e.DefaultEurekaServerContext - Shut down
+2025-07-26 17:04:16 [SpringApplicationShutdownHook] INFO  o.s.c.n.e.s.EurekaServerBootstrap - Eureka Service is now shutdown...
+2025-07-26 17:04:16 [SpringApplicationShutdownHook] INFO  c.n.e.DefaultEurekaServerContext - Shutting down ...
+2025-07-26 17:04:16 [SpringApplicationShutdownHook] INFO  c.n.e.DefaultEurekaServerContext - Shut down
+2025-07-26 17:04:17 [SpringApplicationShutdownHook] INFO  c.netflix.discovery.DiscoveryClient - Shutting down DiscoveryClient ...
+2025-07-26 17:04:17 [SpringApplicationShutdownHook] INFO  c.netflix.discovery.DiscoveryClient - Completed shut down of DiscoveryClient
+2025-07-26 20:29:35 [main] INFO  c.b.discovery.DiscoveryApplication - Starting DiscoveryApplication using Java 17.0.15 with PID 20178 (/home/ironman/book-it-now/BookItNow/discovery-service/build/classes/java/main started by ironman in /home/ironman/book-it-now/BookItNow/discovery-service)
+2025-07-26 20:29:35 [main] INFO  c.b.discovery.DiscoveryApplication - No active profile set, falling back to 1 default profile: "default"
+2025-07-26 20:29:38 [main] INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=7c151485-92d3-3efd-9fed-aa6526449e7e
+2025-07-26 20:29:38 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8761 (http)
+2025-07-26 20:29:38 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8761"]
+2025-07-26 20:29:38 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-07-26 20:29:38 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.33]
+2025-07-26 20:29:38 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-07-26 20:29:38 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 3144 ms
+2025-07-26 20:29:40 [main] INFO  c.n.d.p.DiscoveryJerseyProvider - Using JSON encoding codec LegacyJacksonJson
+2025-07-26 20:29:40 [main] INFO  c.n.d.p.DiscoveryJerseyProvider - Using JSON decoding codec LegacyJacksonJson
+2025-07-26 20:29:41 [main] INFO  c.n.d.p.DiscoveryJerseyProvider - Using XML encoding codec XStreamXml
+2025-07-26 20:29:41 [main] INFO  c.n.d.p.DiscoveryJerseyProvider - Using XML decoding codec XStreamXml
+2025-07-26 20:29:44 [main] INFO  o.s.cloud.commons.util.InetUtils - Cannot determine local hostname
+2025-07-26 20:29:46 [main] INFO  o.s.cloud.commons.util.InetUtils - Cannot determine local hostname
+2025-07-26 20:29:46 [main] WARN  o.s.c.l.c.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger - Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2025-07-26 20:29:46 [main] INFO  o.s.c.n.eureka.InstanceInfoFactory - Setting initial instance status as: STARTING
+2025-07-26 20:29:47 [main] INFO  c.netflix.discovery.DiscoveryClient - Initializing Eureka in region us-east-1
+2025-07-26 20:29:47 [main] INFO  c.netflix.discovery.DiscoveryClient - Client configured to neither register nor query for data.
+2025-07-26 20:29:47 [main] INFO  c.netflix.discovery.DiscoveryClient - Discovery Client initialized at timestamp 1753541987056 with initial instances count: 0
+2025-07-26 20:29:47 [main] INFO  c.n.e.DefaultEurekaServerContext - Initializing ...
+2025-07-26 20:29:47 [main] DEBUG c.n.discovery.endpoint.EndpointUtils - The availability zone for the given region us-east-1 are [defaultZone]
+2025-07-26 20:29:47 [main] WARN  c.n.eureka.cluster.PeerEurekaNodes - The replica size seems to be empty. Check the route 53 DNS Registry
+2025-07-26 20:29:47 [main] INFO  c.n.e.r.AbstractInstanceRegistry - Finished initializing remote region registries. All known remote regions: []
+2025-07-26 20:29:47 [main] INFO  c.n.e.DefaultEurekaServerContext - Initialized
+2025-07-26 20:29:47 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 1 endpoint beneath base path '/actuator'
+2025-07-26 20:29:47 [main] INFO  o.s.c.n.e.s.EurekaServiceRegistry - Registering application UNKNOWN with eureka with status UP
+2025-07-26 20:29:47 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8761"]
+2025-07-26 20:29:47 [Thread-9] INFO  o.s.c.n.e.s.EurekaServerBootstrap - isAws returned false
+2025-07-26 20:29:47 [Thread-9] INFO  o.s.c.n.e.s.EurekaServerBootstrap - Initialized server context
+2025-07-26 20:29:47 [Thread-9] INFO  c.n.e.r.PeerAwareInstanceRegistryImpl - Got 1 instances from neighboring DS node
+2025-07-26 20:29:47 [Thread-9] INFO  c.n.e.r.PeerAwareInstanceRegistryImpl - Renew threshold is: 1
+2025-07-26 20:29:47 [Thread-9] INFO  c.n.e.r.PeerAwareInstanceRegistryImpl - Changing status to UP
+2025-07-26 20:29:47 [Thread-9] INFO  o.s.c.n.e.s.EurekaServerInitializerConfiguration - Started Eureka Server
+2025-07-26 20:29:47 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8761 (http) with context path '/'
+2025-07-26 20:29:47 [main] INFO  o.s.c.n.e.s.EurekaAutoServiceRegistration - Updating port to 8761
+2025-07-26 20:29:48 [main] INFO  o.s.cloud.commons.util.InetUtils - Cannot determine local hostname
+2025-07-26 20:29:48 [main] INFO  c.b.discovery.DiscoveryApplication - Started DiscoveryApplication in 15.373 seconds (process running for 16.773)
+2025-07-26 20:30:04 [http-nio-8761-exec-3] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-07-26 20:30:04 [http-nio-8761-exec-3] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-07-26 20:30:04 [http-nio-8761-exec-3] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 5 ms
+2025-07-26 20:30:05 [http-nio-8761-exec-3] WARN  c.n.e.r.AbstractInstanceRegistry - DS: Registry: lease doesn't exist, registering resource: GATEWAY-SERVICE - localhost:gateway-service:8080
+2025-07-26 20:30:05 [http-nio-8761-exec-3] WARN  c.n.e.resources.InstanceResource - Not Found (Renew): GATEWAY-SERVICE - localhost:gateway-service:8080
+2025-07-26 20:30:05 [http-nio-8761-exec-4] DEBUG c.n.d.util.DeserializerStringCache - clearing global-level cache with size 2
+2025-07-26 20:30:05 [http-nio-8761-exec-4] DEBUG c.n.d.util.DeserializerStringCache - clearing app-level serialization cache with size 8
+2025-07-26 20:30:05 [http-nio-8761-exec-2] DEBUG c.n.d.util.DeserializerStringCache - clearing global-level cache with size 2
+2025-07-26 20:30:05 [http-nio-8761-exec-2] DEBUG c.n.d.util.DeserializerStringCache - clearing app-level serialization cache with size 8
+2025-07-26 20:30:05 [http-nio-8761-exec-2] WARN  c.n.e.r.AbstractInstanceRegistry - There is an existing lease and the existing lease's dirty timestamp 1753542005340 is greater than the one that is being registered 1753541944500
+2025-07-26 20:30:05 [http-nio-8761-exec-2] WARN  c.n.e.r.AbstractInstanceRegistry - Using the existing instanceInfo instead of the new instanceInfo as the registrant
+2025-07-26 20:30:05 [http-nio-8761-exec-2] INFO  c.n.e.r.AbstractInstanceRegistry - Registered instance GATEWAY-SERVICE/localhost:gateway-service:8080 with status UP (replication=false)
+2025-07-26 20:30:05 [http-nio-8761-exec-4] INFO  c.n.e.r.AbstractInstanceRegistry - Registered instance GATEWAY-SERVICE/localhost:gateway-service:8080 with status UP (replication=false)
+2025-07-26 20:30:47 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 0ms
+2025-07-26 20:30:47 [http-nio-8761-exec-8] DEBUG c.n.d.util.DeserializerStringCache - clearing global-level cache with size 2
+2025-07-26 20:30:47 [http-nio-8761-exec-8] DEBUG c.n.d.util.DeserializerStringCache - clearing app-level serialization cache with size 8
+2025-07-26 20:30:47 [http-nio-8761-exec-8] INFO  c.n.e.r.AbstractInstanceRegistry - Registered instance EVENT-SERVICE/localhost:event-service:8084 with status UP (replication=false)
+2025-07-26 20:31:47 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 0ms
+2025-07-26 20:32:47 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 0ms
+2025-07-26 20:33:47 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 0ms
+2025-07-26 20:33:58 [http-nio-8761-exec-4] DEBUG c.n.d.util.DeserializerStringCache - clearing global-level cache with size 2
+2025-07-26 20:33:58 [http-nio-8761-exec-4] DEBUG c.n.d.util.DeserializerStringCache - clearing app-level serialization cache with size 8
+2025-07-26 20:33:58 [http-nio-8761-exec-4] INFO  c.n.e.r.AbstractInstanceRegistry - Registered instance EVENT-SERVICE/localhost:event-service:8084 with status DOWN (replication=false)
+2025-07-26 20:34:02 [http-nio-8761-exec-5] INFO  c.n.e.r.AbstractInstanceRegistry - Cancelled instance EVENT-SERVICE/localhost:event-service:8084 (replication=false)
+2025-07-26 20:34:37 [http-nio-8761-exec-2] DEBUG c.n.d.util.DeserializerStringCache - clearing global-level cache with size 2
+2025-07-26 20:34:37 [http-nio-8761-exec-2] DEBUG c.n.d.util.DeserializerStringCache - clearing app-level serialization cache with size 8
+2025-07-26 20:34:37 [http-nio-8761-exec-2] INFO  c.n.e.r.AbstractInstanceRegistry - Registered instance EVENT-SERVICE/localhost:event-service:8084 with status UP (replication=false)
+2025-07-26 20:34:47 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 0ms
+2025-07-26 20:35:47 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 0ms
+2025-07-26 20:36:47 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 0ms
+2025-07-26 20:37:47 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 0ms
+2025-07-26 20:38:47 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 0ms
+2025-07-26 20:39:47 [Eureka-PeerNodesUpdater] DEBUG c.n.discovery.endpoint.EndpointUtils - The availability zone for the given region us-east-1 are [defaultZone]
+2025-07-26 20:39:47 [Eureka-PeerNodesUpdater] WARN  c.n.eureka.cluster.PeerEurekaNodes - The replica size seems to be empty. Check the route 53 DNS Registry
+2025-07-26 20:39:47 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 0ms
+2025-07-26 20:40:49 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 2351ms
+2025-07-26 20:41:23 [http-nio-8761-exec-7] DEBUG c.n.d.util.DeserializerStringCache - clearing global-level cache with size 2
+2025-07-26 20:41:23 [http-nio-8761-exec-7] DEBUG c.n.d.util.DeserializerStringCache - clearing app-level serialization cache with size 8
+2025-07-26 20:41:23 [http-nio-8761-exec-7] INFO  c.n.e.r.AbstractInstanceRegistry - Registered instance PAYMENT-SERVICE/localhost:payment-service:8083 with status UP (replication=false)
+2025-07-26 20:41:49 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 0ms
+2025-07-26 20:42:49 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 0ms
+2025-07-26 20:43:49 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 0ms
+2025-07-26 20:44:47 [ReplicaAwareInstanceRegistry - RenewalThresholdUpdater] INFO  c.n.e.r.PeerAwareInstanceRegistryImpl - Current renewal threshold is : 6
+2025-07-26 20:44:49 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 0ms
+2025-07-26 20:45:49 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 0ms
+2025-07-26 20:46:49 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 0ms
+2025-07-26 20:47:49 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 0ms
+2025-07-26 20:48:49 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 0ms
+2025-07-26 20:49:47 [Eureka-PeerNodesUpdater] DEBUG c.n.discovery.endpoint.EndpointUtils - The availability zone for the given region us-east-1 are [defaultZone]
+2025-07-26 20:49:47 [Eureka-PeerNodesUpdater] WARN  c.n.eureka.cluster.PeerEurekaNodes - The replica size seems to be empty. Check the route 53 DNS Registry
+2025-07-26 20:49:49 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 0ms
+2025-07-26 20:50:49 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 0ms
+2025-07-26 20:51:50 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 88ms
+2025-07-26 20:52:50 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 66ms
+2025-07-26 20:53:50 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 110ms
+2025-07-26 20:54:50 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 232ms
+2025-07-26 20:55:50 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 214ms
+2025-07-26 20:56:51 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 101ms
+2025-07-26 20:57:51 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 225ms
+2025-07-26 20:58:51 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 187ms
+2025-07-26 20:59:49 [Eureka-PeerNodesUpdater] DEBUG c.n.discovery.endpoint.EndpointUtils - The availability zone for the given region us-east-1 are [defaultZone]
+2025-07-26 20:59:49 [ReplicaAwareInstanceRegistry - RenewalThresholdUpdater] INFO  c.n.e.r.PeerAwareInstanceRegistryImpl - Current renewal threshold is : 6
+2025-07-26 20:59:56 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 951ms
+2025-07-26 20:59:59 [Eureka-PeerNodesUpdater] WARN  c.n.eureka.cluster.PeerEurekaNodes - The replica size seems to be empty. Check the route 53 DNS Registry
+2025-07-26 21:00:52 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 262ms
+2025-07-26 21:01:53 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 449ms
+2025-07-26 21:02:53 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 196ms
+2025-07-26 21:03:53 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 92ms
+2025-07-26 21:04:53 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 476ms
+2025-07-26 21:05:54 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 171ms
+2025-07-26 21:06:56 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 1148ms
+2025-07-26 21:07:55 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 368ms
+2025-07-26 21:08:56 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 566ms
+2025-07-26 21:09:57 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 689ms
+2025-07-26 21:10:04 [Eureka-PeerNodesUpdater] DEBUG c.n.discovery.endpoint.EndpointUtils - The availability zone for the given region us-east-1 are [defaultZone]
+2025-07-26 21:10:10 [Eureka-PeerNodesUpdater] WARN  c.n.eureka.cluster.PeerEurekaNodes - The replica size seems to be empty. Check the route 53 DNS Registry
+2025-07-26 21:10:58 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 217ms
+2025-07-26 21:11:57 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 647ms
+2025-07-26 21:12:58 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 163ms
+2025-07-26 21:13:58 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 404ms
+2025-07-26 21:14:55 [ReplicaAwareInstanceRegistry - RenewalThresholdUpdater] INFO  c.n.e.r.PeerAwareInstanceRegistryImpl - Current renewal threshold is : 6
+2025-07-26 21:14:58 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 57ms
+2025-07-26 21:16:02 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 281ms
+2025-07-26 21:16:59 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 687ms
+2025-07-26 21:17:59 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 77ms
+2025-07-26 21:18:59 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 135ms
+2025-07-26 21:20:00 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 194ms
+2025-07-26 21:20:21 [Eureka-PeerNodesUpdater] DEBUG c.n.discovery.endpoint.EndpointUtils - The availability zone for the given region us-east-1 are [defaultZone]
+2025-07-26 21:21:04 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 501ms
+2025-07-26 21:21:07 [Eureka-PeerNodesUpdater] WARN  c.n.eureka.cluster.PeerEurekaNodes - The replica size seems to be empty. Check the route 53 DNS Registry
+2025-07-26 21:22:02 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 601ms
+2025-07-26 21:23:01 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 264ms
+2025-07-26 21:24:01 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 477ms
+2025-07-26 21:25:01 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 0ms
+2025-07-26 21:25:32 [http-nio-8761-exec-3] DEBUG c.n.d.util.DeserializerStringCache - clearing global-level cache with size 2
+2025-07-26 21:25:32 [http-nio-8761-exec-3] DEBUG c.n.d.util.DeserializerStringCache - clearing app-level serialization cache with size 8
+2025-07-26 21:25:32 [http-nio-8761-exec-3] INFO  c.n.e.r.AbstractInstanceRegistry - Registered instance BOOKING-SERVICE/localhost:booking-service:8082 with status UP (replication=false)
+2025-07-26 21:25:50 [http-nio-8761-exec-10] DEBUG c.n.d.util.DeserializerStringCache - clearing global-level cache with size 2
+2025-07-26 21:25:50 [http-nio-8761-exec-10] DEBUG c.n.d.util.DeserializerStringCache - clearing app-level serialization cache with size 8
+2025-07-26 21:25:50 [http-nio-8761-exec-10] INFO  c.n.e.r.AbstractInstanceRegistry - Registered instance BOOKING-SERVICE/localhost:booking-service:8082 with status DOWN (replication=false)
+2025-07-26 21:25:53 [http-nio-8761-exec-1] INFO  c.n.e.r.AbstractInstanceRegistry - Cancelled instance BOOKING-SERVICE/localhost:booking-service:8082 (replication=false)
+2025-07-26 21:26:01 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 0ms
+2025-07-26 21:27:01 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 0ms
+2025-07-26 21:28:01 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 0ms
+2025-07-26 21:29:01 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 1ms
+2025-07-26 21:29:48 [ReplicaAwareInstanceRegistry - RenewalThresholdUpdater] INFO  c.n.e.r.PeerAwareInstanceRegistryImpl - Current renewal threshold is : 6
+2025-07-26 21:30:01 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 0ms
+2025-07-26 21:31:01 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 0ms
+2025-07-26 21:31:35 [Eureka-PeerNodesUpdater] DEBUG c.n.discovery.endpoint.EndpointUtils - The availability zone for the given region us-east-1 are [defaultZone]
+2025-07-26 21:31:35 [Eureka-PeerNodesUpdater] WARN  c.n.eureka.cluster.PeerEurekaNodes - The replica size seems to be empty. Check the route 53 DNS Registry
+2025-07-26 21:32:01 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 0ms
+2025-07-26 21:33:01 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 0ms
+2025-07-26 21:34:01 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 0ms
+2025-07-26 21:35:01 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 0ms
+2025-07-26 21:36:01 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 1ms
+2025-07-26 21:37:01 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 1ms
+2025-07-26 21:38:01 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 0ms
+2025-07-26 21:39:01 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 0ms
+2025-07-26 21:40:01 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 0ms
+2025-07-26 21:41:01 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 0ms
+2025-07-26 21:41:35 [Eureka-PeerNodesUpdater] DEBUG c.n.discovery.endpoint.EndpointUtils - The availability zone for the given region us-east-1 are [defaultZone]
+2025-07-26 21:41:35 [Eureka-PeerNodesUpdater] WARN  c.n.eureka.cluster.PeerEurekaNodes - The replica size seems to be empty. Check the route 53 DNS Registry
+2025-07-26 21:42:01 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 0ms
+2025-07-26 21:43:01 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 0ms
+2025-07-26 21:44:01 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 0ms
+2025-07-26 21:44:48 [ReplicaAwareInstanceRegistry - RenewalThresholdUpdater] INFO  c.n.e.r.PeerAwareInstanceRegistryImpl - Current renewal threshold is : 6
+2025-07-26 21:45:01 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 1ms
+2025-07-26 21:46:01 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 0ms
+2025-07-26 21:47:01 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 0ms
+2025-07-26 21:48:01 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 0ms
+2025-07-26 21:49:01 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 0ms
+2025-07-26 21:50:01 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 0ms
+2025-07-26 21:51:01 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 0ms
+2025-07-26 21:51:35 [Eureka-PeerNodesUpdater] DEBUG c.n.discovery.endpoint.EndpointUtils - The availability zone for the given region us-east-1 are [defaultZone]
+2025-07-26 21:51:35 [Eureka-PeerNodesUpdater] WARN  c.n.eureka.cluster.PeerEurekaNodes - The replica size seems to be empty. Check the route 53 DNS Registry
+2025-07-26 21:52:01 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 0ms
+2025-07-26 21:53:01 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 0ms
+2025-07-26 21:54:01 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 0ms
+2025-07-26 21:55:01 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 0ms
+2025-07-26 21:56:01 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 1ms
+2025-07-26 21:57:01 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 0ms
+2025-07-26 21:58:01 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 0ms
+2025-07-26 21:59:01 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 0ms
+2025-07-26 21:59:48 [ReplicaAwareInstanceRegistry - RenewalThresholdUpdater] INFO  c.n.e.r.PeerAwareInstanceRegistryImpl - Current renewal threshold is : 6
+2025-07-26 22:00:01 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 1ms
+2025-07-26 22:01:01 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 1ms
+2025-07-26 22:01:35 [Eureka-PeerNodesUpdater] DEBUG c.n.discovery.endpoint.EndpointUtils - The availability zone for the given region us-east-1 are [defaultZone]
+2025-07-26 22:01:35 [Eureka-PeerNodesUpdater] WARN  c.n.eureka.cluster.PeerEurekaNodes - The replica size seems to be empty. Check the route 53 DNS Registry
+2025-07-26 22:02:01 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 0ms
+2025-07-26 22:03:01 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 0ms
+2025-07-26 22:04:01 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 0ms
+2025-07-26 22:05:01 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 0ms
+2025-07-26 22:06:01 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 0ms
+2025-07-26 22:07:01 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 1ms
+2025-07-26 23:03:58 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 0ms
+2025-07-26 23:04:58 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 1ms
+2025-07-26 23:05:58 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 0ms
+2025-07-26 23:06:58 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 0ms
+2025-07-26 23:07:32 [Eureka-PeerNodesUpdater] DEBUG c.n.discovery.endpoint.EndpointUtils - The availability zone for the given region us-east-1 are [defaultZone]
+2025-07-26 23:07:32 [Eureka-PeerNodesUpdater] WARN  c.n.eureka.cluster.PeerEurekaNodes - The replica size seems to be empty. Check the route 53 DNS Registry
+2025-07-26 23:07:58 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 0ms
+2025-07-26 23:08:58 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 0ms
+2025-07-26 23:09:58 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 0ms
+2025-07-26 23:10:45 [ReplicaAwareInstanceRegistry - RenewalThresholdUpdater] INFO  c.n.e.r.PeerAwareInstanceRegistryImpl - Current renewal threshold is : 6
+2025-07-26 23:10:58 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 0ms
+2025-07-26 23:11:58 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 0ms
+2025-07-26 23:12:58 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 0ms
+2025-07-26 23:13:58 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 0ms
+2025-07-26 23:14:58 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 0ms
+2025-07-26 23:15:58 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 0ms
+2025-07-26 23:16:58 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 0ms
+2025-07-26 23:17:32 [Eureka-PeerNodesUpdater] DEBUG c.n.discovery.endpoint.EndpointUtils - The availability zone for the given region us-east-1 are [defaultZone]
+2025-07-26 23:17:32 [Eureka-PeerNodesUpdater] WARN  c.n.eureka.cluster.PeerEurekaNodes - The replica size seems to be empty. Check the route 53 DNS Registry
+2025-07-26 23:17:58 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 0ms
+2025-07-26 23:18:58 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 0ms
+2025-07-26 23:19:58 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 0ms
+2025-07-26 23:20:58 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 0ms
+2025-07-26 23:21:58 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 0ms
+2025-07-26 23:22:58 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 0ms
+2025-07-26 23:23:58 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 0ms
+2025-07-26 23:24:58 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 0ms
+2025-07-26 23:25:45 [ReplicaAwareInstanceRegistry - RenewalThresholdUpdater] INFO  c.n.e.r.PeerAwareInstanceRegistryImpl - Current renewal threshold is : 6
+2025-07-26 23:25:58 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 0ms
+2025-07-26 23:26:33 [SpringApplicationShutdownHook] INFO  o.s.c.n.e.s.EurekaServiceRegistry - Unregistering application UNKNOWN with eureka with status DOWN
+2025-07-26 23:26:34 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-07-26 23:26:34 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-07-26 23:26:34 [SpringApplicationShutdownHook] INFO  o.s.c.n.e.s.EurekaServerBootstrap - Shutting down Eureka Server..
+2025-07-26 23:26:34 [SpringApplicationShutdownHook] INFO  c.n.e.DefaultEurekaServerContext - Shutting down ...
+2025-07-26 23:26:34 [SpringApplicationShutdownHook] INFO  c.n.e.DefaultEurekaServerContext - Shut down
+2025-07-26 23:26:34 [SpringApplicationShutdownHook] INFO  o.s.c.n.e.s.EurekaServerBootstrap - Eureka Service is now shutdown...
+2025-07-26 23:26:34 [SpringApplicationShutdownHook] INFO  c.n.e.DefaultEurekaServerContext - Shutting down ...
+2025-07-26 23:26:34 [SpringApplicationShutdownHook] INFO  c.n.e.DefaultEurekaServerContext - Shut down
+2025-07-26 23:26:34 [SpringApplicationShutdownHook] INFO  c.netflix.discovery.DiscoveryClient - Shutting down DiscoveryClient ...
+2025-07-26 23:26:34 [SpringApplicationShutdownHook] INFO  c.netflix.discovery.DiscoveryClient - Completed shut down of DiscoveryClient
+2025-07-27 00:28:03 [main] INFO  c.b.discovery.DiscoveryApplication - Starting DiscoveryApplication using Java 17.0.15 with PID 204411 (/home/ironman/book-it-now/BookItNow/discovery-service/build/classes/java/main started by ironman in /home/ironman/book-it-now/BookItNow/discovery-service)
+2025-07-27 00:28:03 [main] INFO  c.b.discovery.DiscoveryApplication - No active profile set, falling back to 1 default profile: "default"
+2025-07-27 00:28:06 [main] INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=7c151485-92d3-3efd-9fed-aa6526449e7e
+2025-07-27 00:28:07 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8761 (http)
+2025-07-27 00:28:07 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8761"]
+2025-07-27 00:28:07 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-07-27 00:28:07 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.33]
+2025-07-27 00:28:07 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-07-27 00:28:07 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 3909 ms
+2025-07-27 00:28:09 [main] INFO  c.n.d.p.DiscoveryJerseyProvider - Using JSON encoding codec LegacyJacksonJson
+2025-07-27 00:28:09 [main] INFO  c.n.d.p.DiscoveryJerseyProvider - Using JSON decoding codec LegacyJacksonJson
+2025-07-27 00:28:09 [main] INFO  c.n.d.p.DiscoveryJerseyProvider - Using XML encoding codec XStreamXml
+2025-07-27 00:28:09 [main] INFO  c.n.d.p.DiscoveryJerseyProvider - Using XML decoding codec XStreamXml
+2025-07-27 00:28:12 [main] INFO  o.s.cloud.commons.util.InetUtils - Cannot determine local hostname
+2025-07-27 00:28:14 [main] INFO  o.s.cloud.commons.util.InetUtils - Cannot determine local hostname
+2025-07-27 00:28:14 [main] WARN  o.s.c.l.c.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger - Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2025-07-27 00:28:14 [main] INFO  o.s.c.n.eureka.InstanceInfoFactory - Setting initial instance status as: STARTING
+2025-07-27 00:28:14 [main] INFO  c.netflix.discovery.DiscoveryClient - Initializing Eureka in region us-east-1
+2025-07-27 00:28:14 [main] INFO  c.netflix.discovery.DiscoveryClient - Client configured to neither register nor query for data.
+2025-07-27 00:28:14 [main] INFO  c.netflix.discovery.DiscoveryClient - Discovery Client initialized at timestamp 1753556294905 with initial instances count: 0
+2025-07-27 00:28:14 [main] INFO  c.n.e.DefaultEurekaServerContext - Initializing ...
+2025-07-27 00:28:14 [main] DEBUG c.n.discovery.endpoint.EndpointUtils - The availability zone for the given region us-east-1 are [defaultZone]
+2025-07-27 00:28:14 [main] WARN  c.n.eureka.cluster.PeerEurekaNodes - The replica size seems to be empty. Check the route 53 DNS Registry
+2025-07-27 00:28:14 [main] INFO  c.n.e.r.AbstractInstanceRegistry - Finished initializing remote region registries. All known remote regions: []
+2025-07-27 00:28:14 [main] INFO  c.n.e.DefaultEurekaServerContext - Initialized
+2025-07-27 00:28:15 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 1 endpoint beneath base path '/actuator'
+2025-07-27 00:28:15 [main] INFO  o.s.c.n.e.s.EurekaServiceRegistry - Registering application UNKNOWN with eureka with status UP
+2025-07-27 00:28:15 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8761"]
+2025-07-27 00:28:15 [Thread-9] INFO  o.s.c.n.e.s.EurekaServerBootstrap - isAws returned false
+2025-07-27 00:28:15 [Thread-9] INFO  o.s.c.n.e.s.EurekaServerBootstrap - Initialized server context
+2025-07-27 00:28:15 [Thread-9] INFO  c.n.e.r.PeerAwareInstanceRegistryImpl - Got 1 instances from neighboring DS node
+2025-07-27 00:28:15 [Thread-9] INFO  c.n.e.r.PeerAwareInstanceRegistryImpl - Renew threshold is: 1
+2025-07-27 00:28:15 [Thread-9] INFO  c.n.e.r.PeerAwareInstanceRegistryImpl - Changing status to UP
+2025-07-27 00:28:15 [Thread-9] INFO  o.s.c.n.e.s.EurekaServerInitializerConfiguration - Started Eureka Server
+2025-07-27 00:28:15 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8761 (http) with context path '/'
+2025-07-27 00:28:15 [main] INFO  o.s.c.n.e.s.EurekaAutoServiceRegistration - Updating port to 8761
+2025-07-27 00:28:16 [main] INFO  o.s.cloud.commons.util.InetUtils - Cannot determine local hostname
+2025-07-27 00:28:16 [main] INFO  c.b.discovery.DiscoveryApplication - Started DiscoveryApplication in 24.345 seconds (process running for 26.615)
+2025-07-27 00:28:30 [http-nio-8761-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-07-27 00:28:30 [http-nio-8761-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-07-27 00:28:30 [http-nio-8761-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 4 ms
+2025-07-27 00:28:30 [http-nio-8761-exec-2] WARN  c.n.e.r.AbstractInstanceRegistry - DS: Registry: lease doesn't exist, registering resource: EVENT-SERVICE - localhost:event-service:8084
+2025-07-27 00:28:30 [http-nio-8761-exec-2] WARN  c.n.e.resources.InstanceResource - Not Found (Renew): EVENT-SERVICE - localhost:event-service:8084
+2025-07-27 00:28:31 [http-nio-8761-exec-5] WARN  c.n.e.r.AbstractInstanceRegistry - DS: Registry: lease doesn't exist, registering resource: GATEWAY-SERVICE - localhost:gateway-service:8080
+2025-07-27 00:28:31 [http-nio-8761-exec-5] WARN  c.n.e.resources.InstanceResource - Not Found (Renew): GATEWAY-SERVICE - localhost:gateway-service:8080
+2025-07-27 00:28:31 [http-nio-8761-exec-7] DEBUG c.n.d.util.DeserializerStringCache - clearing global-level cache with size 2
+2025-07-27 00:28:31 [http-nio-8761-exec-7] DEBUG c.n.d.util.DeserializerStringCache - clearing app-level serialization cache with size 8
+2025-07-27 00:28:31 [http-nio-8761-exec-7] INFO  c.n.e.r.AbstractInstanceRegistry - Registered instance GATEWAY-SERVICE/localhost:gateway-service:8080 with status UP (replication=false)
+2025-07-27 00:28:31 [http-nio-8761-exec-8] DEBUG c.n.d.util.DeserializerStringCache - clearing global-level cache with size 2
+2025-07-27 00:28:31 [http-nio-8761-exec-8] DEBUG c.n.d.util.DeserializerStringCache - clearing app-level serialization cache with size 8
+2025-07-27 00:28:31 [http-nio-8761-exec-8] INFO  c.n.e.r.AbstractInstanceRegistry - Registered instance EVENT-SERVICE/localhost:event-service:8084 with status UP (replication=false)
+2025-07-27 00:29:15 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 0ms
+2025-07-27 00:29:35 [http-nio-8761-exec-8] DEBUG c.n.d.util.DeserializerStringCache - clearing global-level cache with size 2
+2025-07-27 00:29:35 [http-nio-8761-exec-8] DEBUG c.n.d.util.DeserializerStringCache - clearing app-level serialization cache with size 8
+2025-07-27 00:29:35 [http-nio-8761-exec-8] INFO  c.n.e.r.AbstractInstanceRegistry - Registered instance GATEWAY-SERVICE/localhost:gateway-service:8080 with status UP (replication=false)
+2025-07-27 00:29:37 [http-nio-8761-exec-9] DEBUG c.n.d.util.DeserializerStringCache - clearing global-level cache with size 2
+2025-07-27 00:29:37 [http-nio-8761-exec-9] DEBUG c.n.d.util.DeserializerStringCache - clearing app-level serialization cache with size 8
+2025-07-27 00:29:37 [http-nio-8761-exec-9] INFO  c.n.e.r.AbstractInstanceRegistry - Registered instance GATEWAY-SERVICE/localhost:gateway-service:8080 with status DOWN (replication=false)
+2025-07-27 00:29:37 [http-nio-8761-exec-10] INFO  c.n.e.r.AbstractInstanceRegistry - Cancelled instance GATEWAY-SERVICE/localhost:gateway-service:8080 (replication=false)
+2025-07-27 00:29:59 [http-nio-8761-exec-5] WARN  c.n.e.r.AbstractInstanceRegistry - DS: Registry: lease doesn't exist, registering resource: GATEWAY-SERVICE - localhost:gateway-service:8080
+2025-07-27 00:29:59 [http-nio-8761-exec-5] WARN  c.n.e.resources.InstanceResource - Not Found (Renew): GATEWAY-SERVICE - localhost:gateway-service:8080
+2025-07-27 00:29:59 [http-nio-8761-exec-6] DEBUG c.n.d.util.DeserializerStringCache - clearing global-level cache with size 2
+2025-07-27 00:29:59 [http-nio-8761-exec-6] DEBUG c.n.d.util.DeserializerStringCache - clearing app-level serialization cache with size 8
+2025-07-27 00:29:59 [http-nio-8761-exec-6] INFO  c.n.e.r.AbstractInstanceRegistry - Registered instance GATEWAY-SERVICE/localhost:gateway-service:8080 with status UP (replication=false)
+2025-07-27 00:30:15 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 1538ms
+2025-07-27 00:31:15 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 1543ms
+2025-07-27 00:31:43 [http-nio-8761-exec-1] DEBUG c.n.d.util.DeserializerStringCache - clearing global-level cache with size 2
+2025-07-27 00:31:43 [http-nio-8761-exec-1] DEBUG c.n.d.util.DeserializerStringCache - clearing app-level serialization cache with size 8
+2025-07-27 00:31:43 [http-nio-8761-exec-1] INFO  c.n.e.r.AbstractInstanceRegistry - Registered instance GATEWAY-SERVICE/localhost:gateway-service:8080 with status UP (replication=false)
+2025-07-27 00:31:45 [http-nio-8761-exec-3] DEBUG c.n.d.util.DeserializerStringCache - clearing global-level cache with size 2
+2025-07-27 00:31:45 [http-nio-8761-exec-3] DEBUG c.n.d.util.DeserializerStringCache - clearing app-level serialization cache with size 8
+2025-07-27 00:31:45 [http-nio-8761-exec-3] INFO  c.n.e.r.AbstractInstanceRegistry - Registered instance GATEWAY-SERVICE/localhost:gateway-service:8080 with status DOWN (replication=false)
+2025-07-27 00:31:45 [http-nio-8761-exec-4] INFO  c.n.e.r.AbstractInstanceRegistry - Cancelled instance GATEWAY-SERVICE/localhost:gateway-service:8080 (replication=false)
+2025-07-27 00:31:57 [http-nio-8761-exec-9] WARN  c.n.e.r.AbstractInstanceRegistry - DS: Registry: lease doesn't exist, registering resource: GATEWAY-SERVICE - localhost:gateway-service:8080
+2025-07-27 00:31:57 [http-nio-8761-exec-9] WARN  c.n.e.resources.InstanceResource - Not Found (Renew): GATEWAY-SERVICE - localhost:gateway-service:8080
+2025-07-27 00:31:57 [http-nio-8761-exec-10] DEBUG c.n.d.util.DeserializerStringCache - clearing global-level cache with size 2
+2025-07-27 00:31:57 [http-nio-8761-exec-10] DEBUG c.n.d.util.DeserializerStringCache - clearing app-level serialization cache with size 8
+2025-07-27 00:31:57 [http-nio-8761-exec-10] INFO  c.n.e.r.AbstractInstanceRegistry - Registered instance GATEWAY-SERVICE/localhost:gateway-service:8080 with status UP (replication=false)
+2025-07-27 00:32:15 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 1548ms
+2025-07-27 00:32:50 [http-nio-8761-exec-7] DEBUG c.n.d.util.DeserializerStringCache - clearing global-level cache with size 2
+2025-07-27 00:32:50 [http-nio-8761-exec-7] DEBUG c.n.d.util.DeserializerStringCache - clearing app-level serialization cache with size 8
+2025-07-27 00:32:50 [http-nio-8761-exec-7] INFO  c.n.e.r.AbstractInstanceRegistry - Registered instance GATEWAY-SERVICE/localhost:gateway-service:8080 with status UP (replication=false)
+2025-07-27 00:32:52 [http-nio-8761-exec-8] DEBUG c.n.d.util.DeserializerStringCache - clearing global-level cache with size 2
+2025-07-27 00:32:52 [http-nio-8761-exec-8] DEBUG c.n.d.util.DeserializerStringCache - clearing app-level serialization cache with size 8
+2025-07-27 00:32:52 [http-nio-8761-exec-8] INFO  c.n.e.r.AbstractInstanceRegistry - Registered instance GATEWAY-SERVICE/localhost:gateway-service:8080 with status DOWN (replication=false)
+2025-07-27 00:32:52 [http-nio-8761-exec-9] INFO  c.n.e.r.AbstractInstanceRegistry - Cancelled instance GATEWAY-SERVICE/localhost:gateway-service:8080 (replication=false)
+2025-07-27 00:32:55 [http-nio-8761-exec-4] WARN  c.n.e.r.AbstractInstanceRegistry - DS: Registry: lease doesn't exist, registering resource: GATEWAY-SERVICE - localhost:gateway-service:8080
+2025-07-27 00:32:55 [http-nio-8761-exec-4] WARN  c.n.e.resources.InstanceResource - Not Found (Renew): GATEWAY-SERVICE - localhost:gateway-service:8080
+2025-07-27 00:32:55 [http-nio-8761-exec-6] DEBUG c.n.d.util.DeserializerStringCache - clearing global-level cache with size 2
+2025-07-27 00:32:55 [http-nio-8761-exec-6] DEBUG c.n.d.util.DeserializerStringCache - clearing app-level serialization cache with size 8
+2025-07-27 00:32:55 [http-nio-8761-exec-6] INFO  c.n.e.r.AbstractInstanceRegistry - Registered instance GATEWAY-SERVICE/localhost:gateway-service:8080 with status UP (replication=false)
+2025-07-27 00:33:15 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 1532ms
+2025-07-27 00:34:15 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 1494ms
+2025-07-27 00:34:17 [http-nio-8761-exec-5] DEBUG c.n.d.util.DeserializerStringCache - clearing global-level cache with size 2
+2025-07-27 00:34:17 [http-nio-8761-exec-5] DEBUG c.n.d.util.DeserializerStringCache - clearing app-level serialization cache with size 8
+2025-07-27 00:34:18 [http-nio-8761-exec-5] INFO  c.n.e.r.AbstractInstanceRegistry - Registered instance GATEWAY-SERVICE/localhost:gateway-service:8080 with status UP (replication=false)
+2025-07-27 00:34:20 [http-nio-8761-exec-7] DEBUG c.n.d.util.DeserializerStringCache - clearing global-level cache with size 2
+2025-07-27 00:34:20 [http-nio-8761-exec-7] DEBUG c.n.d.util.DeserializerStringCache - clearing app-level serialization cache with size 8
+2025-07-27 00:34:20 [http-nio-8761-exec-7] INFO  c.n.e.r.AbstractInstanceRegistry - Registered instance GATEWAY-SERVICE/localhost:gateway-service:8080 with status DOWN (replication=false)
+2025-07-27 00:34:20 [http-nio-8761-exec-8] INFO  c.n.e.r.AbstractInstanceRegistry - Cancelled instance GATEWAY-SERVICE/localhost:gateway-service:8080 (replication=false)
+2025-07-27 00:34:23 [http-nio-8761-exec-3] WARN  c.n.e.r.AbstractInstanceRegistry - DS: Registry: lease doesn't exist, registering resource: GATEWAY-SERVICE - localhost:gateway-service:8080
+2025-07-27 00:34:23 [http-nio-8761-exec-3] WARN  c.n.e.resources.InstanceResource - Not Found (Renew): GATEWAY-SERVICE - localhost:gateway-service:8080
+2025-07-27 00:34:23 [http-nio-8761-exec-4] DEBUG c.n.d.util.DeserializerStringCache - clearing global-level cache with size 2
+2025-07-27 00:34:23 [http-nio-8761-exec-4] DEBUG c.n.d.util.DeserializerStringCache - clearing app-level serialization cache with size 8
+2025-07-27 00:34:23 [http-nio-8761-exec-4] INFO  c.n.e.r.AbstractInstanceRegistry - Registered instance GATEWAY-SERVICE/localhost:gateway-service:8080 with status UP (replication=false)
+2025-07-27 00:35:15 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 733ms
+2025-07-27 00:36:15 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 1656ms
+2025-07-27 00:36:55 [http-nio-8761-exec-8] DEBUG c.n.d.util.DeserializerStringCache - clearing global-level cache with size 2
+2025-07-27 00:36:55 [http-nio-8761-exec-8] DEBUG c.n.d.util.DeserializerStringCache - clearing app-level serialization cache with size 8
+2025-07-27 00:36:55 [http-nio-8761-exec-8] INFO  c.n.e.r.AbstractInstanceRegistry - Registered instance GATEWAY-SERVICE/localhost:gateway-service:8080 with status UP (replication=false)
+2025-07-27 00:36:57 [http-nio-8761-exec-9] DEBUG c.n.d.util.DeserializerStringCache - clearing global-level cache with size 2
+2025-07-27 00:36:57 [http-nio-8761-exec-9] DEBUG c.n.d.util.DeserializerStringCache - clearing app-level serialization cache with size 8
+2025-07-27 00:36:57 [http-nio-8761-exec-9] INFO  c.n.e.r.AbstractInstanceRegistry - Registered instance GATEWAY-SERVICE/localhost:gateway-service:8080 with status DOWN (replication=false)
+2025-07-27 00:36:57 [http-nio-8761-exec-10] INFO  c.n.e.r.AbstractInstanceRegistry - Cancelled instance GATEWAY-SERVICE/localhost:gateway-service:8080 (replication=false)
+2025-07-27 00:37:15 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 1533ms
+2025-07-27 00:37:19 [http-nio-8761-exec-6] WARN  c.n.e.r.AbstractInstanceRegistry - DS: Registry: lease doesn't exist, registering resource: GATEWAY-SERVICE - localhost:gateway-service:8080
+2025-07-27 00:37:19 [http-nio-8761-exec-6] WARN  c.n.e.resources.InstanceResource - Not Found (Renew): GATEWAY-SERVICE - localhost:gateway-service:8080
+2025-07-27 00:37:19 [http-nio-8761-exec-5] DEBUG c.n.d.util.DeserializerStringCache - clearing global-level cache with size 2
+2025-07-27 00:37:19 [http-nio-8761-exec-5] DEBUG c.n.d.util.DeserializerStringCache - clearing app-level serialization cache with size 8
+2025-07-27 00:37:19 [http-nio-8761-exec-5] INFO  c.n.e.r.AbstractInstanceRegistry - Registered instance GATEWAY-SERVICE/localhost:gateway-service:8080 with status UP (replication=false)
+2025-07-27 00:37:37 [http-nio-8761-exec-9] DEBUG c.n.d.util.DeserializerStringCache - clearing global-level cache with size 2
+2025-07-27 00:37:37 [http-nio-8761-exec-9] DEBUG c.n.d.util.DeserializerStringCache - clearing app-level serialization cache with size 8
+2025-07-27 00:37:37 [http-nio-8761-exec-9] INFO  c.n.e.r.AbstractInstanceRegistry - Registered instance GATEWAY-SERVICE/localhost:gateway-service:8080 with status UP (replication=false)
+2025-07-27 00:37:39 [http-nio-8761-exec-10] DEBUG c.n.d.util.DeserializerStringCache - clearing global-level cache with size 2
+2025-07-27 00:37:39 [http-nio-8761-exec-10] DEBUG c.n.d.util.DeserializerStringCache - clearing app-level serialization cache with size 8
+2025-07-27 00:37:39 [http-nio-8761-exec-10] INFO  c.n.e.r.AbstractInstanceRegistry - Registered instance GATEWAY-SERVICE/localhost:gateway-service:8080 with status DOWN (replication=false)
+2025-07-27 00:37:39 [http-nio-8761-exec-1] INFO  c.n.e.r.AbstractInstanceRegistry - Cancelled instance GATEWAY-SERVICE/localhost:gateway-service:8080 (replication=false)
+2025-07-27 00:37:48 [http-nio-8761-exec-5] WARN  c.n.e.r.AbstractInstanceRegistry - DS: Registry: lease doesn't exist, registering resource: GATEWAY-SERVICE - localhost:gateway-service:8080
+2025-07-27 00:37:48 [http-nio-8761-exec-5] WARN  c.n.e.resources.InstanceResource - Not Found (Renew): GATEWAY-SERVICE - localhost:gateway-service:8080
+2025-07-27 00:37:48 [http-nio-8761-exec-7] DEBUG c.n.d.util.DeserializerStringCache - clearing global-level cache with size 2
+2025-07-27 00:37:48 [http-nio-8761-exec-7] DEBUG c.n.d.util.DeserializerStringCache - clearing app-level serialization cache with size 8
+2025-07-27 00:37:48 [http-nio-8761-exec-7] INFO  c.n.e.r.AbstractInstanceRegistry - Registered instance GATEWAY-SERVICE/localhost:gateway-service:8080 with status UP (replication=false)
+2025-07-27 00:38:00 [Eureka-PeerNodesUpdater] DEBUG c.n.discovery.endpoint.EndpointUtils - The availability zone for the given region us-east-1 are [defaultZone]
+2025-07-27 00:38:00 [Eureka-PeerNodesUpdater] WARN  c.n.eureka.cluster.PeerEurekaNodes - The replica size seems to be empty. Check the route 53 DNS Registry
+2025-07-27 00:38:15 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 1567ms
+2025-07-27 00:39:15 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 1446ms
+2025-07-27 00:40:15 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 1564ms
+2025-07-27 00:41:15 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 1475ms
+2025-07-27 00:42:15 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 1470ms
+2025-07-27 00:43:15 [ReplicaAwareInstanceRegistry - RenewalThresholdUpdater] INFO  c.n.e.r.PeerAwareInstanceRegistryImpl - Current renewal threshold is : 5
+2025-07-27 00:43:15 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 1504ms
+2025-07-27 00:44:15 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 758ms
+2025-07-27 00:44:37 [http-nio-8761-exec-2] DEBUG c.n.d.util.DeserializerStringCache - clearing global-level cache with size 2
+2025-07-27 00:44:37 [http-nio-8761-exec-2] DEBUG c.n.d.util.DeserializerStringCache - clearing app-level serialization cache with size 8
+2025-07-27 00:44:37 [http-nio-8761-exec-2] INFO  c.n.e.r.AbstractInstanceRegistry - Registered instance GATEWAY-SERVICE/localhost:gateway-service:8080 with status UP (replication=false)
+2025-07-27 00:44:39 [http-nio-8761-exec-8] DEBUG c.n.d.util.DeserializerStringCache - clearing global-level cache with size 2
+2025-07-27 00:44:39 [http-nio-8761-exec-8] DEBUG c.n.d.util.DeserializerStringCache - clearing app-level serialization cache with size 8
+2025-07-27 00:44:39 [http-nio-8761-exec-8] INFO  c.n.e.r.AbstractInstanceRegistry - Registered instance GATEWAY-SERVICE/localhost:gateway-service:8080 with status DOWN (replication=false)
+2025-07-27 00:44:39 [http-nio-8761-exec-9] INFO  c.n.e.r.AbstractInstanceRegistry - Cancelled instance GATEWAY-SERVICE/localhost:gateway-service:8080 (replication=false)
+2025-07-27 00:44:57 [SpringApplicationShutdownHook] INFO  o.s.c.n.e.s.EurekaServiceRegistry - Unregistering application UNKNOWN with eureka with status DOWN
+2025-07-27 00:44:57 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-07-27 00:44:57 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-07-27 00:44:57 [SpringApplicationShutdownHook] INFO  o.s.c.n.e.s.EurekaServerBootstrap - Shutting down Eureka Server..
+2025-07-27 00:44:57 [SpringApplicationShutdownHook] INFO  c.n.e.DefaultEurekaServerContext - Shutting down ...
+2025-07-27 00:44:57 [SpringApplicationShutdownHook] INFO  c.n.e.DefaultEurekaServerContext - Shut down
+2025-07-27 00:44:57 [SpringApplicationShutdownHook] INFO  o.s.c.n.e.s.EurekaServerBootstrap - Eureka Service is now shutdown...
+2025-07-27 00:44:57 [SpringApplicationShutdownHook] INFO  c.n.e.DefaultEurekaServerContext - Shutting down ...
+2025-07-27 00:44:57 [SpringApplicationShutdownHook] INFO  c.n.e.DefaultEurekaServerContext - Shut down
+2025-07-27 00:44:57 [SpringApplicationShutdownHook] INFO  c.netflix.discovery.DiscoveryClient - Shutting down DiscoveryClient ...
+2025-07-27 00:44:57 [SpringApplicationShutdownHook] INFO  c.netflix.discovery.DiscoveryClient - Completed shut down of DiscoveryClient
+2025-07-27 01:12:59 [main] INFO  c.b.discovery.DiscoveryApplication - Starting DiscoveryApplication using Java 17.0.15 with PID 266339 (/home/ironman/book-it-now/BookItNow/discovery-service/build/classes/java/main started by ironman in /home/ironman/book-it-now/BookItNow/discovery-service)
+2025-07-27 01:12:59 [main] INFO  c.b.discovery.DiscoveryApplication - No active profile set, falling back to 1 default profile: "default"
+2025-07-27 01:13:01 [main] INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=7c151485-92d3-3efd-9fed-aa6526449e7e
+2025-07-27 01:13:01 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8761 (http)
+2025-07-27 01:13:01 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8761"]
+2025-07-27 01:13:01 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-07-27 01:13:01 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.33]
+2025-07-27 01:13:01 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-07-27 01:13:01 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1915 ms
+2025-07-27 01:13:03 [main] INFO  c.n.d.p.DiscoveryJerseyProvider - Using JSON encoding codec LegacyJacksonJson
+2025-07-27 01:13:03 [main] INFO  c.n.d.p.DiscoveryJerseyProvider - Using JSON decoding codec LegacyJacksonJson
+2025-07-27 01:13:03 [main] INFO  c.n.d.p.DiscoveryJerseyProvider - Using XML encoding codec XStreamXml
+2025-07-27 01:13:03 [main] INFO  c.n.d.p.DiscoveryJerseyProvider - Using XML decoding codec XStreamXml
+2025-07-27 01:13:05 [main] INFO  o.s.cloud.commons.util.InetUtils - Cannot determine local hostname
+2025-07-27 01:13:08 [main] INFO  o.s.cloud.commons.util.InetUtils - Cannot determine local hostname
+2025-07-27 01:13:08 [main] WARN  o.s.c.l.c.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger - Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2025-07-27 01:13:08 [main] INFO  o.s.c.n.eureka.InstanceInfoFactory - Setting initial instance status as: STARTING
+2025-07-27 01:13:08 [main] INFO  c.netflix.discovery.DiscoveryClient - Initializing Eureka in region us-east-1
+2025-07-27 01:13:08 [main] INFO  c.netflix.discovery.DiscoveryClient - Client configured to neither register nor query for data.
+2025-07-27 01:13:08 [main] INFO  c.netflix.discovery.DiscoveryClient - Discovery Client initialized at timestamp 1753558988957 with initial instances count: 0
+2025-07-27 01:13:09 [main] INFO  c.n.e.DefaultEurekaServerContext - Initializing ...
+2025-07-27 01:13:09 [main] DEBUG c.n.discovery.endpoint.EndpointUtils - The availability zone for the given region us-east-1 are [defaultZone]
+2025-07-27 01:13:09 [main] WARN  c.n.eureka.cluster.PeerEurekaNodes - The replica size seems to be empty. Check the route 53 DNS Registry
+2025-07-27 01:13:09 [main] INFO  c.n.e.r.AbstractInstanceRegistry - Finished initializing remote region registries. All known remote regions: []
+2025-07-27 01:13:09 [main] INFO  c.n.e.DefaultEurekaServerContext - Initialized
+2025-07-27 01:13:09 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 1 endpoint beneath base path '/actuator'
+2025-07-27 01:13:09 [main] INFO  o.s.c.n.e.s.EurekaServiceRegistry - Registering application UNKNOWN with eureka with status UP
+2025-07-27 01:13:09 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8761"]
+2025-07-27 01:13:09 [Thread-9] INFO  o.s.c.n.e.s.EurekaServerBootstrap - isAws returned false
+2025-07-27 01:13:09 [Thread-9] INFO  o.s.c.n.e.s.EurekaServerBootstrap - Initialized server context
+2025-07-27 01:13:09 [Thread-9] INFO  c.n.e.r.PeerAwareInstanceRegistryImpl - Got 1 instances from neighboring DS node
+2025-07-27 01:13:09 [Thread-9] INFO  c.n.e.r.PeerAwareInstanceRegistryImpl - Renew threshold is: 1
+2025-07-27 01:13:09 [Thread-9] INFO  c.n.e.r.PeerAwareInstanceRegistryImpl - Changing status to UP
+2025-07-27 01:13:09 [Thread-9] INFO  o.s.c.n.e.s.EurekaServerInitializerConfiguration - Started Eureka Server
+2025-07-27 01:13:09 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8761 (http) with context path '/'
+2025-07-27 01:13:09 [main] INFO  o.s.c.n.e.s.EurekaAutoServiceRegistration - Updating port to 8761
+2025-07-27 01:13:10 [main] INFO  o.s.cloud.commons.util.InetUtils - Cannot determine local hostname
+2025-07-27 01:13:10 [main] INFO  c.b.discovery.DiscoveryApplication - Started DiscoveryApplication in 12.154 seconds (process running for 13.514)
+2025-07-27 01:13:31 [http-nio-8761-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-07-27 01:13:31 [http-nio-8761-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-07-27 01:13:31 [http-nio-8761-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2025-07-27 01:13:31 [http-nio-8761-exec-1] WARN  c.n.e.r.AbstractInstanceRegistry - DS: Registry: lease doesn't exist, registering resource: GATEWAY-SERVICE - localhost:gateway-service:8080
+2025-07-27 01:13:31 [http-nio-8761-exec-1] WARN  c.n.e.resources.InstanceResource - Not Found (Renew): GATEWAY-SERVICE - localhost:gateway-service:8080
+2025-07-27 01:13:31 [http-nio-8761-exec-4] DEBUG c.n.d.util.DeserializerStringCache - clearing global-level cache with size 2
+2025-07-27 01:13:31 [http-nio-8761-exec-4] DEBUG c.n.d.util.DeserializerStringCache - clearing app-level serialization cache with size 8
+2025-07-27 01:13:31 [http-nio-8761-exec-4] INFO  c.n.e.r.AbstractInstanceRegistry - Registered instance GATEWAY-SERVICE/localhost:gateway-service:8080 with status UP (replication=false)
+2025-07-27 01:14:05 [http-nio-8761-exec-8] DEBUG c.n.d.util.DeserializerStringCache - clearing global-level cache with size 2
+2025-07-27 01:14:05 [http-nio-8761-exec-8] DEBUG c.n.d.util.DeserializerStringCache - clearing app-level serialization cache with size 8
+2025-07-27 01:14:05 [http-nio-8761-exec-8] INFO  c.n.e.r.AbstractInstanceRegistry - Registered instance GATEWAY-SERVICE/localhost:gateway-service:8080 with status UP (replication=false)
+2025-07-27 01:14:07 [http-nio-8761-exec-9] DEBUG c.n.d.util.DeserializerStringCache - clearing global-level cache with size 2
+2025-07-27 01:14:07 [http-nio-8761-exec-9] DEBUG c.n.d.util.DeserializerStringCache - clearing app-level serialization cache with size 8
+2025-07-27 01:14:07 [http-nio-8761-exec-9] INFO  c.n.e.r.AbstractInstanceRegistry - Registered instance GATEWAY-SERVICE/localhost:gateway-service:8080 with status DOWN (replication=false)
+2025-07-27 01:14:07 [http-nio-8761-exec-10] INFO  c.n.e.r.AbstractInstanceRegistry - Cancelled instance GATEWAY-SERVICE/localhost:gateway-service:8080 (replication=false)
+2025-07-27 01:14:09 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 0ms
+2025-07-27 01:14:30 [http-nio-8761-exec-4] WARN  c.n.e.r.AbstractInstanceRegistry - DS: Registry: lease doesn't exist, registering resource: GATEWAY-SERVICE - localhost:gateway-service:8080
+2025-07-27 01:14:30 [http-nio-8761-exec-4] WARN  c.n.e.resources.InstanceResource - Not Found (Renew): GATEWAY-SERVICE - localhost:gateway-service:8080
+2025-07-27 01:14:30 [http-nio-8761-exec-5] DEBUG c.n.d.util.DeserializerStringCache - clearing global-level cache with size 2
+2025-07-27 01:14:30 [http-nio-8761-exec-5] DEBUG c.n.d.util.DeserializerStringCache - clearing app-level serialization cache with size 8
+2025-07-27 01:14:30 [http-nio-8761-exec-5] INFO  c.n.e.r.AbstractInstanceRegistry - Registered instance GATEWAY-SERVICE/localhost:gateway-service:8080 with status UP (replication=false)
+2025-07-27 01:15:09 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 1341ms
+2025-07-27 01:16:09 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 1424ms
+2025-07-27 01:17:09 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 1359ms
+2025-07-27 01:18:09 [http-nio-8761-exec-2] DEBUG c.n.d.util.DeserializerStringCache - clearing global-level cache with size 2
+2025-07-27 01:18:09 [http-nio-8761-exec-2] DEBUG c.n.d.util.DeserializerStringCache - clearing app-level serialization cache with size 8
+2025-07-27 01:18:09 [http-nio-8761-exec-2] INFO  c.n.e.r.AbstractInstanceRegistry - Registered instance GATEWAY-SERVICE/localhost:gateway-service:8080 with status UP (replication=false)
+2025-07-27 01:18:09 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 1388ms
+2025-07-27 01:18:11 [http-nio-8761-exec-1] DEBUG c.n.d.util.DeserializerStringCache - clearing global-level cache with size 2
+2025-07-27 01:18:11 [http-nio-8761-exec-1] DEBUG c.n.d.util.DeserializerStringCache - clearing app-level serialization cache with size 8
+2025-07-27 01:18:11 [http-nio-8761-exec-1] INFO  c.n.e.r.AbstractInstanceRegistry - Registered instance GATEWAY-SERVICE/localhost:gateway-service:8080 with status DOWN (replication=false)
+2025-07-27 01:18:11 [http-nio-8761-exec-3] INFO  c.n.e.r.AbstractInstanceRegistry - Cancelled instance GATEWAY-SERVICE/localhost:gateway-service:8080 (replication=false)
+2025-07-27 01:18:25 [http-nio-8761-exec-7] WARN  c.n.e.r.AbstractInstanceRegistry - DS: Registry: lease doesn't exist, registering resource: GATEWAY-SERVICE - localhost:gateway-service:8080
+2025-07-27 01:18:25 [http-nio-8761-exec-7] WARN  c.n.e.resources.InstanceResource - Not Found (Renew): GATEWAY-SERVICE - localhost:gateway-service:8080
+2025-07-27 01:18:25 [http-nio-8761-exec-8] DEBUG c.n.d.util.DeserializerStringCache - clearing global-level cache with size 2
+2025-07-27 01:18:25 [http-nio-8761-exec-8] DEBUG c.n.d.util.DeserializerStringCache - clearing app-level serialization cache with size 8
+2025-07-27 01:18:25 [http-nio-8761-exec-8] INFO  c.n.e.r.AbstractInstanceRegistry - Registered instance GATEWAY-SERVICE/localhost:gateway-service:8080 with status UP (replication=false)
+2025-07-27 01:19:09 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 606ms
+2025-07-27 01:20:09 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 1449ms
+2025-07-27 01:21:09 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 1344ms
+2025-07-27 01:22:09 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 1459ms
+2025-07-27 01:22:55 [Eureka-PeerNodesUpdater] DEBUG c.n.discovery.endpoint.EndpointUtils - The availability zone for the given region us-east-1 are [defaultZone]
+2025-07-27 01:22:55 [Eureka-PeerNodesUpdater] WARN  c.n.eureka.cluster.PeerEurekaNodes - The replica size seems to be empty. Check the route 53 DNS Registry
+2025-07-27 01:23:09 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 1333ms
+2025-07-27 01:24:09 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 1453ms
+2025-07-27 01:25:09 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 1373ms
+2025-07-27 01:26:09 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 1442ms
+2025-07-27 01:27:09 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 1402ms
+2025-07-27 01:28:09 [ReplicaAwareInstanceRegistry - RenewalThresholdUpdater] INFO  c.n.e.r.PeerAwareInstanceRegistryImpl - Current renewal threshold is : 3
+2025-07-27 01:28:09 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 712ms
+2025-07-27 01:29:09 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 1339ms
+2025-07-27 01:30:09 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 1357ms
+2025-07-27 01:31:09 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 1336ms
+2025-07-27 01:32:09 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 1390ms
+2025-07-27 01:32:43 [Eureka-PeerNodesUpdater] DEBUG c.n.discovery.endpoint.EndpointUtils - The availability zone for the given region us-east-1 are [defaultZone]
+2025-07-27 01:32:43 [Eureka-PeerNodesUpdater] WARN  c.n.eureka.cluster.PeerEurekaNodes - The replica size seems to be empty. Check the route 53 DNS Registry
+2025-07-27 01:33:09 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 1391ms
+2025-07-27 01:34:09 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 1441ms
+2025-07-27 01:35:09 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 1390ms
+2025-07-27 01:36:09 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 1379ms
+2025-07-27 01:37:09 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 742ms
+2025-07-27 01:38:09 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 1482ms
+2025-07-27 01:39:10 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 2566ms
+2025-07-27 01:40:09 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 192ms
+2025-07-27 01:41:09 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 1386ms
+2025-07-27 01:41:41 [SpringApplicationShutdownHook] INFO  o.s.c.n.e.s.EurekaServiceRegistry - Unregistering application UNKNOWN with eureka with status DOWN
+2025-07-27 01:41:41 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-07-27 01:41:42 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-07-27 01:41:42 [SpringApplicationShutdownHook] INFO  o.s.c.n.e.s.EurekaServerBootstrap - Shutting down Eureka Server..
+2025-07-27 01:41:42 [SpringApplicationShutdownHook] INFO  c.n.e.DefaultEurekaServerContext - Shutting down ...
+2025-07-27 01:41:42 [SpringApplicationShutdownHook] INFO  c.n.e.DefaultEurekaServerContext - Shut down
+2025-07-27 01:41:42 [SpringApplicationShutdownHook] INFO  o.s.c.n.e.s.EurekaServerBootstrap - Eureka Service is now shutdown...
+2025-07-27 01:41:42 [SpringApplicationShutdownHook] INFO  c.n.e.DefaultEurekaServerContext - Shutting down ...
+2025-07-27 01:41:42 [SpringApplicationShutdownHook] INFO  c.n.e.DefaultEurekaServerContext - Shut down
+2025-07-27 01:41:42 [SpringApplicationShutdownHook] INFO  c.netflix.discovery.DiscoveryClient - Shutting down DiscoveryClient ...
+2025-07-27 01:41:42 [SpringApplicationShutdownHook] INFO  c.netflix.discovery.DiscoveryClient - Completed shut down of DiscoveryClient

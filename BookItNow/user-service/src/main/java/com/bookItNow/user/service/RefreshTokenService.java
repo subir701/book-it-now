@@ -5,6 +5,7 @@ import com.bookItNow.user.model.RefreshToken;
 import com.bookItNow.user.model.User;
 import com.bookItNow.user.repository.RefreshTokenRepository;
 import com.bookItNow.user.repository.UserRepository;
+import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -12,14 +13,15 @@ import java.time.Instant;
 import java.util.Optional;
 import java.util.UUID;
 
+@RequiredArgsConstructor
 @Service
 public class RefreshTokenService {
 
-    @Autowired
-    private RefreshTokenRepository refreshTokenRepository;
 
-    @Autowired
-    private UserRepository userRepository;
+    private final RefreshTokenRepository refreshTokenRepository;
+
+
+    private final UserRepository userRepository;
 
     public RefreshToken createRefreshToken(String userName){
         User user = userRepository.findByUsername(userName).orElseThrow(()->new UserNotFoundException(userName));
@@ -57,5 +59,9 @@ public class RefreshTokenService {
 
     public void deleteRefreshToken(User user) {
         refreshTokenRepository.deleteByUser(user);
+    }
+
+    public void deleteRefereshTokenByUserId(int userId){
+        refreshTokenRepository.deleteByUserId(userId);
     }
 }

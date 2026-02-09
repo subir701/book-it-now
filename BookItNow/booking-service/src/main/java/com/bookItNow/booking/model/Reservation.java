@@ -1,9 +1,9 @@
 package com.bookItNow.booking.model;
 
 
+import com.bookItNow.booking.converter.SeatDetailsConverter;
+import com.bookItNow.common.Enum.Status;
 import com.bookItNow.common.dto.SeatDetails;
-import com.fasterxml.jackson.core.type.TypeReference;
-import com.fasterxml.jackson.databind.ObjectMapper;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -27,34 +27,18 @@ public class Reservation {
     private int userId;
     private int eventId;
 
-    @Column(columnDefinition = "jsonb") // Store as JSONB in Postgres
-    private String seatDetails; // Renamed from seatIds
+    @Convert(converter = SeatDetailsConverter.class)
+    @Column(columnDefinition = "jsonb")
+    private List<SeatDetails> seatDetails;
 
-    private boolean isConfirmed;
-
-    // Convert List<SeatDetail> to JSON before storing
-    public void setSeatDetails(List<SeatDetails> seatDetailsList) {
-        try {
-            ObjectMapper objectMapper = new ObjectMapper();
-            this.seatDetails = objectMapper.writeValueAsString(seatDetailsList);
-        } catch (IOException e) {
-            throw new RuntimeException("Error converting seat details to JSON", e);
-        }
-    }
-
-    // Convert JSON back to List<SeatDetail> when retrieving
-    public List<SeatDetails> getSeatDetails() {
-        try {
-            ObjectMapper objectMapper = new ObjectMapper();
-            return objectMapper.readValue(this.seatDetails, new TypeReference<List<SeatDetails>>() {});
-        } catch (IOException e) {
-            throw new RuntimeException("Error converting seat details from JSON", e);
-        }
-    }
+    @Enumerated(EnumType.STRING)
+    private Status status = Status.PENDING;
 
     @PrePersist
     public void prePersist() {
-        this.isConfirmed = false;
+        if(this.status == null){
+            this.status = Status.PENDING;
+        }
     }
 }
 

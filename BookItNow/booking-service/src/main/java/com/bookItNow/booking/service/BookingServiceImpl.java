@@ -40,47 +40,47 @@ public class BookingServiceImpl implements BookingService {
     @Override
     @Transactional
     @RabbitListener(queues = "payment.confirmed.queue")
-    public Booking createBooking(ConfirmedPaymentEvent event) {
+    public void createBooking(ConfirmedPaymentEvent event) {
+        log.info("Processing confirmed payment for reservation: {}", event.getReservationId());
 
+        // 1. Prevent duplicate bookings
+        if (bookingRepository.existsByPaymentId(event.getPaymentId())) {
+            log.warn("Booking already exists for paymentId: {}", event.getPaymentId());
+            return;
+        }
 
+        Reservation reservation = reservationRepository.findById(event.getReservationId())
+                .orElseThrow(() -> new ReservationNotFoundException("Reservation not found"));
 
-        Reservation reservation = reservationRepository.findById(event.getReservationId()).orElseThrow(()->new ReservationNotFoundException("Reservation not found by this ID : "+ event.getReservationId()));
-
+        // 2. Map Reservation to Booking
         Booking booking = new Booking();
-
         booking.setUserId(event.getUserId());
-        double totalPrice = reservation.getSeatDetails().stream().mapToDouble(i -> i.getSeatPrice()).sum();
-        booking.setTotalPrice(totalPrice);
         booking.setPaymentId(event.getPaymentId());
+        booking.setTotalPrice(reservation.getSeatDetails().stream().mapToDouble(SeatDetails::getSeatPrice).sum());
 
-        List<Ticket> ticketList = reservation.getSeatDetails().stream().
-                map(seatDetails -> {
-                    Ticket ticket = new Ticket();
-                    ticket.setBooking(booking);
-                    ticket.setSeatNumber(seatDetails.getSeatNumber());
-                    return ticket;
-                }).collect(Collectors.toList());
-        booking.setTickets(ticketList);
+        List<Ticket> tickets = reservation.getSeatDetails().stream().map(seat -> {
+            Ticket t = new Ticket();
+            t.setBooking(booking);
+            t.setSeatNumber(seat.getSeatNumber());
+            return t;
+        }).collect(Collectors.toList());
 
-        ticketRepository.saveAll(ticketList);
+        booking.setTickets(tickets);
 
-        Booking temp = bookingRepository.save(booking);
+        Booking savedBooking = bookingRepository.save(booking);
 
-        log.info("Booking created successfully");
-
-        SeatStatusUpdateEvent seatStatusUpdateEvent = new SeatStatusUpdateEvent(
+        // 4. Update the Event Service (KAFKA - to match the listener you wrote)
+        SeatStatusUpdateEvent updateEvent = new SeatStatusUpdateEvent(
                 reservation.getEventId(),
-                temp.getId(),
-                reservation.getSeatDetails().stream()
-                        .map(SeatDetails::getSeatId)
-                        .collect(Collectors.toList()),
+                savedBooking.getId(),
+                reservation.getSeatDetails().stream().map(SeatDetails::getSeatId).collect(Collectors.toList()),
                 true
         );
 
-        rabbitTemplate.convertAndSend("seat.exchange", "seat.status.update", seatStatusUpdateEvent);
+        rabbitTemplate.convertAndSend("seat.exchange", "seat.status.update", updateEvent);
         log.info("SeatStatusUpdateEvent sent to event-service for eventId: " + reservation.getEventId());
 
-        return temp;
+        reservationRepository.delete(reservation);
 
     }
 

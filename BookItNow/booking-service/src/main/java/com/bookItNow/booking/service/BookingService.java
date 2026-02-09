@@ -8,7 +8,7 @@ import java.util.List;
 
 public interface BookingService {
 
-    Booking createBooking(ConfirmedPaymentEvent event);
+    void createBooking(ConfirmedPaymentEvent event);
     List<Booking> findByUserId(Integer userId);
     void deleteBooking(Integer bookingId);
 }

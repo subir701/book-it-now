@@ -35,8 +35,8 @@ dependencies {
     // Spring Security (for API authentication)
     implementation 'org.springframework.boot:spring-boot-starter-security'
 
-    // OpenAPI Documentation (Swagger)
-    implementation 'org.springdoc:springdoc-openapi-starter-webmvc-ui:2.7.0'
+    // OpenAPI Documentation (use WebFlux starter)
+    implementation 'org.springdoc:springdoc-openapi-starter-webflux-ui:2.7.0'
 
     // Logging
     implementation 'org.springframework.boot:spring-boot-starter-logging'
@@ -49,4 +49,6 @@ dependencies {
     runtimeOnly 'io.jsonwebtoken:jjwt-impl:0.12.6'
     runtimeOnly 'io.jsonwebtoken:jjwt-jackson:0.12.6'
 
+    // Reactive Redis
+    implementation 'org.springframework.boot:spring-boot-starter-data-redis-reactive'
 }

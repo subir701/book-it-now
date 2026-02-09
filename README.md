@@ -11,40 +11,49 @@
 - **Modular Services:** User, Event, Seat, Booking, Payment, Notification.
 - **Service Discovery:** Eureka for registering and discovering services.
 - **API Gateway:** Centralized routing and JWT validation using Spring Cloud Gateway.
+- **Fault Tolerance:** Implementing Resilience4j (Cricuit Breaker & Retry) to handle service inter-dependencies and prevent cascading failure.
 
 ### 🔐 **Security**
 - **JWT Authentication & Authorization:** 
   - Tokens are validated by the Gateway service.
   - Role-Based Access Control (RBAC) is enforced across services.
+- **Secure Communication:**
+-  Pass-through of security context ensures authenticated user IDs are consistent across service boundaries.
 
-### 🧵 **Multithreading for Concurrency**
-- Optimized for high traffic booking scenarios using synchronized blocks and thread-safe structures in Booking Service.
+### 🧵 **Concurrency & Distributed Locking**
+- **Redisson (Redis) Locks:** Implements distributed locking for seat selection to prevent race conditions in high-concurrency environments.
+- **Optimistic Locking:** Utilizes JPA @Version as a secondary defense layer for data integrity.
+- **Thread Safety:** Optimized Booking Service using thread-safe structures to manage high-volume transactional throughput.
 
-### 📨 **Messaging Architecture**
+### 📨 **Messaging Architecture (Choreography Saga)**
+- **Hybrid Messaging:** Utilizes both Kafka and RabbitMQ to balance high throughput with complex transactional routing.
 - **Kafka:** Used for high-volume messaging (e.g., seat status updates)
-- Topic: reservation.create, reservation.cancel, etc.
+  - Topic: reservation.create, reservation.cancel, etc.
 - **RabbitMQ Queues:**
-- seat.status.update.queue: Updates seat status after booking
-- payment.confirmation.queue: Confirms payment and triggers booking
-- notification.queue: Sends booking confirmation notifications
+  - seat.status.update.queue: Updates seat status after booking
+  - payment.confirmation.queue: Confirms payment and triggers booking
+  - notification.queue: Sends booking confirmation notifications
 - Ensures transactional consistency across distributed services.
+- **Idempotency:** Implementation of paymentId checks in the Booking Service to ensure "Exactly-Once" processing of payment messages.
 
 ### 🔍 **Swagger Integration**
 - API documentation and token-based request testing available for each service.
 
 ### 💾 **Data Persistence**
-- Each microservice persists its own data using **JPA + PostgreSQL**.
+- **Polyglot Persistence:** Each service manages its own PostgreSQL instance.
+- **JSONB Optimization:** Uses Postgres JSONB columns for flexible seat detail storage, mapped via JPA Attribute Converters.
+- **Performance Tuning:** Optimized data retrieval using JOIN FETCH and DTO Projections to eliminate the N+1 query problem.
 
 ---
 
 ## 🧪 Technologies Used
 
-| Category       | Tools/Tech                        |
+| Category       | Tools/Tech                       |
 |----------------|----------------------------------|
 | **Backend**    | Spring Boot, Spring Cloud        |
 | **Auth**       | JWT, Spring Security             |
 | **Messaging**  | RabbitMQ, Kafka                  |
-| **Database**   | PostgreSQL                       |
+| **Database**   | PostgreSQL, Redis                |
 | **Discovery**  | Eureka                           |
 | **Gateway**    | Spring Cloud Gateway             |
 | **Build Tool** | Gradle                           |
@@ -167,9 +176,9 @@ bookitnow/
 |--------------------------|-------------|
 | **Email & SMS Notification** | Integration with Twilio/SendGrid |
 | **Real Payment Gateway** | Integrate Stripe or Razorpay |
-| **Caching Layer**        | Redis-based caching for seat/event data |
-| **Circuit Breaker**      | Fault tolerance using Resilience4J |
 | **Dockerization**        | Containerize all services |
 | **Monitoring**           | Add Prometheus + Grafana for metrics |
+| **Advanced Security**    | Implement OAuth2 with Keycloak |
+| **Database Sharding**    | Explore Postgres partitioning or Read Replica |
 
 ---
